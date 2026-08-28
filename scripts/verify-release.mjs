@@ -30,9 +30,22 @@ const allowedPublicHosts = new Set([
   "x1wealth.com",
 ]);
 
+function isRootGitMetadata(path, entry) {
+  return path === ".git" && (entry.isDirectory() || entry.isFile());
+}
+
+function releaseEntries(directory) {
+  return readdirSync(directory, { withFileTypes: true }).filter((entry) => {
+    const path = relative(root, resolve(directory, entry.name))
+      .split(sep)
+      .join("/");
+    return !isRootGitMetadata(path, entry);
+  });
+}
+
 function walk(directory) {
   const files = [];
-  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+  for (const entry of releaseEntries(directory)) {
     const absolute = resolve(directory, entry.name);
     const path = relative(root, absolute).split(sep).join("/");
     const stats = lstatSync(absolute);
