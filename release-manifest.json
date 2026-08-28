@@ -187,9 +187,9 @@
       "sha256": "caeab6c967b67753507fd22292b6678da72c95c31fc19c23e5d819d2db3e39ec"
     },
     {
-      "bytes": 7965,
+      "bytes": 8324,
       "path": "scripts/verify-release.mjs",
-      "sha256": "b12c21d5f5f6bc030b908a68e4dfce87c05ac202167789e68d4043b7a5bf1356"
+      "sha256": "fead57566092614c1a2960bbdbdfab66dbdda550e7d22211fe6b8a61284a02e8"
     },
     {
       "bytes": 625,
@@ -256,7 +256,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "b12c21d5f5f6bc030b908a68e4dfce87c05ac202167789e68d4043b7a5bf1356"
+      "sha256": "fead57566092614c1a2960bbdbdfab66dbdda550e7d22211fe6b8a61284a02e8"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
