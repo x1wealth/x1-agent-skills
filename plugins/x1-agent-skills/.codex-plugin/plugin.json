@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "X1 Wealth",
+    "url": "https://x1wealth.com"
+  },
+  "description": "Review and coordinate capital-call notices through X1 while keeping money movement and household authority outside the agent.",
+  "homepage": "https://x1wealth.com",
+  "interface": {
+    "capabilities": [
+      "Read",
+      "Governed proposals"
+    ],
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Help me review this capital-call notice through X1.",
+      "Resume my open capital-call work in X1."
+    ],
+    "developerName": "X1 Wealth",
+    "displayName": "X1 Capital Call",
+    "longDescription": "A portable workflow for reviewing a capital-call notice, preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
+    "privacyPolicyURL": "https://x1wealth.com/legal/privacy-policy",
+    "shortDescription": "Review and coordinate capital calls through X1",
+    "termsOfServiceURL": "https://x1wealth.com/legal/terms-and-conditions",
+    "websiteURL": "https://x1wealth.com"
+  },
+  "keywords": [
+    "x1",
+    "capital-call",
+    "drawdown-notice",
+    "private-investments",
+    "household-coordination"
+  ],
+  "license": "Apache-2.0",
+  "name": "x1-agent-skills",
+  "repository": "https://github.com/x1wealth/x1-agent-skills",
+  "skills": "./skills/",
+  "version": "0.1.0"
+}

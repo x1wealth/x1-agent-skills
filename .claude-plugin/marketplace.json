@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "description": "Official X1 Wealth agent skills",
+    "version": "0.1.0"
+  },
+  "name": "x1-wealth",
+  "owner": {
+    "name": "X1 Wealth"
+  },
+  "plugins": [
+    {
+      "description": "Review and coordinate capital-call notices through X1 without moving money.",
+      "name": "x1-agent-skills",
+      "source": "./plugins/x1-agent-skills"
+    }
+  ]
+}

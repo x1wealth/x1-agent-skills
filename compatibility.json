@@ -1,0 +1,37 @@
+{
+  "contractId": "x1.agent-skills.compatibility.v1",
+  "hosts": [
+    {
+      "host": "Codex CLI",
+      "minimumVersion": "0.150.1",
+      "referenceQualifiedVersion": "0.150.1",
+      "status": "qualified"
+    },
+    {
+      "host": "Claude Code",
+      "minimumVersion": "2.1.154",
+      "referenceQualifiedVersion": "2.1.247",
+      "status": "qualified"
+    },
+    {
+      "host": "ChatGPT",
+      "status": "provider_submission_not_asserted"
+    },
+    {
+      "host": "Other MCP hosts",
+      "status": "expected_compatible_not_qualified"
+    }
+  ],
+  "notes": [
+    "The exact public plugin bytes passed the clean mock-only host suite in Codex CLI 0.150.1 and Claude Code 2.1.247.",
+    "Installing the plugin does not grant X1 authority or make every X1 tool available."
+  ],
+  "publicCandidateStatus": "exact_bytes_qualified_not_published",
+  "requiredCapabilities": [
+    "MCP streamable HTTP",
+    "OAuth-capable remote connection",
+    "portable skills",
+    "user-visible confirmation for consequential proposals"
+  ],
+  "version": "0.1.0"
+}

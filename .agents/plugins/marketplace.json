@@ -1,0 +1,20 @@
+{
+  "interface": {
+    "displayName": "X1 Wealth"
+  },
+  "name": "x1-wealth",
+  "plugins": [
+    {
+      "category": "Productivity",
+      "name": "x1-agent-skills",
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "source": {
+        "path": "./plugins/x1-agent-skills",
+        "source": "local"
+      }
+    }
+  ]
+}

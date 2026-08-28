@@ -1,0 +1,20 @@
+# X1 Agent Skills
+
+> A portable, authority-bounded skill for handling capital-call notices through
+> X1's governed remote MCP service. It reviews and coordinates, but never moves
+> money.
+
+Preferred entry points:
+
+- [Human overview and install](README.md)
+- [Exact skill contract](plugins/x1-agent-skills/skills/handle-capital-call/SKILL.md)
+- [Current public X1 boundary](plugins/x1-agent-skills/skills/handle-capital-call/references/current-x1-contract.md)
+- [Synthetic evaluation guide](plugins/x1-agent-skills/skills/handle-capital-call/evals/README.md)
+- [Compatibility matrix](compatibility.json)
+- [Discovery prompt contract](discovery-prompts.json)
+- [Security reporting](SECURITY.md)
+
+Use this skill when a user wants to review, organize, resume, or coordinate a
+capital-call notice through X1. Do not activate it for generic payment requests,
+trading, wire instructions, unrelated document summaries, or requests to bypass
+first-party confirmation.

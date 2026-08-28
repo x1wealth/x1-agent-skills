@@ -1,0 +1,89 @@
+{
+  "version": "2026-08-24",
+  "actions": [
+    {
+      "code": "create_fresh_intake_request_in_x1",
+      "display": "Review the expired intake request in first-party X1; create a fresh request there only if still needed."
+    },
+    {
+      "code": "inspect_capital_call_in_x1",
+      "display": "Review the capital-call evidence and hold in first-party X1."
+    },
+    {
+      "code": "inspect_resume_join_in_x1",
+      "display": "Review the obligation and coordination relationship in first-party X1."
+    },
+    {
+      "code": "open_coordination_in_x1",
+      "display": "Continue professional coordination in an authorized first-party X1 surface."
+    },
+    {
+      "code": "prepare_professional_handoff_in_x1",
+      "display": "Prepare and confirm the professional handoff in first-party X1."
+    },
+    {
+      "code": "retrieve_governed_intake_result_in_x1",
+      "display": "Review the committed intake result in first-party X1; do not replay the request."
+    },
+    {
+      "code": "reuse_governed_result",
+      "display": "Reuse only the stable governed result returned by X1."
+    },
+    {
+      "code": "review_and_confirm_in_x1",
+      "display": "Review and confirm the proposed obligation in first-party X1."
+    },
+    {
+      "code": "review_closeout_in_x1",
+      "display": "Review both closeout states and confirm the household outcome in first-party X1."
+    },
+    {
+      "code": "review_governed_intake_in_x1",
+      "display": "Review the governed intake request in first-party X1."
+    },
+    {
+      "code": "review_incomplete_notice_in_x1",
+      "display": "Review the incomplete notice in first-party X1."
+    },
+    {
+      "code": "review_pending_proposal_in_x1",
+      "display": "Review the pending capital-call proposal in first-party X1."
+    },
+    {
+      "code": "review_professional_response_in_x1",
+      "display": "Review the professional response and proposed closeout in first-party X1."
+    },
+    {
+      "code": "review_unsupported_currency_in_x1",
+      "display": "Review the unsupported currency and notice in first-party X1."
+    },
+    {
+      "code": "resolve_access_in_x1",
+      "display": "Resolve access or household scope in first-party X1."
+    },
+    {
+      "code": "resolve_conflict_in_x1",
+      "display": "Resolve the contradictory closeout state in first-party X1."
+    },
+    {
+      "code": "route_money_movement_outside_skill",
+      "display": "Review the obligation in first-party X1; this skill cannot move money or verify settlement."
+    },
+    {
+      "code": "upload_notice_in_x1",
+      "display": "Upload the notice in first-party X1."
+    },
+    {
+      "code": "use_context_without_reuse_claim",
+      "display": "Use the returned records as context; do not claim trace-correlated reuse."
+    },
+    {
+      "code": "use_other_skill",
+      "display": "Use a skill appropriate to the user's request."
+    },
+    {
+      "code": "wait_for_governed_intake_reconciliation",
+      "display": "Wait for X1 to reconcile the consumed intake request; do not retry or replay it."
+    }
+  ]
+}

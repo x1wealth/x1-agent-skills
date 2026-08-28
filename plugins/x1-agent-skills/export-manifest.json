@@ -1,0 +1,211 @@
+{
+  "contractId": "x1.agent-skills-public-plugin.v1",
+  "files": [
+    {
+      "bytes": 513,
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "6f4cfb6dedce126804a45f20587e15ec9e10d27068b48a24032a632adbcd2a26"
+    },
+    {
+      "bytes": 1350,
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "5111e97bdcaba83102fb59b339352396641d21e809035b10af1d20300ceb0efd"
+    },
+    {
+      "bytes": 674,
+      "path": "integrations/claude-code/README.md",
+      "sha256": "84de63de6e645796888eb83d21fee4042126f30f0a251b8e7f25ce35401bee00"
+    },
+    {
+      "bytes": 487,
+      "path": "integrations/codex/README.md",
+      "sha256": "86f4c1b16f7d28cfc470b83deeac9b9638a7f9f79b374ac97780dd72dd295bd6"
+    },
+    {
+      "bytes": 461,
+      "path": "integrations/generic-mcp/README.md",
+      "sha256": "9bf493de3ac291ece60339ed9ba35fc0c53282e491865e8431e5f4b741c70829"
+    },
+    {
+      "bytes": 861,
+      "path": "package.json",
+      "sha256": "9ee08953ea8c7e49ff53a01bb319fc9cc564a851aa4522cd5aeb44146a842b1c"
+    },
+    {
+      "bytes": 23714,
+      "path": "pnpm-lock.yaml",
+      "sha256": "b5a3967b4ebd55137201116f904ce9a477daea6568ce6efe0735152d3a7bcd94"
+    },
+    {
+      "bytes": 470,
+      "path": "README.md",
+      "sha256": "903aa95d16299d7036393741ffc32889a078b661c499b226e6939a6abaa63073"
+    },
+    {
+      "bytes": 1742,
+      "path": "scripts/verify-plugin.mjs",
+      "sha256": "46bed312084231459e643a6b0f19986929291d10600502513fe4749cbc06cbd1"
+    },
+    {
+      "bytes": 32254,
+      "path": "skills/handle-capital-call/evals/evaluate.mjs",
+      "sha256": "1b7219ab0ea34c8b03d232e2fa7070ba5a7e7bbfff1033c9833279d805b8de66"
+    },
+    {
+      "bytes": 3231,
+      "path": "skills/handle-capital-call/evals/evaluate.test.mjs",
+      "sha256": "02d3237f5e9bf8748b8da8b268a5b50697e1ca508c7ac163d7b23d8977f8649b"
+    },
+    {
+      "bytes": 6165,
+      "path": "skills/handle-capital-call/evals/host-receipt.schema.json",
+      "sha256": "0482ea8b1f7cb07f04b57ecc61d128d9a61e271189c389f8275261c4eb24bd5b"
+    },
+    {
+      "bytes": 26251,
+      "path": "skills/handle-capital-call/evals/host-scenarios.json",
+      "sha256": "acfde32e224bb88de99a51f748fa9444cc9e539ee9f61e3b10909cc4d585c996"
+    },
+    {
+      "bytes": 4795,
+      "path": "skills/handle-capital-call/evals/mock-x1-mcp-server.mjs",
+      "sha256": "1b90db2a9fda42eaad1530247d597bd62c8d13df0ba86bd6c4e5a5dddda48913"
+    },
+    {
+      "bytes": 24908,
+      "path": "skills/handle-capital-call/evals/negative-cases.json",
+      "sha256": "c876bb6eeb667629d5b84e5a16c7681eb4fed3e676682a9a3928545e0845e6c3"
+    },
+    {
+      "bytes": 3073,
+      "path": "skills/handle-capital-call/evals/next-action-contract.json",
+      "sha256": "e584db27138d424062ed0bc1ad031d748d92240b6b1a23ae49b165ef5aac6e4e"
+    },
+    {
+      "bytes": 809,
+      "path": "skills/handle-capital-call/evals/normalize-captured-x1-result.mjs",
+      "sha256": "9ab13e1956e81cdba32c1bad7144aa8207c387515bd68a97d2e143ca6fd2ee28"
+    },
+    {
+      "bytes": 1077,
+      "path": "skills/handle-capital-call/evals/README.md",
+      "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
+    },
+    {
+      "bytes": 19501,
+      "path": "skills/handle-capital-call/evals/run-host-eval.mjs",
+      "sha256": "ac921d073ec97ee3b5bff0734e5a9b7ae7180524f19fa659ff6cadce5277dddc"
+    },
+    {
+      "bytes": 6139,
+      "path": "skills/handle-capital-call/evals/run-host-eval.test.mjs",
+      "sha256": "eec93ad61c3f2d0751eb61c996b16755a3e76cc90e8c79a0dabf7605cfe1885c"
+    },
+    {
+      "bytes": 101252,
+      "path": "skills/handle-capital-call/evals/scenarios.json",
+      "sha256": "6e98853ae9c5a595f8871039446c1aa02da7a817433e79d3b3e65cfb0c1bbbb0"
+    },
+    {
+      "bytes": 1170,
+      "path": "skills/handle-capital-call/references/current-x1-contract.md",
+      "sha256": "a0890e36675278d4a2c8e9a63a291a444d5d94be502403d6d1acce2ae88e029f"
+    },
+    {
+      "bytes": 22453,
+      "path": "skills/handle-capital-call/SKILL.md",
+      "sha256": "6e16af6672df91808d9c5c07a1929df599f4c0238b52853491176f91e5c77182"
+    }
+  ],
+  "license": "Apache-2.0",
+  "releaseStatus": "public_candidate_not_published",
+  "sourceExportManifestSha256": "5a0f1a2fcecdb7da59df8cdf263a260b4bbee69c487ada7829e2b6784749fc8e",
+  "sourceProvenance": [
+    {
+      "disposition": "transform_and_requalify",
+      "source": "SKILL.md",
+      "sourceSha256": "7521e9ba9c10b917987bdcdad17ad936e7df7f588940af79f402ba72a52cbe2f",
+      "target": "skills/handle-capital-call/SKILL.md"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/README.md",
+      "sourceSha256": "e8fbbc325866b6e76e4d31c90e039128c1af3fabcfccb3d68f8ab7f885e9e3b8",
+      "target": "skills/handle-capital-call/evals/README.md"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/evaluate.mjs",
+      "sourceSha256": "cb45533305eb01343e7fb2dda7fd09adb0f1a194089408c08953c83fa7a53914",
+      "target": "skills/handle-capital-call/evals/evaluate.mjs"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/evaluate.test.mjs",
+      "sourceSha256": "2c9c6c57aa669e8c0f76b80832cf579f741d671649bed8054371ba1183c914a1",
+      "target": "skills/handle-capital-call/evals/evaluate.test.mjs"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/host-receipt.schema.json",
+      "sourceSha256": "c6397bd6f60be244cc92b34f7a9c71cef35aca201519d72898722b18c3de0185",
+      "target": "skills/handle-capital-call/evals/host-receipt.schema.json"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/host-scenarios.json",
+      "sourceSha256": "88c6850567bd607b6cf8fe064d0c57681833d8a2d59b80c832e297b6244b7a1b",
+      "target": "skills/handle-capital-call/evals/host-scenarios.json"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/mock-x1-mcp-server.mjs",
+      "sourceSha256": "c98937c4b7ac06ec3521004936b054b7cac1fd68cafba2cb86d7f9d14664dbf2",
+      "target": "skills/handle-capital-call/evals/mock-x1-mcp-server.mjs"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/negative-cases.json",
+      "sourceSha256": "6720dc79bd320483bef385036fd1ecb089651f922b03b81137bc3ed38067e71d",
+      "target": "skills/handle-capital-call/evals/negative-cases.json"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/next-action-contract.json",
+      "sourceSha256": "e584db27138d424062ed0bc1ad031d748d92240b6b1a23ae49b165ef5aac6e4e",
+      "target": "skills/handle-capital-call/evals/next-action-contract.json"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/normalize-captured-x1-result.mjs",
+      "sourceSha256": "6990af27eee2773dbc1d2f5adb10e3d3d51ba893b3b69c674f566576f19f63e8",
+      "target": "skills/handle-capital-call/evals/normalize-captured-x1-result.mjs"
+    },
+    {
+      "disposition": "rewrite_for_export_and_requalify",
+      "source": "evals/run-host-eval.mjs",
+      "sourceSha256": "e57b2a19d7d484cac63dd42686b03df8af7b77ad93cac4a1b3b058adef1e6681",
+      "target": "skills/handle-capital-call/evals/run-host-eval.mjs"
+    },
+    {
+      "disposition": "rewrite_for_export_and_requalify",
+      "source": "evals/run-host-eval.test.mjs",
+      "sourceSha256": "f80ff690be10017a179a1652a262b12201629e2c3fdc9451af686efa2ffc240b",
+      "target": "skills/handle-capital-call/evals/run-host-eval.test.mjs"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "evals/scenarios.json",
+      "sourceSha256": "9e439e069621f63d1af146c3c85a086114d8da71a24fcc3e1991dba41d98f38f",
+      "target": "skills/handle-capital-call/evals/scenarios.json"
+    },
+    {
+      "disposition": "transform_and_requalify",
+      "source": "references/current-x1-contract.md",
+      "sourceSha256": "16699113d9c6a39adc25eb2cf767ae8b72010f5ab2455d27e364fb0f761bfb35",
+      "target": "skills/handle-capital-call/references/current-x1-contract.md"
+    }
+  ],
+  "sourceRevision": "e91e1658669cc73e0c13ce6444892105edd31955",
+  "version": "0.1.0"
+}

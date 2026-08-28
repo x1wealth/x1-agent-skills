@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "X1 Wealth"
+  },
+  "defaultEnabled": false,
+  "description": "Review and coordinate capital-call notices through X1 without moving money or bypassing first-party authority.",
+  "homepage": "https://github.com/x1wealth/x1-agent-skills",
+  "license": "Apache-2.0",
+  "mcpServers": {
+    "x1": {
+      "type": "http",
+      "url": "https://mcp.x1wealth.com/mcp"
+    }
+  },
+  "name": "x1-agent-skills",
+  "repository": "https://github.com/x1wealth/x1-agent-skills",
+  "version": "0.1.0"
+}

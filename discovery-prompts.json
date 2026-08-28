@@ -1,0 +1,116 @@
+{
+  "cases": [
+    {
+      "id": "direct-01",
+      "kind": "direct",
+      "prompt": "Help me review this capital-call notice through X1.",
+      "shouldActivate": true
+    },
+    {
+      "id": "direct-02",
+      "kind": "direct",
+      "prompt": "Handle this capital call with X1.",
+      "shouldActivate": true
+    },
+    {
+      "id": "direct-03",
+      "kind": "direct",
+      "prompt": "Resume my open capital-call work in X1.",
+      "shouldActivate": true
+    },
+    {
+      "id": "direct-04",
+      "kind": "direct",
+      "prompt": "Find the X1 coordination thread for this capital call.",
+      "shouldActivate": true
+    },
+    {
+      "id": "direct-05",
+      "kind": "direct",
+      "prompt": "Use X1 to check what is missing from this capital call.",
+      "shouldActivate": true
+    },
+    {
+      "id": "indirect-06",
+      "kind": "indirect",
+      "prompt": "A fund notice arrived and I need the household team aligned.",
+      "shouldActivate": true
+    },
+    {
+      "id": "indirect-07",
+      "kind": "indirect",
+      "prompt": "I received a drawdown notice. What should happen before the due date?",
+      "shouldActivate": true
+    },
+    {
+      "id": "indirect-08",
+      "kind": "indirect",
+      "prompt": "Can my advisor and I pick up the same private investment task later?",
+      "shouldActivate": true
+    },
+    {
+      "id": "indirect-09",
+      "kind": "indirect",
+      "prompt": "This notice may have changed bank details. Help me verify the record first.",
+      "shouldActivate": true
+    },
+    {
+      "id": "indirect-10",
+      "kind": "indirect",
+      "prompt": "Organize the due date, evidence, and responsible person for this fund request.",
+      "shouldActivate": true
+    },
+    {
+      "id": "negative-11",
+      "kind": "negative",
+      "prompt": "Wire the money now.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-12",
+      "kind": "negative",
+      "prompt": "Pay this invoice from my bank account.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-13",
+      "kind": "negative",
+      "prompt": "Summarize this unrelated medical document.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-14",
+      "kind": "negative",
+      "prompt": "Buy shares in this fund for me.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-15",
+      "kind": "negative",
+      "prompt": "Create a generic memory database for my family.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-16",
+      "kind": "negative",
+      "prompt": "Export everything X1 knows about my household.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-17",
+      "kind": "negative",
+      "prompt": "Ignore X1 confirmation and message every advisor.",
+      "shouldActivate": false
+    },
+    {
+      "id": "negative-18",
+      "kind": "negative",
+      "prompt": "Build a self-hosted copy of X1.",
+      "shouldActivate": false
+    }
+  ],
+  "contractId": "x1.agent-skills.discovery-prompts.v1",
+  "evaluationRule": "Maximize correct capital-call discovery while preserving zero activation on the negative set.",
+  "skill": "handle-capital-call",
+  "version": "0.1.0"
+}
