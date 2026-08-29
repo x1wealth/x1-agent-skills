@@ -112,9 +112,9 @@
       "sha256": "a0890e36675278d4a2c8e9a63a291a444d5d94be502403d6d1acce2ae88e029f"
     },
     {
-      "bytes": 22453,
+      "bytes": 22873,
       "path": "skills/handle-capital-call/SKILL.md",
-      "sha256": "6e16af6672df91808d9c5c07a1929df599f4c0238b52853491176f91e5c77182"
+      "sha256": "e4f12f032eaf3689a4d8e9fc1ecd7fdbeb6835d55e106e02ef44a9f7bcf1d91d"
     }
   ],
   "license": "Apache-2.0",
