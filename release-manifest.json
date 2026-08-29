@@ -17,9 +17,9 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 234,
+      "bytes": 333,
       "path": "CHANGELOG.md",
-      "sha256": "282da14e984dfba0222405c82bf4adb6f5b3692317b72138c279bcddb2652887"
+      "sha256": "333ad8b1e1b7f523326e74fe70d78abd4ccd5f955eda7245f4a2683119db0c44"
     },
     {
       "bytes": 2539,
@@ -42,9 +42,9 @@
       "sha256": "73e67499d2d72af306425f68b6db9e6245726c3d30f9360b065c7628e31d3ceb"
     },
     {
-      "bytes": 3978,
+      "bytes": 3909,
       "path": "FIELD_GUIDE.md",
-      "sha256": "50ef514d92533f63ed8825632b03847f2529973553d5986ff67cbfef5cb3a8c2"
+      "sha256": "6fa3136e290608d164126ac88d8bdb4443fe1540d122642ec1f9850bc798eb64"
     },
     {
       "bytes": 1398,
@@ -57,9 +57,9 @@
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
-      "bytes": 2569,
+      "bytes": 2573,
       "path": "llms.txt",
-      "sha256": "fb05154c45dfda3ca0fbb9325d527c55c0c56c3108608d5bd84ed083d3da35bf"
+      "sha256": "28f66a765d9b7e6fde56c70d1ec92027325cb487057021fe4eef7e243cfc30c7"
     },
     {
       "bytes": 287,
@@ -187,9 +187,9 @@
       "sha256": "6e16af6672df91808d9c5c07a1929df599f4c0238b52853491176f91e5c77182"
     },
     {
-      "bytes": 9682,
+      "bytes": 7129,
       "path": "README.md",
-      "sha256": "7555fb711b71cc7ee602447d01cedf1e936ad9d6c3b2de81c7e3e9cef0b027f0"
+      "sha256": "70bc3f1f0f597f2a131be9ab4d8efc971d0dc4775fbf25125ee2c1842724a585"
     },
     {
       "bytes": 2125,
@@ -263,7 +263,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "386beb2622334cf3f63e0fd775084dda3dfcb51437b103d084ed7ecaf5fa6eb7"
+      "sha256": "d3ba6acf0cc8852e2277315fcc56b6fd7625ddaa00e779b70f603dd09497dfc7"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
