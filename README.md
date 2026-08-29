@@ -33,6 +33,20 @@ Then connect your compatible host to X1's remote MCP service at
 `https://mcp.x1wealth.com/mcp`. X1 handles sign-in and decides which tools and
 records the person can use. Installing the skill grants no additional access.
 
+### Give the agent a real source
+
+The synthetic tour needs no account. Connect a free X1 account when you want
+the agent to work from a real document instead of another pasted prompt.
+
+The agent can propose adding a source document to your private X1 vault. You
+review each exact action in X1. Once X1 accepts, scans, and indexes the file,
+the agent can search that source in later work. A free vault holds up to 10
+documents, 10 MB each.
+
+That gives the agent a trusted starting point. It still can't move money,
+verify settlement, write professional or coordination records, or complete a
+capital call on its own.
+
 The package includes native setup for the two hosts we've qualified.
 
 ### Codex
