@@ -18,6 +18,66 @@
       "status": "provider_submission_not_asserted"
     },
     {
+      "host": "eve",
+      "status": "skill_install_supported_connection_not_qualified"
+    },
+    {
+      "host": "Pi",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "OpenCode",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Cursor",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Gemini CLI",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "GitHub Copilot",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Goose",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Amp",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Cline",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Devin",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "OpenHands",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Replit",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Roo Code",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Warp",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
+      "host": "Windsurf",
+      "status": "skill_install_supported_host_not_qualified"
+    },
+    {
       "host": "Other MCP hosts",
       "status": "expected_compatible_not_qualified"
     }

@@ -23,12 +23,23 @@ const forbiddenBasenames = new Set([
   "LICENSE_DECISION.md",
 ]);
 const allowedPublicHosts = new Set([
+  "eve.dev",
   "github.com",
   "json-schema.org",
   "mcp.x1wealth.com",
   "www.apache.org",
   "x1wealth.com",
 ]);
+const forbiddenInternalStrategyText = [
+  /\bx1-w-[a-z0-9][a-z0-9.-]*\b/iu,
+  /(?:^|[/\\])\.beads(?:[/\\]|$)/imu,
+  /docs\/plans\//iu,
+  /strategy\/agent-native/iu,
+  /X1_AGENT_(?:FIRST_FINANCIAL_EVENT_ACQUISITION_PROGRAM|NATIVE_HOUSEHOLD_CONTROL_PLANE)/u,
+  /45[- ]day assisted commercial cohort/iu,
+  /household\/operator\/professional distribution barbell/iu,
+  /repeated professional initiation/iu,
+];
 
 function isRootGitMetadata(path, entry) {
   return path === ".git" && (entry.isDirectory() || entry.isFile());
@@ -111,6 +122,9 @@ for (const entry of manifest.files) {
     if (/docs\/mcp\/skills/iu.test(text)) {
       errors.push(`forbidden private monorepo path in ${entry.path}`);
     }
+    if (forbiddenInternalStrategyText.some((pattern) => pattern.test(text))) {
+      errors.push(`forbidden internal strategy text in ${entry.path}`);
+    }
     for (const match of text.matchAll(/https:\/\/[^\s)"'<>`]+/gu)) {
       let url;
       try {
@@ -147,11 +161,14 @@ const requiredPaths = [
   "LICENSE",
   "NOTICE",
   "README.md",
+  "RECEIPTS.md",
   "SECURITY.md",
+  "THE_STOP_TEST.md",
   "compatibility.json",
   "dependency-licenses.json",
   "discovery-prompts.json",
   "llms.txt",
+  "integrations/eve/README.md",
   "plugins/x1-agent-skills/.claude-plugin/plugin.json",
   "plugins/x1-agent-skills/.codex-plugin/plugin.json",
   "plugins/x1-agent-skills/skills/handle-capital-call/SKILL.md",
