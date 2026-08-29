@@ -187,9 +187,9 @@
       "sha256": "e4f12f032eaf3689a4d8e9fc1ecd7fdbeb6835d55e106e02ef44a9f7bcf1d91d"
     },
     {
-      "bytes": 7129,
+      "bytes": 7746,
       "path": "README.md",
-      "sha256": "70bc3f1f0f597f2a131be9ab4d8efc971d0dc4775fbf25125ee2c1842724a585"
+      "sha256": "439c84bbb76938624a052164f49f500281ec512a2b1ccd611d826dd0a85c9634"
     },
     {
       "bytes": 2125,
@@ -263,7 +263,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "7097721f26d9c12f15b5d18991a46307d57218c7ca1eed4b846049c9f9d64872"
+      "sha256": "07a3179427ceed6e9193e8179e78099c17c5b6472f8158b5cc7e881d8ebd02c9"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
