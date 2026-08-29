@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">X1 Agent Skills</title>
+  <desc id="description">Your family office just hired an agent. First assignment: handle the capital call.</desc>
+  <rect width="1200" height="480" rx="28" fill="#F4F0E6"/>
+  <path d="M0 366C188 326 290 449 474 404C670 356 729 234 934 251C1055 261 1127 315 1200 294V480H0Z" fill="#D7E4D4"/>
+  <circle cx="1071" cy="94" r="170" fill="#173C2B"/>
+  <circle cx="1071" cy="94" r="105" fill="none" stroke="#B7D7A8" stroke-width="2" opacity=".65"/>
+  <text x="72" y="78" fill="#173C2B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" letter-spacing="4">X1 AGENT SKILLS</text>
+  <text x="72" y="166" fill="#171A18" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="760" letter-spacing="-2.5">YOUR FAMILY OFFICE</text>
+  <text x="72" y="236" fill="#173C2B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="760" letter-spacing="-2.5">JUST HIRED AN AGENT.</text>
+  <text x="72" y="306" fill="#4D564F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24">First assignment: handle the capital call.</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="1.5">
+    <rect x="72" y="380" width="150" height="48" rx="24" fill="#173C2B"/><text x="108" y="411" fill="#F4F0E6">NOTICE</text>
+    <path d="M234 404H266" stroke="#173C2B" stroke-width="2"/><path d="m258 397 9 7-9 7" fill="none" stroke="#173C2B" stroke-width="2"/>
+    <rect x="280" y="380" width="132" height="48" rx="24" fill="#C4DAB9"/><text x="315" y="411" fill="#173C2B">AGENT</text>
+    <path d="M424 404H456" stroke="#173C2B" stroke-width="2"/><path d="m448 397 9 7-9 7" fill="none" stroke="#173C2B" stroke-width="2"/>
+    <rect x="470" y="380" width="150" height="48" rx="24" fill="#F4F0E6" stroke="#173C2B" stroke-width="2"/><text x="518" y="411" fill="#173C2B">TEAM</text>
+    <path d="M632 404H664" stroke="#173C2B" stroke-width="2"/><path d="m656 397 9 7-9 7" fill="none" stroke="#173C2B" stroke-width="2"/>
+    <rect x="678" y="380" width="186" height="48" rx="24" fill="#173C2B"/><text x="708" y="411" fill="#F4F0E6">CONTINUE</text>
+  </g>
+  <text x="994" y="119" fill="#F4F0E6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="70" font-weight="800" letter-spacing="-4">X1</text>
+</svg>
