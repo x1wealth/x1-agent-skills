@@ -17,9 +17,9 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 333,
+      "bytes": 504,
       "path": "CHANGELOG.md",
-      "sha256": "333ad8b1e1b7f523326e74fe70d78abd4ccd5f955eda7245f4a2683119db0c44"
+      "sha256": "1f2038d15749d0e9bd621d00a93a0664d11d8a1da3a139f0233560f6dd214452"
     },
     {
       "bytes": 2539,
@@ -263,7 +263,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "d3ba6acf0cc8852e2277315fcc56b6fd7625ddaa00e779b70f603dd09497dfc7"
+      "sha256": "efec72d2c49f46b663803a31505454b07305918bb4ccbaeabb8a8f77bfa981d7"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
