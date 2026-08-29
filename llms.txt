@@ -35,6 +35,8 @@ still controls the available tools and records.
 Preferred entry points:
 
 - [Human overview and install](README.md)
+- [The office around the agent](FIELD_GUIDE.md)
+- [Five-minute synthetic tour](TRY_IT.md)
 - [The Stop Test](THE_STOP_TEST.md)
 - [Bounded receipt contract](RECEIPTS.md)
 - [eve integration boundary](integrations/eve/README.md)

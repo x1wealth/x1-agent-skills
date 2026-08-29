@@ -17,9 +17,13 @@ agent joins the household's financial team as a capable collaborator. People
 remain accountable for consequential decisions, and the skill never moves
 money.
 
-This isn't another financial chatbot. It is an open job description, a
-qualification suite, and a connection to the household-owned office where the
-work lives after the chat ends.
+Inside are the open job description, the public tests, and the connection to the
+household-owned office where the work lives after the chat ends.
+
+Want the idea first? Read [The office around the agent](FIELD_GUIDE.md), five
+short notes from giving an AI agent a real financial job. Want to see the skill
+under pressure? [Try the weird parts first](TRY_IT.md). The synthetic demo needs
+no X1 account, API key, or financial document.
 
 ## Start in one command
 
