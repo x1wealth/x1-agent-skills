@@ -13,7 +13,6 @@ import { fileURLToPath } from "node:url";
 
 const releaseRoot = realpathSync(fileURLToPath(new URL("..", import.meta.url)));
 const manifestPath = resolve(releaseRoot, "release-manifest.json");
-const archivePrefix = "x1-agent-skills-0.1.0";
 
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
 
@@ -128,11 +127,14 @@ export function buildReleaseArchive({ outputPath }) {
   const manifest = JSON.parse(manifestBytes.toString("utf8"));
   if (
     manifest.contractId !== "x1.agent-skills-public-release.v1" ||
-    manifest.releaseStatus !== "public_candidate_not_published" ||
+    manifest.artifactQualificationStatus !== "exact_bytes_qualified" ||
     !Array.isArray(manifest.files)
   ) {
-    throw new Error("release manifest is not an unpublished X1 public release");
+    throw new Error(
+      "release manifest is not an exact qualified X1 public release"
+    );
   }
+  const archivePrefix = `x1-agent-skills-${manifest.version}`;
   const declared = new Set();
   for (const entry of manifest.files) {
     if (!safeRelativePath(entry.path) || declared.has(entry.path)) {

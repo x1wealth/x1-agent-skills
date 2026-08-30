@@ -56,7 +56,7 @@ function sha256(value) {
 export function verifyDeclaredPackageBinding(manifest, readExportFile) {
   if (
     manifest?.contractId !== "x1.agent-skills-public-plugin.v1" ||
-    manifest?.releaseStatus !== "public_candidate_not_published" ||
+    manifest?.artifactQualificationStatus !== "exact_bytes_qualified" ||
     !Array.isArray(manifest?.files)
   ) {
     throw new Error("Export manifest is not a public X1 plugin manifest");
@@ -91,7 +91,7 @@ export function readPackageBinding() {
   return {
     files: verified.files,
     manifestSha256: sha256(manifestBytes),
-    releaseStatus: manifest.releaseStatus,
+    artifactQualificationStatus: manifest.artifactQualificationStatus,
     sourceRevision: verified.sourceRevision,
   };
 }

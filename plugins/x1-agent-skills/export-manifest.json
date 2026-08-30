@@ -1,15 +1,16 @@
 {
+  "artifactQualificationStatus": "exact_bytes_qualified",
   "contractId": "x1.agent-skills-public-plugin.v1",
   "files": [
     {
       "bytes": 513,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "6f4cfb6dedce126804a45f20587e15ec9e10d27068b48a24032a632adbcd2a26"
+      "sha256": "10b44c288a8031e89aa5bd7379b4870d06bd2af313278bc1954c2d9b7340c3e7"
     },
     {
       "bytes": 1350,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "5111e97bdcaba83102fb59b339352396641d21e809035b10af1d20300ceb0efd"
+      "sha256": "42d603ca4c2778923de3fb7cf714c90dfdaae50f7e4d9970c286a280c86b49de"
     },
     {
       "bytes": 674,
@@ -29,7 +30,7 @@
     {
       "bytes": 861,
       "path": "package.json",
-      "sha256": "9ee08953ea8c7e49ff53a01bb319fc9cc564a851aa4522cd5aeb44146a842b1c"
+      "sha256": "5475d310b313b643fe8f3f58087cfdfe1026a9681da3d7fadc23d2d058d47677"
     },
     {
       "bytes": 23714,
@@ -42,9 +43,9 @@
       "sha256": "903aa95d16299d7036393741ffc32889a078b661c499b226e6939a6abaa63073"
     },
     {
-      "bytes": 1742,
+      "bytes": 2131,
       "path": "scripts/verify-plugin.mjs",
-      "sha256": "46bed312084231459e643a6b0f19986929291d10600502513fe4749cbc06cbd1"
+      "sha256": "e02bbc40af454d81ed416799273945a3e6eebab71796788560a733e8abec169b"
     },
     {
       "bytes": 32254,
@@ -92,14 +93,14 @@
       "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
-      "bytes": 19501,
+      "bytes": 19534,
       "path": "skills/handle-capital-call/evals/run-host-eval.mjs",
-      "sha256": "ac921d073ec97ee3b5bff0734e5a9b7ae7180524f19fa659ff6cadce5277dddc"
+      "sha256": "a59ccb159f67df89b74046544623226d2852f8134178775c11b541eff431a1f1"
     },
     {
-      "bytes": 6139,
+      "bytes": 6144,
       "path": "skills/handle-capital-call/evals/run-host-eval.test.mjs",
-      "sha256": "eec93ad61c3f2d0751eb61c996b16755a3e76cc90e8c79a0dabf7605cfe1885c"
+      "sha256": "4ef5740446131b0f815bb3bbc547855f0d2a2df28de02020807e9e6a62e6a257"
     },
     {
       "bytes": 101252,
@@ -118,7 +119,16 @@
     }
   ],
   "license": "Apache-2.0",
-  "releaseStatus": "public_candidate_not_published",
+  "publicationStatus": {
+    "directories": {
+      "claude": "not_published",
+      "openai": "not_published"
+    },
+    "github": {
+      "priorVerifiedRelease": "v0.1.0",
+      "repository": "published"
+    }
+  },
   "sourceExportManifestSha256": "5a0f1a2fcecdb7da59df8cdf263a260b4bbee69c487ada7829e2b6784749fc8e",
   "sourceProvenance": [
     {
@@ -207,5 +217,5 @@
     }
   ],
   "sourceRevision": "e91e1658669cc73e0c13ce6444892105edd31955",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

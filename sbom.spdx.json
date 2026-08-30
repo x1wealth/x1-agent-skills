@@ -8,8 +8,8 @@
     "licenseListVersion": "3.26"
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.1.0",
-  "name": "x1-agent-skills-0.1.0",
+  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.1.1",
+  "name": "x1-agent-skills-0.1.1",
   "packages": [
     {
       "copyrightText": "Copyright 2026 Lever Wealth LLC",
@@ -19,7 +19,7 @@
       "licenseDeclared": "Apache-2.0",
       "name": "x1-agent-skills",
       "SPDXID": "SPDXRef-Package-x1-agent-skills",
-      "versionInfo": "0.1.0"
+      "versionInfo": "0.1.1"
     },
     {
       "downloadLocation": "NOASSERTION",

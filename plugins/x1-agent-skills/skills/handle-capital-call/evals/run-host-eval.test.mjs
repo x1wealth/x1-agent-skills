@@ -37,7 +37,7 @@ test("host package binding rejects changed declared bytes", () => {
           "9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a",
       },
     ],
-    releaseStatus: "public_candidate_not_published",
+    artifactQualificationStatus: "exact_bytes_qualified",
     sourceRevision: "e91e1658669cc73e0c13ce6444892105edd31955",
   };
   const verified = verifyDeclaredPackageBinding(manifest, () =>

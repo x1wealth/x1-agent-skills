@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 - 2026-08-30
+
+- Separated exact artifact qualification from live publication state so current metadata reflects the public GitHub repository and verified v0.1.0 release.
+- Recorded Claude and OpenAI directory publication independently without changing X1 authority or host-support claims.
+
 ## 0.1.0 - 2026-08-29
 
 - Published the first handle-capital-call skill, with portable Agent Skills packaging and plugins for Codex and Claude Code.
