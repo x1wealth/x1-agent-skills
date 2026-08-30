@@ -145,8 +145,41 @@ for (const entry of manifest.files) {
 if (manifest.contractId !== "x1.agent-skills-public-release.v1") {
   errors.push("unexpected release manifest contractId");
 }
-if (manifest.releaseStatus !== "public_candidate_not_published") {
-  errors.push("unexpected release status");
+if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
+  errors.push("unexpected artifact qualification status");
+}
+const expectedPublicationStatus = {
+  directories: { claude: "not_published", openai: "not_published" },
+  github: { priorVerifiedRelease: "v0.1.0", repository: "published" },
+};
+if (
+  JSON.stringify(manifest.publicationStatus) !==
+  JSON.stringify(expectedPublicationStatus)
+) {
+  errors.push("unexpected publication status");
+}
+const compatibility = JSON.parse(
+  readFileSync(resolve(root, "compatibility.json"), "utf8")
+);
+const pluginExportManifest = JSON.parse(
+  readFileSync(
+    resolve(root, "plugins/x1-agent-skills/export-manifest.json"),
+    "utf8"
+  )
+);
+for (const [label, metadata] of [
+  ["compatibility", compatibility],
+  ["plugin export manifest", pluginExportManifest],
+]) {
+  if (metadata.artifactQualificationStatus !== "exact_bytes_qualified") {
+    errors.push(`${label} artifact qualification status disagrees`);
+  }
+  if (
+    JSON.stringify(metadata.publicationStatus) !==
+    JSON.stringify(expectedPublicationStatus)
+  ) {
+    errors.push(`${label} publication status disagrees`);
+  }
 }
 if (manifest.license !== "Apache-2.0") {
   errors.push("public release must use Apache-2.0");

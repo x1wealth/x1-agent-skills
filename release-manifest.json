@@ -1,4 +1,5 @@
 {
+  "artifactQualificationStatus": "exact_bytes_qualified",
   "contractId": "x1.agent-skills-public-release.v1",
   "files": [
     {
@@ -9,7 +10,7 @@
     {
       "bytes": 375,
       "path": ".claude-plugin/marketplace.json",
-      "sha256": "c1107507d949e3b6b519829dd24c5a0b4365ac39bccf49444ed93fb4ee5089da"
+      "sha256": "b477d056964020a43df4d6e0e2ad3adcc7815893e7f89deb610bb9d090248ace"
     },
     {
       "bytes": 2552,
@@ -17,14 +18,14 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 504,
+      "bytes": 803,
       "path": "CHANGELOG.md",
-      "sha256": "1f2038d15749d0e9bd621d00a93a0664d11d8a1da3a139f0233560f6dd214452"
+      "sha256": "6702571ffbf87607ac6979ce01f366a97ada749932033c62d0cc97d3aecbfd4e"
     },
     {
-      "bytes": 2539,
+      "bytes": 2768,
       "path": "compatibility.json",
-      "sha256": "a01ae978c7dd8bb64ff7306e101116b635c1249979749864fcdebc9f229170c4"
+      "sha256": "0e4ef1f28f62f5f8a6b65e59baaf6ec93d5e13b8ce183628e1b832b14fbeffb6"
     },
     {
       "bytes": 1851,
@@ -34,12 +35,12 @@
     {
       "bytes": 8502,
       "path": "dependency-licenses.json",
-      "sha256": "6be8682760553b09d09458f03669417cf93d4b8a83e4c9fe7a4b678fd8a8d80d"
+      "sha256": "04c66ce81fb8eb05835b84f9d3d6c842fe4fd3cefb6c9ec9085607d0e3a30783"
     },
     {
       "bytes": 3192,
       "path": "discovery-prompts.json",
-      "sha256": "73e67499d2d72af306425f68b6db9e6245726c3d30f9360b065c7628e31d3ceb"
+      "sha256": "f20891f3d1f1f2dc205ac48c2a0bca0553738a6e3fba341851bb6b07659402f7"
     },
     {
       "bytes": 3909,
@@ -69,17 +70,17 @@
     {
       "bytes": 513,
       "path": "plugins/x1-agent-skills/.claude-plugin/plugin.json",
-      "sha256": "6f4cfb6dedce126804a45f20587e15ec9e10d27068b48a24032a632adbcd2a26"
+      "sha256": "10b44c288a8031e89aa5bd7379b4870d06bd2af313278bc1954c2d9b7340c3e7"
     },
     {
       "bytes": 1350,
       "path": "plugins/x1-agent-skills/.codex-plugin/plugin.json",
-      "sha256": "5111e97bdcaba83102fb59b339352396641d21e809035b10af1d20300ceb0efd"
+      "sha256": "42d603ca4c2778923de3fb7cf714c90dfdaae50f7e4d9970c286a280c86b49de"
     },
     {
-      "bytes": 8148,
+      "bytes": 8370,
       "path": "plugins/x1-agent-skills/export-manifest.json",
-      "sha256": "06149e0f8178f3bf7d357fd55781863ca7afb07aa21453fe2593b9c4e5aa3a43"
+      "sha256": "852d231f3b27c4d32242c34f6387df2c86a9f472f0073842b48acec6bb4deb11"
     },
     {
       "bytes": 674,
@@ -99,7 +100,7 @@
     {
       "bytes": 861,
       "path": "plugins/x1-agent-skills/package.json",
-      "sha256": "9ee08953ea8c7e49ff53a01bb319fc9cc564a851aa4522cd5aeb44146a842b1c"
+      "sha256": "5475d310b313b643fe8f3f58087cfdfe1026a9681da3d7fadc23d2d058d47677"
     },
     {
       "bytes": 23714,
@@ -112,9 +113,9 @@
       "sha256": "903aa95d16299d7036393741ffc32889a078b661c499b226e6939a6abaa63073"
     },
     {
-      "bytes": 1742,
+      "bytes": 2131,
       "path": "plugins/x1-agent-skills/scripts/verify-plugin.mjs",
-      "sha256": "46bed312084231459e643a6b0f19986929291d10600502513fe4749cbc06cbd1"
+      "sha256": "e02bbc40af454d81ed416799273945a3e6eebab71796788560a733e8abec169b"
     },
     {
       "bytes": 32254,
@@ -162,14 +163,14 @@
       "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
-      "bytes": 19501,
+      "bytes": 19534,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/run-host-eval.mjs",
-      "sha256": "ac921d073ec97ee3b5bff0734e5a9b7ae7180524f19fa659ff6cadce5277dddc"
+      "sha256": "a59ccb159f67df89b74046544623226d2852f8134178775c11b541eff431a1f1"
     },
     {
-      "bytes": 6139,
+      "bytes": 6144,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/run-host-eval.test.mjs",
-      "sha256": "eec93ad61c3f2d0751eb61c996b16755a3e76cc90e8c79a0dabf7605cfe1885c"
+      "sha256": "4ef5740446131b0f815bb3bbc547855f0d2a2df28de02020807e9e6a62e6a257"
     },
     {
       "bytes": 101252,
@@ -199,12 +200,12 @@
     {
       "bytes": 40808,
       "path": "sbom.spdx.json",
-      "sha256": "91ecc65714404b0dc92ee98006f03a7d76c09dfec8847d93c6331e5c02a009c1"
+      "sha256": "0247f6b2f165920b66c4f13b8f7d010910083b4f098d9803d5e93079b884d7b2"
     },
     {
-      "bytes": 6236,
+      "bytes": 6273,
       "path": "scripts/build-release-archive.mjs",
-      "sha256": "caeab6c967b67753507fd22292b6678da72c95c31fc19c23e5d819d2db3e39ec"
+      "sha256": "f7cbe1d8d7133a2808a87da8c700dde8a5bbf026f8352c221148781fd3f7613d"
     },
     {
       "bytes": 1995,
@@ -212,9 +213,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 8971,
+      "bytes": 10009,
       "path": "scripts/verify-release.mjs",
-      "sha256": "69a5450f867c8b087b293721d4c3780543f883cb1032eae511931a47b7dded35"
+      "sha256": "fca7aec10dbc7875559022f85d88138bca1abcab3c3eb4eeb75bc3bfba959e95"
     },
     {
       "bytes": 625,
@@ -243,9 +244,18 @@
     }
   ],
   "license": "Apache-2.0",
-  "pluginExportManifestSha256": "06149e0f8178f3bf7d357fd55781863ca7afb07aa21453fe2593b9c4e5aa3a43",
+  "pluginExportManifestSha256": "852d231f3b27c4d32242c34f6387df2c86a9f472f0073842b48acec6bb4deb11",
+  "publicationStatus": {
+    "directories": {
+      "claude": "not_published",
+      "openai": "not_published"
+    },
+    "github": {
+      "priorVerifiedRelease": "v0.1.0",
+      "repository": "published"
+    }
+  },
   "publisher": "Lever Wealth LLC",
-  "releaseStatus": "public_candidate_not_published",
   "repository": "https://github.com/x1wealth/x1-agent-skills",
   "sourceRevision": "e91e1658669cc73e0c13ce6444892105edd31955",
   "transformInputs": [
@@ -255,7 +265,11 @@
     },
     {
       "path": "docs/mcp/x1-agent-skills-public-release-contract.v1.json",
-      "sha256": "189b7e3fc2eac812740a98f22279b7c95af44bb7215f24877d31a1879386613c"
+      "sha256": "ff8067ee25997221500063ea993d1b29744f28e49bf276540ff7f7b41cd3a3ea"
+    },
+    {
+      "path": "docs/mcp/x1-agent-skills-v0-1-0-github-release-publication-2026-08-29.json",
+      "sha256": "90f352d04bf9f9637aea1d22fe8e8db7e1ba195e0931a8d8fde3cca40cac4c43"
     },
     {
       "path": "scripts/build-x1-agent-skills-private-export.mjs",
@@ -263,7 +277,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "07a3179427ceed6e9193e8179e78099c17c5b6472f8158b5cc7e881d8ebd02c9"
+      "sha256": "43e402e2c18d093e5fea125a8d791cb00f62a21ce9809fc861c130e7a88a93ba"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -271,7 +285,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/build-release-archive.mjs",
-      "sha256": "caeab6c967b67753507fd22292b6678da72c95c31fc19c23e5d819d2db3e39ec"
+      "sha256": "f7cbe1d8d7133a2808a87da8c700dde8a5bbf026f8352c221148781fd3f7613d"
     },
     {
       "path": "scripts/templates/x1-agent-skills/dependency-licenses.json",
@@ -291,12 +305,12 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "69a5450f867c8b087b293721d4c3780543f883cb1032eae511931a47b7dded35"
+      "sha256": "fca7aec10dbc7875559022f85d88138bca1abcab3c3eb4eeb75bc3bfba959e95"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
       "sha256": "5397e7b5e6dd2011caca53edec1f3ffbac5a136615a2a7ee078a8587c7fccd32"
     }
   ],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

@@ -32,8 +32,24 @@ for (const entry of manifest.files) {
     errors.push(`plugin file mismatch: ${entry.path}`);
   }
 }
-if (manifest.releaseStatus !== "public_candidate_not_published") {
-  errors.push("unexpected plugin release status");
+if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
+  errors.push("unexpected plugin artifact qualification status");
+}
+const expectedPublicationStatus = {
+  "directories": {
+    "claude": "not_published",
+    "openai": "not_published"
+  },
+  "github": {
+    "priorVerifiedRelease": "v0.1.0",
+    "repository": "published"
+  }
+};
+if (
+  JSON.stringify(manifest.publicationStatus) !==
+  JSON.stringify(expectedPublicationStatus)
+) {
+  errors.push("unexpected plugin publication status");
 }
 if (errors.length) {
   process.stdout.write(`${JSON.stringify({ errors, ok: false }, null, 2)}\n`);
