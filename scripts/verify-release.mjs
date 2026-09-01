@@ -149,8 +149,12 @@ if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
   errors.push("unexpected artifact qualification status");
 }
 const expectedPublicationStatus = {
-  directories: { claude: "not_published", openai: "not_published" },
-  github: { priorVerifiedRelease: "v0.1.0", repository: "published" },
+  directories: {
+    claude: "not_published",
+    grok: "not_published",
+    openai: "not_published",
+  },
+  github: { priorVerifiedRelease: "v0.1.1", repository: "published" },
 };
 if (
   JSON.stringify(manifest.publicationStatus) !==
@@ -167,13 +171,21 @@ const pluginExportManifest = JSON.parse(
     "utf8"
   )
 );
+if (
+  compatibility.artifactQualificationStatus !==
+  "current_candidate_requires_named_host_qualification"
+) {
+  errors.push("compatibility artifact qualification status disagrees");
+}
+if (
+  pluginExportManifest.artifactQualificationStatus !== "exact_bytes_qualified"
+) {
+  errors.push("plugin export manifest artifact qualification status disagrees");
+}
 for (const [label, metadata] of [
   ["compatibility", compatibility],
   ["plugin export manifest", pluginExportManifest],
 ]) {
-  if (metadata.artifactQualificationStatus !== "exact_bytes_qualified") {
-    errors.push(`${label} artifact qualification status disagrees`);
-  }
   if (
     JSON.stringify(metadata.publicationStatus) !==
     JSON.stringify(expectedPublicationStatus)
@@ -191,6 +203,8 @@ if (manifest.publisher !== "Lever Wealth LLC") {
 const requiredPaths = [
   ".agents/plugins/marketplace.json",
   ".claude-plugin/marketplace.json",
+  ".grok-plugin/marketplace.json",
+  "GROK_BOT_PROFILE.md",
   "LICENSE",
   "NOTICE",
   "README.md",
@@ -202,8 +216,11 @@ const requiredPaths = [
   "discovery-prompts.json",
   "llms.txt",
   "integrations/eve/README.md",
+  "integrations/grok/README.md",
   "plugins/x1-agent-skills/.claude-plugin/plugin.json",
   "plugins/x1-agent-skills/.codex-plugin/plugin.json",
+  "plugins/x1-agent-skills/GROK_BOT_PROFILE.md",
+  "plugins/x1-agent-skills/integrations/grok/README.md",
   "plugins/x1-agent-skills/skills/handle-capital-call/SKILL.md",
   "sbom.spdx.json",
 ];
@@ -263,6 +280,20 @@ if (claudeManifest.defaultEnabled !== false) {
 }
 if (claudeManifest.mcpServers?.x1?.url !== "https://mcp.x1wealth.com/mcp") {
   errors.push("Claude manifest must use the exact public X1 MCP endpoint");
+}
+
+const grokMarketplace = JSON.parse(
+  readFileSync(resolve(root, ".grok-plugin/marketplace.json"), "utf8")
+);
+const grokPlugin = grokMarketplace.plugins?.find(
+  (plugin) => plugin.name === "x1-agent-skills"
+);
+if (
+  grokMarketplace.name !== "x1-wealth" ||
+  grokPlugin?.source?.type !== "local" ||
+  grokPlugin?.source?.path !== "./plugins/x1-agent-skills"
+) {
+  errors.push("Grok marketplace must bind the exact local X1 plugin path");
 }
 
 const discovery = JSON.parse(

@@ -47,7 +47,8 @@ That gives the agent a trusted starting point. It still can't move money,
 verify settlement, write professional or coordination records, or complete a
 capital call on its own.
 
-The package includes native setup for the two hosts we've qualified.
+The package includes native setup for Codex, Claude Code, and Grok. Exact host
+qualification is recorded separately from installation support.
 
 ### Codex
 
@@ -76,6 +77,31 @@ ready, and complete X1 sign-in through Claude Code.
 
 See [compatibility.json](compatibility.json) for the exact qualification status
 of each host.
+
+### Grok Build
+
+Preview the exact tagged plugin before trusting it:
+
+```bash
+grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills
+grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills --trust
+grok inspect
+```
+
+The plugin includes the skill and X1 MCP endpoint. Grok will ask you to complete
+X1 sign-in. An install does not grant access or prove the full workflow. Read
+the [Grok setup and qualification boundary](integrations/grok/README.md).
+
+### Grok Bot
+
+Create a focused Bot, connect X1 as a Custom MCP connector at
+`https://mcp.x1wealth.com/mcp`, and enable the installed
+`handle-capital-call` skill under Settings -> Plugins -> Yours. Use the
+[share-safe Bot profile](GROK_BOT_PROFILE.md) so X1 remains the authority while
+the Bot owns the administrative job.
+
+Start with one manual notice. Save a routine only after the Bot stops correctly
+on missing evidence, changed payment details, and required human confirmation.
 
 ### Other agents
 

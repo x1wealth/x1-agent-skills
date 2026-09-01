@@ -1,0 +1,25 @@
+{
+  "description": "Official X1 Wealth agent skills",
+  "name": "x1-wealth",
+  "owner": {
+    "name": "X1 Wealth"
+  },
+  "plugins": [
+    {
+      "category": "finance",
+      "description": "Review and coordinate capital-call notices through X1 without moving money.",
+      "homepage": "https://github.com/x1wealth/x1-agent-skills",
+      "keywords": [
+        "x1",
+        "capital call",
+        "private investments"
+      ],
+      "name": "x1-agent-skills",
+      "source": {
+        "path": "./plugins/x1-agent-skills",
+        "type": "local"
+      },
+      "version": "0.2.0"
+    }
+  ]
+}

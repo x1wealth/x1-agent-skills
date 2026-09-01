@@ -38,10 +38,11 @@ if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
 const expectedPublicationStatus = {
   "directories": {
     "claude": "not_published",
+    "grok": "not_published",
     "openai": "not_published"
   },
   "github": {
-    "priorVerifiedRelease": "v0.1.0",
+    "priorVerifiedRelease": "v0.1.1",
     "repository": "published"
   }
 };

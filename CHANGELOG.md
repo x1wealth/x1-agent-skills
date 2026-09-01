@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 - 2026-08-31
+
+- Added first-class Grok marketplace metadata, Grok Build installation guidance, and a share-safe Grok Bot profile and routine boundary.
+- Recorded the exact published v0.1.1 install and OAuth-boundary proof under Grok Build 1.0.13 without turning it into a full workflow-qualification claim.
+- Kept X1 authentication, household authority, human confirmation, durable records, and money movement outside Grok and the open skill.
+
 ## 0.1.1 - 2026-08-30
 
 - Separated exact artifact qualification from live publication state so current metadata reflects the public GitHub repository and verified v0.1.0 release.
