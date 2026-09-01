@@ -40,6 +40,8 @@ Preferred entry points:
 - [The Stop Test](THE_STOP_TEST.md)
 - [Bounded receipt contract](RECEIPTS.md)
 - [eve integration boundary](integrations/eve/README.md)
+- [Grok integration and Bot boundary](integrations/grok/README.md)
+- [Share-safe Grok Bot profile](GROK_BOT_PROFILE.md)
 - [Exact skill contract](plugins/x1-agent-skills/skills/handle-capital-call/SKILL.md)
 - [Current public X1 boundary](plugins/x1-agent-skills/skills/handle-capital-call/references/current-x1-contract.md)
 - [Synthetic evaluation guide](plugins/x1-agent-skills/skills/handle-capital-call/evals/README.md)

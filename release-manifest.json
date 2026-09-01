@@ -10,7 +10,12 @@
     {
       "bytes": 375,
       "path": ".claude-plugin/marketplace.json",
-      "sha256": "b477d056964020a43df4d6e0e2ad3adcc7815893e7f89deb610bb9d090248ace"
+      "sha256": "87710b9e375b031feb1e0923be161f254bdd7237bab7ca1bb6a91d0f49c3a4da"
+    },
+    {
+      "bytes": 597,
+      "path": ".grok-plugin/marketplace.json",
+      "sha256": "f24c09a31febad2f43d41937a2ba34cc3af0efc7ed2ca471ddfaa2af566ded90"
     },
     {
       "bytes": 2552,
@@ -18,14 +23,14 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 803,
+      "bytes": 1256,
       "path": "CHANGELOG.md",
-      "sha256": "6702571ffbf87607ac6979ce01f366a97ada749932033c62d0cc97d3aecbfd4e"
+      "sha256": "d3aff25a114a0aae0e292602c41f5fb200e5dbd7250a87c6792af880e770056e"
     },
     {
-      "bytes": 2768,
+      "bytes": 3858,
       "path": "compatibility.json",
-      "sha256": "0e4ef1f28f62f5f8a6b65e59baaf6ec93d5e13b8ce183628e1b832b14fbeffb6"
+      "sha256": "011ae5fbfb11ecd6d1a49444088c847e6e04bae03101479dfc4871b719b5fe30"
     },
     {
       "bytes": 1851,
@@ -35,12 +40,12 @@
     {
       "bytes": 8502,
       "path": "dependency-licenses.json",
-      "sha256": "04c66ce81fb8eb05835b84f9d3d6c842fe4fd3cefb6c9ec9085607d0e3a30783"
+      "sha256": "2b941ac3d1e9768ccf1e40d6f1231b98e7b408c149a150a9c2b3b4836a6a78f0"
     },
     {
       "bytes": 3192,
       "path": "discovery-prompts.json",
-      "sha256": "f20891f3d1f1f2dc205ac48c2a0bca0553738a6e3fba341851bb6b07659402f7"
+      "sha256": "e9105daf6ddbce852f48c93bf1595668363c0448a4113a03deacb237e43b6bf7"
     },
     {
       "bytes": 3909,
@@ -48,9 +53,19 @@
       "sha256": "6fa3136e290608d164126ac88d8bdb4443fe1540d122642ec1f9850bc798eb64"
     },
     {
+      "bytes": 2583,
+      "path": "GROK_BOT_PROFILE.md",
+      "sha256": "13138b6735374f0f9928d9bf5801331efc5d0a5f848520aefcc25b88b9ab0381"
+    },
+    {
       "bytes": 1398,
       "path": "integrations/eve/README.md",
       "sha256": "6a6af990f6c6c72c267dd4d23619ae60083c6939707a0c3dd157865ff7bd1ac1"
+    },
+    {
+      "bytes": 2177,
+      "path": "integrations/grok/README.md",
+      "sha256": "f292e2de0a2f8ed3990dd9d496a6a257340fa22cff7a15c624769045fa961456"
     },
     {
       "bytes": 11357,
@@ -58,9 +73,9 @@
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
-      "bytes": 2573,
+      "bytes": 2693,
       "path": "llms.txt",
-      "sha256": "28f66a765d9b7e6fde56c70d1ec92027325cb487057021fe4eef7e243cfc30c7"
+      "sha256": "bbcd66144b51f643c9af1f07b56d482ff488bad648a82de17eb5300b6c99a926"
     },
     {
       "bytes": 287,
@@ -70,17 +85,22 @@
     {
       "bytes": 513,
       "path": "plugins/x1-agent-skills/.claude-plugin/plugin.json",
-      "sha256": "10b44c288a8031e89aa5bd7379b4870d06bd2af313278bc1954c2d9b7340c3e7"
+      "sha256": "e8fab00b9b6261f543ae82d56595ea01ad7ccfebf4eedaec45d9a2781ec299eb"
     },
     {
       "bytes": 1350,
       "path": "plugins/x1-agent-skills/.codex-plugin/plugin.json",
-      "sha256": "42d603ca4c2778923de3fb7cf714c90dfdaae50f7e4d9970c286a280c86b49de"
+      "sha256": "f8195bb8f367dfe5600805472bf504792c9f09743eb8fdefa91894b235680aea"
     },
     {
-      "bytes": 8370,
+      "bytes": 8717,
       "path": "plugins/x1-agent-skills/export-manifest.json",
-      "sha256": "852d231f3b27c4d32242c34f6387df2c86a9f472f0073842b48acec6bb4deb11"
+      "sha256": "b2ebaf954ff02bcd1ac1b3eaa67a22592daaec7e5a75fa4b1310237bc61109d3"
+    },
+    {
+      "bytes": 2583,
+      "path": "plugins/x1-agent-skills/GROK_BOT_PROFILE.md",
+      "sha256": "13138b6735374f0f9928d9bf5801331efc5d0a5f848520aefcc25b88b9ab0381"
     },
     {
       "bytes": 674,
@@ -98,9 +118,14 @@
       "sha256": "9bf493de3ac291ece60339ed9ba35fc0c53282e491865e8431e5f4b741c70829"
     },
     {
+      "bytes": 2177,
+      "path": "plugins/x1-agent-skills/integrations/grok/README.md",
+      "sha256": "f292e2de0a2f8ed3990dd9d496a6a257340fa22cff7a15c624769045fa961456"
+    },
+    {
       "bytes": 861,
       "path": "plugins/x1-agent-skills/package.json",
-      "sha256": "5475d310b313b643fe8f3f58087cfdfe1026a9681da3d7fadc23d2d058d47677"
+      "sha256": "622ae17a4e43be82642fea1b1670e82da320c7dd5d9e7e2e4f1bc0f8351e42b8"
     },
     {
       "bytes": 23714,
@@ -108,14 +133,14 @@
       "sha256": "b5a3967b4ebd55137201116f904ce9a477daea6568ce6efe0735152d3a7bcd94"
     },
     {
-      "bytes": 470,
+      "bytes": 477,
       "path": "plugins/x1-agent-skills/README.md",
-      "sha256": "903aa95d16299d7036393741ffc32889a078b661c499b226e6939a6abaa63073"
+      "sha256": "69b9858c058c39ecaa96c28c3fcfd2d6b9c9cbe6670c3f42256e99706789e46b"
     },
     {
-      "bytes": 2131,
+      "bytes": 2160,
       "path": "plugins/x1-agent-skills/scripts/verify-plugin.mjs",
-      "sha256": "e02bbc40af454d81ed416799273945a3e6eebab71796788560a733e8abec169b"
+      "sha256": "26b2db5b72afb51fabe8080ef5686a83b98b753bf0833bcb32fe91ad9152a486"
     },
     {
       "bytes": 32254,
@@ -188,9 +213,9 @@
       "sha256": "e4f12f032eaf3689a4d8e9fc1ecd7fdbeb6835d55e106e02ef44a9f7bcf1d91d"
     },
     {
-      "bytes": 7746,
+      "bytes": 8792,
       "path": "README.md",
-      "sha256": "439c84bbb76938624a052164f49f500281ec512a2b1ccd611d826dd0a85c9634"
+      "sha256": "e5389d8eedceb2eab3a1314f0822561df21b2cb9766de8e795bf161728ac89bf"
     },
     {
       "bytes": 2125,
@@ -200,7 +225,7 @@
     {
       "bytes": 40808,
       "path": "sbom.spdx.json",
-      "sha256": "0247f6b2f165920b66c4f13b8f7d010910083b4f098d9803d5e93079b884d7b2"
+      "sha256": "ae1cee5b194bfc9e592b2e2c422918d3c8e9dca2024d9151852ff75c662a049b"
     },
     {
       "bytes": 6273,
@@ -213,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 10009,
+      "bytes": 10899,
       "path": "scripts/verify-release.mjs",
-      "sha256": "fca7aec10dbc7875559022f85d88138bca1abcab3c3eb4eeb75bc3bfba959e95"
+      "sha256": "4ea1878a2a034044ed1da5d5ef6c4f131bf3242c8a49d6921913affd601ed823"
     },
     {
       "bytes": 625,
@@ -244,14 +269,15 @@
     }
   ],
   "license": "Apache-2.0",
-  "pluginExportManifestSha256": "852d231f3b27c4d32242c34f6387df2c86a9f472f0073842b48acec6bb4deb11",
+  "pluginExportManifestSha256": "b2ebaf954ff02bcd1ac1b3eaa67a22592daaec7e5a75fa4b1310237bc61109d3",
   "publicationStatus": {
     "directories": {
       "claude": "not_published",
+      "grok": "not_published",
       "openai": "not_published"
     },
     "github": {
-      "priorVerifiedRelease": "v0.1.0",
+      "priorVerifiedRelease": "v0.1.1",
       "repository": "published"
     }
   },
@@ -265,11 +291,15 @@
     },
     {
       "path": "docs/mcp/x1-agent-skills-public-release-contract.v1.json",
-      "sha256": "ff8067ee25997221500063ea993d1b29744f28e49bf276540ff7f7b41cd3a3ea"
+      "sha256": "b9abbeb369c8a382d816a333f81315e13f909431a36edaa632ae6d18e3765ec7"
     },
     {
-      "path": "docs/mcp/x1-agent-skills-v0-1-0-github-release-publication-2026-08-29.json",
-      "sha256": "90f352d04bf9f9637aea1d22fe8e8db7e1ba195e0931a8d8fde3cca40cac4c43"
+      "path": "docs/mcp/x1-agent-skills-v0-1-1-grok-install-verification-2026-08-31.json",
+      "sha256": "ac9e3153e74a8ca0fcdd7ffd800201b0d6468b39232efce596db8f617516ddd6"
+    },
+    {
+      "path": "docs/mcp/x1-agent-skills-v0-1-1-github-release-publication-2026-08-30.json",
+      "sha256": "d6759698fd138ad2f2c9695068afa471a5979b47537a197c72fa946d42904e31"
     },
     {
       "path": "scripts/build-x1-agent-skills-private-export.mjs",
@@ -277,7 +307,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "43e402e2c18d093e5fea125a8d791cb00f62a21ce9809fc861c130e7a88a93ba"
+      "sha256": "6b10087eb6b694adc120094dacbfe5fba56638fa84e63e6ef68d74feb9bc4d4d"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -305,12 +335,12 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "fca7aec10dbc7875559022f85d88138bca1abcab3c3eb4eeb75bc3bfba959e95"
+      "sha256": "4ea1878a2a034044ed1da5d5ef6c4f131bf3242c8a49d6921913affd601ed823"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
       "sha256": "5397e7b5e6dd2011caca53edec1f3ffbac5a136615a2a7ee078a8587c7fccd32"
     }
   ],
-  "version": "0.1.1"
+  "version": "0.2.0"
 }
