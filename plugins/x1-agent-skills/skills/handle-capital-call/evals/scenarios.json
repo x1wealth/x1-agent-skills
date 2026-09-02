@@ -32,7 +32,7 @@
           "get_x1_guide",
           "get_user_capabilities",
           "get_vault_documents",
-          "search_my_document_contents"
+          "get_capital_call_source_state"
         ],
         "forbidden_tools": [],
         "gap": null,
@@ -68,14 +68,15 @@
             "outcome": "success"
           },
           {
-            "name": "search_my_document_contents",
+            "name": "get_capital_call_source_state",
             "effect": "read",
             "outcome": "success",
             "source_ids": [
               "doc_notice_1"
             ],
             "citations": [
-              "page:1"
+              "x1:vault-document:doc_notice_1:page:1",
+              "x1:vault-document:doc_notice_1:page:2"
             ]
           }
         ],
@@ -89,28 +90,28 @@
               "field": "issuer",
               "value": "Example Growth Fund III",
               "source_id": "doc_notice_1",
-              "citation": "page:1",
+              "citation": "x1:vault-document:doc_notice_1:page:1",
               "tool_call_index": 3
             },
             {
               "field": "amount",
               "value": "100000",
               "source_id": "doc_notice_1",
-              "citation": "page:1",
+              "citation": "x1:vault-document:doc_notice_1:page:1",
               "tool_call_index": 3
             },
             {
               "field": "currency",
               "value": "USD",
               "source_id": "doc_notice_1",
-              "citation": "page:1",
+              "citation": "x1:vault-document:doc_notice_1:page:1",
               "tool_call_index": 3
             },
             {
               "field": "due_date",
               "value": "2026-09-15",
               "source_id": "doc_notice_1",
-              "citation": "page:1",
+              "citation": "x1:vault-document:doc_notice_1:page:2",
               "tool_call_index": 3
             }
           ],
@@ -139,8 +140,8 @@
     },
     {
       "id": "notice-metadata-preflight-held",
-      "category": "current-product-gap",
-      "intent": "Start from a member-owned capital-call notice visible through real X1 metadata, then hold because strict source state is not externally returned.",
+      "category": "capability-bounded-hold",
+      "intent": "Start from a member-owned capital-call notice visible through X1 metadata, then hold because this live surface does not mount the strict source-state read.",
       "user_input": "Start handling the capital-call notice with X1 document ID doc_preflight. Read that exact finance document from X1, but do not claim strict source state or confirm an obligation.",
       "current_support": "bounded-hold",
       "expected": {
@@ -1879,8 +1880,8 @@
     },
     {
       "id": "strict-source-state-not-returned",
-      "category": "current-product-gap",
-      "intent": "Avoid relabeling model-read fields as X1 source-ready state.",
+      "category": "capability-bounded-hold",
+      "intent": "Avoid relabeling model-read fields as X1 source-ready state when the live surface does not mount the strict source-state read.",
       "current_support": "bounded-hold",
       "expected": {
         "state": "held",
@@ -1963,7 +1964,7 @@
     {
       "id": "stale-or-mismatched-evidence",
       "category": "stale-evidence",
-      "intent": "Hold because the external surface cannot prove whether source generation and proofs are current.",
+      "intent": "Hold because this live surface does not mount the read that proves whether source generation and proofs are current.",
       "current_support": "bounded-hold",
       "expected": {
         "state": "held",

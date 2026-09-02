@@ -1,26 +1,26 @@
 {
-  "artifactQualificationStatus": "current_candidate_requires_named_host_qualification",
+  "artifactQualificationStatus": "exact_bytes_qualified",
   "contractId": "x1.agent-skills.compatibility.v1",
   "hosts": [
     {
       "host": "Codex CLI",
       "minimumVersion": "0.150.1",
-      "referenceQualifiedVersion": "0.151.0-alpha.7.1",
-      "status": "current_candidate_requalification_required"
+      "referenceQualifiedVersion": "0.152.0",
+      "status": "qualified"
     },
     {
       "host": "Claude Code",
       "minimumVersion": "2.1.154",
-      "referenceQualifiedVersion": "2.1.251",
-      "status": "current_candidate_requalification_required"
+      "referenceQualifiedVersion": "2.1.258",
+      "status": "qualified"
     },
     {
       "host": "Grok Build",
       "installEvidenceReceipt": "docs/mcp/x1-agent-skills-v0-1-1-grok-install-verification-2026-08-31.json",
       "installEvidenceReceiptSha256": "ac9e3153e74a8ca0fcdd7ffd800201b0d6468b39232efce596db8f617516ddd6",
       "installVerifiedVersion": "1.0.13",
-      "referencePublishedRelease": "v0.1.1",
-      "status": "published_plugin_install_and_oauth_boundary_verified_current_candidate_not_qualified"
+      "referencePublishedRelease": "v0.2.0",
+      "status": "published_v0_2_0_install_and_oauth_boundary_verified_current_release_not_qualified"
     },
     {
       "host": "Grok Bot",
@@ -96,9 +96,8 @@
     }
   ],
   "notes": [
-    "The prior public plugin bytes passed the clean mock-only host suite in Codex CLI 0.151.0-alpha.7.1 and Claude Code 2.1.251.",
-    "Grok Build 1.0.13 validated and installed the exact published v0.1.1 plugin, discovered handle-capital-call and the X1 MCP endpoint, and stopped at the expected OAuth boundary. This is install evidence, not an authenticated workflow qualification.",
-    "The current v0.2.0 candidate requires fresh exact-byte and named-host qualification before publication.",
+    "The exact public plugin bytes passed the clean mock-only host suite in Codex CLI 0.152.0 and Claude Code 2.1.258.",
+    "Grok Build 1.0.13 qualified the published v0.2.0 package for installation, discovery, and the expected OAuth stop. The current release was not rerun in Grok.",
     "Installing the plugin does not grant X1 authority or make every X1 tool available."
   ],
   "publicationStatus": {
@@ -108,7 +107,7 @@
       "openai": "not_published"
     },
     "github": {
-      "priorVerifiedRelease": "v0.1.1",
+      "priorVerifiedRelease": "v0.2.0",
       "repository": "published"
     }
   },
@@ -119,5 +118,5 @@
     "plugin marketplace installation",
     "user-visible confirmation for consequential proposals"
   ],
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

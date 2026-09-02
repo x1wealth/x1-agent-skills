@@ -1,4 +1,4 @@
-// Portable export derived from X1 source revision e91e1658669cc73e0c13ce6444892105edd31955.
+// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
 import assert from "node:assert/strict";
 import test from "node:test";
 import {

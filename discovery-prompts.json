@@ -112,5 +112,5 @@
   "contractId": "x1.agent-skills.discovery-prompts.v1",
   "evaluationRule": "Maximize correct capital-call discovery while preserving zero activation on the negative set.",
   "skill": "handle-capital-call",
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

@@ -42,7 +42,7 @@ const expectedPublicationStatus = {
     "openai": "not_published"
   },
   "github": {
-    "priorVerifiedRelease": "v0.1.1",
+    "priorVerifiedRelease": "v0.2.0",
     "repository": "published"
   }
 };

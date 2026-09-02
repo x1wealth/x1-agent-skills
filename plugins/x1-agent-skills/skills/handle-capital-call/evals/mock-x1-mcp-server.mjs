@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Portable export derived from X1 source revision e91e1658669cc73e0c13ce6444892105edd31955.
+// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -11,11 +11,12 @@ import { normalizeCapturedX1Call } from "./normalize-captured-x1-result.mjs";
 
 const EVAL_DIRECTORY = fileURLToPath(new URL(".", import.meta.url));
 
-const PROVIDER_CREDENTIAL_NAMES = [
+const FORBIDDEN_PROVIDER_CREDENTIAL_NAMES = [
   "ANTHROPIC_API_KEY",
+  "ANTHROPIC_AUTH_TOKEN",
   "CLAUDE_CODE_OAUTH_TOKEN",
 ];
-for (const name of PROVIDER_CREDENTIAL_NAMES) {
+for (const name of FORBIDDEN_PROVIDER_CREDENTIAL_NAMES) {
   if (process.env[name]) {
     throw new Error("Provider credential crossed into the synthetic MCP child");
   }
@@ -65,19 +66,23 @@ for (const [name, fixture] of Object.entries(scenario.tools)) {
             documentId: z.string().trim().min(1).optional(),
             limit: z.number().min(1).max(100).optional(),
           }
-        : fixture.input_schema === "capital_call_resume_and_detail_v1"
+        : fixture.input_schema === "capital_call_source_state_v1"
           ? {
-              obligationId: z
-                .literal(fixture.expected_arguments.obligationId)
-                .optional(),
-              projection: z.literal("capital_call_resume_v1").optional(),
-              threadId: z.literal(fixture.expected_arguments.threadId),
+              documentId: z.literal(fixture.expected_arguments.documentId),
             }
-          : fixture.input_schema === "coordination_thread_id"
+          : fixture.input_schema === "capital_call_resume_and_detail_v1"
             ? {
+                obligationId: z
+                  .literal(fixture.expected_arguments.obligationId)
+                  .optional(),
+                projection: z.literal("capital_call_resume_v1").optional(),
                 threadId: z.literal(fixture.expected_arguments.threadId),
               }
-            : {};
+            : fixture.input_schema === "coordination_thread_id"
+              ? {
+                  threadId: z.literal(fixture.expected_arguments.threadId),
+                }
+              : {};
   server.registerTool(
     name,
     {

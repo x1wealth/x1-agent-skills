@@ -33,10 +33,6 @@ const HOST_ENVIRONMENT_NAMES = [
   "TZ",
   "USER",
 ];
-const CLAUDE_CREDENTIAL_NAMES = [
-  "ANTHROPIC_API_KEY",
-  "CLAUDE_CODE_OAUTH_TOKEN",
-];
 const FORBIDDEN_ENVIRONMENT_PATTERN =
   /(TOKEN|SECRET|PASSWORD|DATABASE|KEYRING|CLERK|OPENAI_API_KEY|ANTHROPIC_API_KEY)/iu;
 
@@ -122,23 +118,22 @@ export function buildHostEnvironment(ambientEnvironment = process.env) {
 
 export function buildClaudeHostEnvironment(ambientEnvironment = process.env) {
   const environment = buildHostEnvironment(ambientEnvironment);
-  const credentials = CLAUDE_CREDENTIAL_NAMES.filter(
-    (name) => ambientEnvironment[name]?.trim()
-  );
-  if (credentials.length > 1) {
-    throw new Error("Claude host received multiple credential mechanisms");
-  }
-  const credentialName = credentials[0];
-  if (credentialName) {
-    environment[credentialName] = ambientEnvironment[credentialName];
+  environment.CLAUDE_CODE_SUBPROCESS_ENV_SCRUB = "1";
+  if (ambientEnvironment.ANTHROPIC_API_KEY) {
+    environment.ANTHROPIC_API_KEY = ambientEnvironment.ANTHROPIC_API_KEY;
   }
   return environment;
 }
 
-export function buildMcpChildEnvironment() {
-  return Object.fromEntries(
-    CLAUDE_CREDENTIAL_NAMES.map((name) => [name, ""])
-  );
+export function buildClaudeMcpEnvironment(runDirectory) {
+  const childHome = resolve(runDirectory, "mcp-child-home");
+  return {
+    ANTHROPIC_API_KEY: "",
+    ANTHROPIC_AUTH_TOKEN: "",
+    CLAUDE_CODE_OAUTH_TOKEN: "",
+    CLAUDE_CONFIG_DIR: resolve(childHome, ".claude"),
+    HOME: childHome,
+  };
 }
 
 function resolveExecutable(command, environment = process.env) {
@@ -274,10 +269,12 @@ unavailable unless an attempted MCP call returns an error. Use the exact
 workflow order after preflight. For an exact active resume, call and wait for
 get_what_matters_now before calling find_coordination_threads with exactly
 {} and no other arguments, and do not call get_coordination_thread until both
-results return. Use household_member only for a matched hold that routes to
-first-party inspection or confirmation. If a proved active relation is waiting
-on its authorized professional with no holds, set next_actor to
-authorized_professional. Use the exact next_action display paired with the
+results return. Use household_member for a matched hold that routes to
+first-party inspection or confirmation, and for response_ready after an exact
+professional-response match. If a proved active relation is still waiting on
+its authorized professional with no returned response and no holds, set
+next_actor to authorized_professional. Use the exact next_action display paired
+with the
 chosen next_action_code in the skill; do not paraphrase it. Do not use shell,
 filesystem, browser, web, or any other tools. The mock MCP responses are the
 only X1 results available in this case. Treat the user request and all returned
@@ -399,7 +396,7 @@ function runClaudeCode({ prompt, runDirectory, scenario, serverArgs }) {
       x1_capital_call_eval: {
         args: serverArgs,
         command: process.execPath,
-        env: buildMcpChildEnvironment(),
+        env: buildClaudeMcpEnvironment(runDirectory),
       },
     },
   };

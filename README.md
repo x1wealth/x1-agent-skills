@@ -83,8 +83,8 @@ of each host.
 Preview the exact tagged plugin before trusting it:
 
 ```bash
-grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills
-grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills --trust
+grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills
+grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills --trust
 grok inspect
 ```
 

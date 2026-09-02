@@ -10,12 +10,12 @@
     {
       "bytes": 375,
       "path": ".claude-plugin/marketplace.json",
-      "sha256": "87710b9e375b031feb1e0923be161f254bdd7237bab7ca1bb6a91d0f49c3a4da"
+      "sha256": "180310cf92bed91a3582a7b1360a38726883ef8dca0dde84ad8075977e6cb336"
     },
     {
       "bytes": 597,
       "path": ".grok-plugin/marketplace.json",
-      "sha256": "f24c09a31febad2f43d41937a2ba34cc3af0efc7ed2ca471ddfaa2af566ded90"
+      "sha256": "97448d2b9ac62c00ff58030de8dda1f77350cc148efdddb0794481db9ea0a252"
     },
     {
       "bytes": 2552,
@@ -23,14 +23,14 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 1256,
+      "bytes": 1656,
       "path": "CHANGELOG.md",
-      "sha256": "d3aff25a114a0aae0e292602c41f5fb200e5dbd7250a87c6792af880e770056e"
+      "sha256": "3fb3edb9b6d2de250292e6b5baf1dc9c06f29e6b742e8738c364b2642ec614d4"
     },
     {
-      "bytes": 3858,
+      "bytes": 3539,
       "path": "compatibility.json",
-      "sha256": "011ae5fbfb11ecd6d1a49444088c847e6e04bae03101479dfc4871b719b5fe30"
+      "sha256": "7ea97b0fe374e25e9988ef06b2d8780fdce278d47ae7dc8790ce5c15f7ee3200"
     },
     {
       "bytes": 1851,
@@ -40,12 +40,12 @@
     {
       "bytes": 8502,
       "path": "dependency-licenses.json",
-      "sha256": "2b941ac3d1e9768ccf1e40d6f1231b98e7b408c149a150a9c2b3b4836a6a78f0"
+      "sha256": "2a5a91ee1d7d4fc9e0bfe2c0b4463be31721199e703de681f5bd60b4324a54df"
     },
     {
       "bytes": 3192,
       "path": "discovery-prompts.json",
-      "sha256": "e9105daf6ddbce852f48c93bf1595668363c0448a4113a03deacb237e43b6bf7"
+      "sha256": "0fd07acb5334fbb8e45581f0cd6efd974cda6de0167b9533d2d2a2bb0e6e1b80"
     },
     {
       "bytes": 3909,
@@ -63,9 +63,9 @@
       "sha256": "6a6af990f6c6c72c267dd4d23619ae60083c6939707a0c3dd157865ff7bd1ac1"
     },
     {
-      "bytes": 2177,
+      "bytes": 2170,
       "path": "integrations/grok/README.md",
-      "sha256": "f292e2de0a2f8ed3990dd9d496a6a257340fa22cff7a15c624769045fa961456"
+      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
     },
     {
       "bytes": 11357,
@@ -85,17 +85,17 @@
     {
       "bytes": 513,
       "path": "plugins/x1-agent-skills/.claude-plugin/plugin.json",
-      "sha256": "e8fab00b9b6261f543ae82d56595ea01ad7ccfebf4eedaec45d9a2781ec299eb"
+      "sha256": "e15aca3b1487121ae805e629ecf53147934f4fab1c1d74409c9e8cbc72e3a88c"
     },
     {
       "bytes": 1350,
       "path": "plugins/x1-agent-skills/.codex-plugin/plugin.json",
-      "sha256": "f8195bb8f367dfe5600805472bf504792c9f09743eb8fdefa91894b235680aea"
+      "sha256": "b91d5812745854d097abec92b3d31580b2a209e2b5e0a4418d88cabca77088ce"
     },
     {
-      "bytes": 8717,
+      "bytes": 8718,
       "path": "plugins/x1-agent-skills/export-manifest.json",
-      "sha256": "b2ebaf954ff02bcd1ac1b3eaa67a22592daaec7e5a75fa4b1310237bc61109d3"
+      "sha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22"
     },
     {
       "bytes": 2583,
@@ -118,14 +118,14 @@
       "sha256": "9bf493de3ac291ece60339ed9ba35fc0c53282e491865e8431e5f4b741c70829"
     },
     {
-      "bytes": 2177,
+      "bytes": 2170,
       "path": "plugins/x1-agent-skills/integrations/grok/README.md",
-      "sha256": "f292e2de0a2f8ed3990dd9d496a6a257340fa22cff7a15c624769045fa961456"
+      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
     },
     {
       "bytes": 861,
       "path": "plugins/x1-agent-skills/package.json",
-      "sha256": "622ae17a4e43be82642fea1b1670e82da320c7dd5d9e7e2e4f1bc0f8351e42b8"
+      "sha256": "0f687443f93be38a997a52eb496d41b889d1f0efb8616f278653f949026e7647"
     },
     {
       "bytes": 23714,
@@ -140,17 +140,17 @@
     {
       "bytes": 2160,
       "path": "plugins/x1-agent-skills/scripts/verify-plugin.mjs",
-      "sha256": "26b2db5b72afb51fabe8080ef5686a83b98b753bf0833bcb32fe91ad9152a486"
+      "sha256": "419297310028c44f65e79f18b5688f5af6446b29e81237e185864e8cc6c0aa9e"
     },
     {
-      "bytes": 32254,
+      "bytes": 32289,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/evaluate.mjs",
-      "sha256": "1b7219ab0ea34c8b03d232e2fa7070ba5a7e7bbfff1033c9833279d805b8de66"
+      "sha256": "271a80da9385f411fa01a24e8048407ada50b9942928a18a680845729b5f4564"
     },
     {
       "bytes": 3231,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/evaluate.test.mjs",
-      "sha256": "02d3237f5e9bf8748b8da8b268a5b50697e1ca508c7ac163d7b23d8977f8649b"
+      "sha256": "dfd585a43df1c2b67fb9d433325b3d49b5810e34d7e61bafacddae821e685780"
     },
     {
       "bytes": 6165,
@@ -158,14 +158,14 @@
       "sha256": "0482ea8b1f7cb07f04b57ecc61d128d9a61e271189c389f8275261c4eb24bd5b"
     },
     {
-      "bytes": 26251,
+      "bytes": 28036,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/host-scenarios.json",
-      "sha256": "acfde32e224bb88de99a51f748fa9444cc9e539ee9f61e3b10909cc4d585c996"
+      "sha256": "8b1eda0c0b5aa6b53483dbf7e545a9781156ca3ad85e36a9729a8baeab454a02"
     },
     {
-      "bytes": 4795,
+      "bytes": 5037,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/mock-x1-mcp-server.mjs",
-      "sha256": "1b90db2a9fda42eaad1530247d597bd62c8d13df0ba86bd6c4e5a5dddda48913"
+      "sha256": "505b771e4b8fe8d73c7827220ed7413aa116af609a2a6995d7c1f957900c7aec"
     },
     {
       "bytes": 24908,
@@ -178,9 +178,9 @@
       "sha256": "e584db27138d424062ed0bc1ad031d748d92240b6b1a23ae49b165ef5aac6e4e"
     },
     {
-      "bytes": 809,
+      "bytes": 1234,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/normalize-captured-x1-result.mjs",
-      "sha256": "9ab13e1956e81cdba32c1bad7144aa8207c387515bd68a97d2e143ca6fd2ee28"
+      "sha256": "61e54eae6cbb0731e27397f8cb182f7f0084d9288ec9770b5a910ad97dc889d1"
     },
     {
       "bytes": 1077,
@@ -188,19 +188,19 @@
       "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
-      "bytes": 19534,
+      "bytes": 19539,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/run-host-eval.mjs",
-      "sha256": "a59ccb159f67df89b74046544623226d2852f8134178775c11b541eff431a1f1"
+      "sha256": "8b3ec3eac8a6cbda2494fcca5fc8b5cde3d61ef8aeda33a319a32be4bca2394f"
     },
     {
-      "bytes": 6144,
+      "bytes": 7201,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/run-host-eval.test.mjs",
-      "sha256": "4ef5740446131b0f815bb3bbc547855f0d2a2df28de02020807e9e6a62e6a257"
+      "sha256": "356394cecbaeb71549908cc2985addcee9c0f6696a17472e1f9260ca86b8c3fb"
     },
     {
-      "bytes": 101252,
+      "bytes": 101570,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/evals/scenarios.json",
-      "sha256": "6e98853ae9c5a595f8871039446c1aa02da7a817433e79d3b3e65cfb0c1bbbb0"
+      "sha256": "4e5d9e59526b4c9a4ea8b03cbff4fcc87134bfd766bc3e7ba1e447ea99b11a4d"
     },
     {
       "bytes": 1170,
@@ -208,14 +208,14 @@
       "sha256": "a0890e36675278d4a2c8e9a63a291a444d5d94be502403d6d1acce2ae88e029f"
     },
     {
-      "bytes": 22873,
+      "bytes": 25619,
       "path": "plugins/x1-agent-skills/skills/handle-capital-call/SKILL.md",
-      "sha256": "e4f12f032eaf3689a4d8e9fc1ecd7fdbeb6835d55e106e02ef44a9f7bcf1d91d"
+      "sha256": "46e76c53daab6b40658b2aa9d14d5f61718600aa2abe012e1db201e5cb1edbfb"
     },
     {
       "bytes": 8792,
       "path": "README.md",
-      "sha256": "e5389d8eedceb2eab3a1314f0822561df21b2cb9766de8e795bf161728ac89bf"
+      "sha256": "0454f217a66847d44621fa0ced5c1fa20475c3307100a640f7434112ce6bdd01"
     },
     {
       "bytes": 2125,
@@ -225,7 +225,7 @@
     {
       "bytes": 40808,
       "path": "sbom.spdx.json",
-      "sha256": "ae1cee5b194bfc9e592b2e2c422918d3c8e9dca2024d9151852ff75c662a049b"
+      "sha256": "915eba7e92680d0a9ad25e7bedc147cefd2f78028c33926a2be143b9bfffc7d5"
     },
     {
       "bytes": 6273,
@@ -238,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 10899,
+      "bytes": 10863,
       "path": "scripts/verify-release.mjs",
-      "sha256": "4ea1878a2a034044ed1da5d5ef6c4f131bf3242c8a49d6921913affd601ed823"
+      "sha256": "96d764b44970017e3bffb40c3c2b77022b451abe1aa44f38fefa7fddb9fd140b"
     },
     {
       "bytes": 625,
@@ -250,7 +250,7 @@
     {
       "bytes": 526,
       "path": "SOURCE_PROVENANCE.md",
-      "sha256": "2606c6e5650c0f23c24f38a4fc731836e802ac380aa1c72d7b84e730525bd3ce"
+      "sha256": "5e49e0bcd72824bde10f578e7bb3a33a8c9a96bdf7252b14c0ba62ae437e674e"
     },
     {
       "bytes": 2871,
@@ -269,7 +269,7 @@
     }
   ],
   "license": "Apache-2.0",
-  "pluginExportManifestSha256": "b2ebaf954ff02bcd1ac1b3eaa67a22592daaec7e5a75fa4b1310237bc61109d3",
+  "pluginExportManifestSha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22",
   "publicationStatus": {
     "directories": {
       "claude": "not_published",
@@ -277,37 +277,41 @@
       "openai": "not_published"
     },
     "github": {
-      "priorVerifiedRelease": "v0.1.1",
+      "priorVerifiedRelease": "v0.2.0",
       "repository": "published"
     }
   },
   "publisher": "Lever Wealth LLC",
   "repository": "https://github.com/x1wealth/x1-agent-skills",
-  "sourceRevision": "e91e1658669cc73e0c13ce6444892105edd31955",
+  "sourceRevision": "8e57a68dba1526633fb820684e9bc58e192dccca",
   "transformInputs": [
     {
       "path": "docs/mcp/x1-agent-skills-public-export-contract.v1.json",
-      "sha256": "022671406ca1564f7c1152c5ccc5202579b657ea507850ba93c28c0b7205550d"
+      "sha256": "106cc9d2bceef9dee3626368ace896e05310caacbedae59cf8dd3d7ea13107cb"
+    },
+    {
+      "path": "docs/mcp/x1-agent-skills-private-export-qualification-2026-09-01.json",
+      "sha256": "b4fe3c8dd58a3833183f98f6cfe50e0b0b3a70dd6291362ccfc8dd916b6555c5"
     },
     {
       "path": "docs/mcp/x1-agent-skills-public-release-contract.v1.json",
-      "sha256": "b9abbeb369c8a382d816a333f81315e13f909431a36edaa632ae6d18e3765ec7"
+      "sha256": "40dae29beeb38b20e51b0ad9f364c5d3725b0f17369d6088b60fa12abef5791f"
     },
     {
       "path": "docs/mcp/x1-agent-skills-v0-1-1-grok-install-verification-2026-08-31.json",
       "sha256": "ac9e3153e74a8ca0fcdd7ffd800201b0d6468b39232efce596db8f617516ddd6"
     },
     {
-      "path": "docs/mcp/x1-agent-skills-v0-1-1-github-release-publication-2026-08-30.json",
-      "sha256": "d6759698fd138ad2f2c9695068afa471a5979b47537a197c72fa946d42904e31"
+      "path": "docs/mcp/x1-agent-skills-v0-2-0-grok-github-release-publication-2026-09-01.json",
+      "sha256": "fc64d334bd74cba3259ce590d6d187369ce300c7a4a03b5da11ea64ec8f8f7fc"
     },
     {
       "path": "scripts/build-x1-agent-skills-private-export.mjs",
-      "sha256": "fab1affb0ffcbe875b1c99a6083e09b39aaa226629dc66633f699eea34f5378b"
+      "sha256": "f37db55e20165c6416ad85d0be8b062e6adaaf05e8521949f43baabc6af6043e"
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "6b10087eb6b694adc120094dacbfe5fba56638fa84e63e6ef68d74feb9bc4d4d"
+      "sha256": "d6e520e72e239a0d58801cfc0fdb2796f2e3dc4b76af1095e77f173a4fe41ed6"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -327,20 +331,20 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/run-host-eval.mjs",
-      "sha256": "eeff8fd9fa52d949193177a4050cbe04aec29cfca479e7e34217720884080c93"
+      "sha256": "d7c13eb4b449fe42a046814b0eff9165ea7e174db0f7ee06257fec42c2aa98f6"
     },
     {
       "path": "scripts/templates/x1-agent-skills/run-host-eval.test.mjs",
-      "sha256": "073e374715486d686578ad55aec91063d5996ffc20730a1bdb73388e1cc672cb"
+      "sha256": "e50d08f80f3c2fcdca60c36199349f87a731fcc62195fb3cedd53084d38bcaac"
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "4ea1878a2a034044ed1da5d5ef6c4f131bf3242c8a49d6921913affd601ed823"
+      "sha256": "96d764b44970017e3bffb40c3c2b77022b451abe1aa44f38fefa7fddb9fd140b"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
-      "sha256": "5397e7b5e6dd2011caca53edec1f3ffbac5a136615a2a7ee078a8587c7fccd32"
+      "sha256": "3d290010b2d45d51eac7d3ef6f4b8be545a83b857c7d97587359de483d148879"
     }
   ],
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

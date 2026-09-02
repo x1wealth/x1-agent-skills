@@ -1,6 +1,20 @@
-// Portable export derived from X1 source revision e91e1658669cc73e0c13ce6444892105edd31955.
+// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
 export function normalizeCapturedX1Call(call) {
   const result = call?.structured_result;
+  if (
+    result?.contract === "x1_capital_call_source_state_v1" &&
+    result?.source &&
+    typeof result.source.documentId === "string"
+  ) {
+    return {
+      ...call,
+      citations: [
+        result.source.citation,
+        ...(result.anchors ?? []).map((anchor) => anchor?.citation),
+      ].filter((value) => typeof value === "string" && value.length > 0),
+      source_ids: [result.source.documentId],
+    };
+  }
   const closedResult = result?.closed_result;
   if (
     result?.projection !== "capital_call_closed_result_v1" ||

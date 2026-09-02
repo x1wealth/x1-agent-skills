@@ -5,8 +5,8 @@
 Install the exact public plugin from GitHub:
 
 ```bash
-grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills
-grok plugin install x1wealth/x1-agent-skills@v0.2.0#plugins/x1-agent-skills --trust
+grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills
+grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills --trust
 grok inspect
 ```
 
@@ -45,7 +45,7 @@ human confirmation.
 ## Qualification boundary
 
 Grok Build can validate and install Claude-compatible plugin manifests, which is
-how the published v0.1.1 release was first discovered by Grok. A successful
+how the published v0.2.0 release was qualified in Grok. A successful
 install and OAuth challenge do not qualify the complete skill workflow. Check
 `compatibility.json` for the exact current status before making a host-support
 claim.
