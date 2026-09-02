@@ -5,12 +5,12 @@
     {
       "bytes": 513,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "e8fab00b9b6261f543ae82d56595ea01ad7ccfebf4eedaec45d9a2781ec299eb"
+      "sha256": "e15aca3b1487121ae805e629ecf53147934f4fab1c1d74409c9e8cbc72e3a88c"
     },
     {
       "bytes": 1350,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "f8195bb8f367dfe5600805472bf504792c9f09743eb8fdefa91894b235680aea"
+      "sha256": "b91d5812745854d097abec92b3d31580b2a209e2b5e0a4418d88cabca77088ce"
     },
     {
       "bytes": 2583,
@@ -33,14 +33,14 @@
       "sha256": "9bf493de3ac291ece60339ed9ba35fc0c53282e491865e8431e5f4b741c70829"
     },
     {
-      "bytes": 2177,
+      "bytes": 2170,
       "path": "integrations/grok/README.md",
-      "sha256": "f292e2de0a2f8ed3990dd9d496a6a257340fa22cff7a15c624769045fa961456"
+      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
     },
     {
       "bytes": 861,
       "path": "package.json",
-      "sha256": "622ae17a4e43be82642fea1b1670e82da320c7dd5d9e7e2e4f1bc0f8351e42b8"
+      "sha256": "0f687443f93be38a997a52eb496d41b889d1f0efb8616f278653f949026e7647"
     },
     {
       "bytes": 23714,
@@ -55,17 +55,17 @@
     {
       "bytes": 2160,
       "path": "scripts/verify-plugin.mjs",
-      "sha256": "26b2db5b72afb51fabe8080ef5686a83b98b753bf0833bcb32fe91ad9152a486"
+      "sha256": "419297310028c44f65e79f18b5688f5af6446b29e81237e185864e8cc6c0aa9e"
     },
     {
-      "bytes": 32254,
+      "bytes": 32289,
       "path": "skills/handle-capital-call/evals/evaluate.mjs",
-      "sha256": "1b7219ab0ea34c8b03d232e2fa7070ba5a7e7bbfff1033c9833279d805b8de66"
+      "sha256": "271a80da9385f411fa01a24e8048407ada50b9942928a18a680845729b5f4564"
     },
     {
       "bytes": 3231,
       "path": "skills/handle-capital-call/evals/evaluate.test.mjs",
-      "sha256": "02d3237f5e9bf8748b8da8b268a5b50697e1ca508c7ac163d7b23d8977f8649b"
+      "sha256": "dfd585a43df1c2b67fb9d433325b3d49b5810e34d7e61bafacddae821e685780"
     },
     {
       "bytes": 6165,
@@ -73,14 +73,14 @@
       "sha256": "0482ea8b1f7cb07f04b57ecc61d128d9a61e271189c389f8275261c4eb24bd5b"
     },
     {
-      "bytes": 26251,
+      "bytes": 28036,
       "path": "skills/handle-capital-call/evals/host-scenarios.json",
-      "sha256": "acfde32e224bb88de99a51f748fa9444cc9e539ee9f61e3b10909cc4d585c996"
+      "sha256": "8b1eda0c0b5aa6b53483dbf7e545a9781156ca3ad85e36a9729a8baeab454a02"
     },
     {
-      "bytes": 4795,
+      "bytes": 5037,
       "path": "skills/handle-capital-call/evals/mock-x1-mcp-server.mjs",
-      "sha256": "1b90db2a9fda42eaad1530247d597bd62c8d13df0ba86bd6c4e5a5dddda48913"
+      "sha256": "505b771e4b8fe8d73c7827220ed7413aa116af609a2a6995d7c1f957900c7aec"
     },
     {
       "bytes": 24908,
@@ -93,9 +93,9 @@
       "sha256": "e584db27138d424062ed0bc1ad031d748d92240b6b1a23ae49b165ef5aac6e4e"
     },
     {
-      "bytes": 809,
+      "bytes": 1234,
       "path": "skills/handle-capital-call/evals/normalize-captured-x1-result.mjs",
-      "sha256": "9ab13e1956e81cdba32c1bad7144aa8207c387515bd68a97d2e143ca6fd2ee28"
+      "sha256": "61e54eae6cbb0731e27397f8cb182f7f0084d9288ec9770b5a910ad97dc889d1"
     },
     {
       "bytes": 1077,
@@ -103,19 +103,19 @@
       "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
-      "bytes": 19534,
+      "bytes": 19539,
       "path": "skills/handle-capital-call/evals/run-host-eval.mjs",
-      "sha256": "a59ccb159f67df89b74046544623226d2852f8134178775c11b541eff431a1f1"
+      "sha256": "8b3ec3eac8a6cbda2494fcca5fc8b5cde3d61ef8aeda33a319a32be4bca2394f"
     },
     {
-      "bytes": 6144,
+      "bytes": 7201,
       "path": "skills/handle-capital-call/evals/run-host-eval.test.mjs",
-      "sha256": "4ef5740446131b0f815bb3bbc547855f0d2a2df28de02020807e9e6a62e6a257"
+      "sha256": "356394cecbaeb71549908cc2985addcee9c0f6696a17472e1f9260ca86b8c3fb"
     },
     {
-      "bytes": 101252,
+      "bytes": 101570,
       "path": "skills/handle-capital-call/evals/scenarios.json",
-      "sha256": "6e98853ae9c5a595f8871039446c1aa02da7a817433e79d3b3e65cfb0c1bbbb0"
+      "sha256": "4e5d9e59526b4c9a4ea8b03cbff4fcc87134bfd766bc3e7ba1e447ea99b11a4d"
     },
     {
       "bytes": 1170,
@@ -123,9 +123,9 @@
       "sha256": "a0890e36675278d4a2c8e9a63a291a444d5d94be502403d6d1acce2ae88e029f"
     },
     {
-      "bytes": 22873,
+      "bytes": 25619,
       "path": "skills/handle-capital-call/SKILL.md",
-      "sha256": "e4f12f032eaf3689a4d8e9fc1ecd7fdbeb6835d55e106e02ef44a9f7bcf1d91d"
+      "sha256": "46e76c53daab6b40658b2aa9d14d5f61718600aa2abe012e1db201e5cb1edbfb"
     }
   ],
   "license": "Apache-2.0",
@@ -136,34 +136,34 @@
       "openai": "not_published"
     },
     "github": {
-      "priorVerifiedRelease": "v0.1.1",
+      "priorVerifiedRelease": "v0.2.0",
       "repository": "published"
     }
   },
-  "sourceExportManifestSha256": "5a0f1a2fcecdb7da59df8cdf263a260b4bbee69c487ada7829e2b6784749fc8e",
+  "sourceExportManifestSha256": "a9024374c210604e00624a10c35f6292da09ef1cf6fbe8d98567509483921aaf",
   "sourceProvenance": [
     {
       "disposition": "transform_and_requalify",
       "source": "SKILL.md",
-      "sourceSha256": "7521e9ba9c10b917987bdcdad17ad936e7df7f588940af79f402ba72a52cbe2f",
+      "sourceSha256": "42e748155c8b88fdce312cf96944ae2d9a1622f5d02999219f625997695a08e1",
       "target": "skills/handle-capital-call/SKILL.md"
     },
     {
       "disposition": "transform_and_requalify",
       "source": "evals/README.md",
-      "sourceSha256": "e8fbbc325866b6e76e4d31c90e039128c1af3fabcfccb3d68f8ab7f885e9e3b8",
+      "sourceSha256": "e46c9b2201f9f2b739cca1e8c8c7aaf1b5115f0e73c5fd38c69ec82bc0475373",
       "target": "skills/handle-capital-call/evals/README.md"
     },
     {
       "disposition": "transform_and_requalify",
       "source": "evals/evaluate.mjs",
-      "sourceSha256": "cb45533305eb01343e7fb2dda7fd09adb0f1a194089408c08953c83fa7a53914",
+      "sourceSha256": "b02fbcfce94b951c03987f8e09611a391a5f1577a0b10a71b0de0bd9fb1ac61f",
       "target": "skills/handle-capital-call/evals/evaluate.mjs"
     },
     {
       "disposition": "transform_and_requalify",
       "source": "evals/evaluate.test.mjs",
-      "sourceSha256": "2c9c6c57aa669e8c0f76b80832cf579f741d671649bed8054371ba1183c914a1",
+      "sourceSha256": "ff057fd784fa2344880336ff954e8c39fdea07b12d551cc5e8cd9589b16eddab",
       "target": "skills/handle-capital-call/evals/evaluate.test.mjs"
     },
     {
@@ -175,13 +175,13 @@
     {
       "disposition": "transform_and_requalify",
       "source": "evals/host-scenarios.json",
-      "sourceSha256": "88c6850567bd607b6cf8fe064d0c57681833d8a2d59b80c832e297b6244b7a1b",
+      "sourceSha256": "6821df6f4f483e0afb2825bbebcb8ceb799faca974361a80b75a424f660fdd95",
       "target": "skills/handle-capital-call/evals/host-scenarios.json"
     },
     {
       "disposition": "transform_and_requalify",
       "source": "evals/mock-x1-mcp-server.mjs",
-      "sourceSha256": "c98937c4b7ac06ec3521004936b054b7cac1fd68cafba2cb86d7f9d14664dbf2",
+      "sourceSha256": "8972a6098628b7c29aeccb7b14c4945b9aedb6e9c9d939a1c4d28a5b41892ace",
       "target": "skills/handle-capital-call/evals/mock-x1-mcp-server.mjs"
     },
     {
@@ -199,13 +199,13 @@
     {
       "disposition": "transform_and_requalify",
       "source": "evals/normalize-captured-x1-result.mjs",
-      "sourceSha256": "6990af27eee2773dbc1d2f5adb10e3d3d51ba893b3b69c674f566576f19f63e8",
+      "sourceSha256": "5bda70d20b264ff16c31f266be012891d7020f8892193e3f31060c0c0d9d0480",
       "target": "skills/handle-capital-call/evals/normalize-captured-x1-result.mjs"
     },
     {
       "disposition": "rewrite_for_export_and_requalify",
       "source": "evals/run-host-eval.mjs",
-      "sourceSha256": "e57b2a19d7d484cac63dd42686b03df8af7b77ad93cac4a1b3b058adef1e6681",
+      "sourceSha256": "604f1fd0a9db2a6e966d588a304fb646162ff220ed823bdf5fd7a9116324d392",
       "target": "skills/handle-capital-call/evals/run-host-eval.mjs"
     },
     {
@@ -217,16 +217,16 @@
     {
       "disposition": "transform_and_requalify",
       "source": "evals/scenarios.json",
-      "sourceSha256": "9e439e069621f63d1af146c3c85a086114d8da71a24fcc3e1991dba41d98f38f",
+      "sourceSha256": "b8257fadaa3048ca843c7a54c5018c8969b1410751769c64b5befae5f47dda51",
       "target": "skills/handle-capital-call/evals/scenarios.json"
     },
     {
       "disposition": "transform_and_requalify",
       "source": "references/current-x1-contract.md",
-      "sourceSha256": "16699113d9c6a39adc25eb2cf767ae8b72010f5ab2455d27e364fb0f761bfb35",
+      "sourceSha256": "7ae567a8ae21b9f9d9c844297e07330fc59802abde6470615d3cfdfec3d59708",
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "e91e1658669cc73e0c13ce6444892105edd31955",
-  "version": "0.2.0"
+  "sourceRevision": "8e57a68dba1526633fb820684e9bc58e192dccca",
+  "version": "0.3.0"
 }

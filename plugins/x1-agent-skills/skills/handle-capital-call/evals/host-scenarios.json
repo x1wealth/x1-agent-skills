@@ -23,7 +23,7 @@
             "surface": "external_connector",
             "available_tools": [
               "get_vault_documents",
-              "search_my_document_contents"
+              "get_capital_call_source_state"
             ]
           }
         },
@@ -41,23 +41,67 @@
             ]
           }
         },
-        "search_my_document_contents": {
+        "get_capital_call_source_state": {
           "effect": "read",
-          "description": "Search cited passages in the connected member's accessible documents.",
+          "description": "Return strict source state for one accessible member-owned capital-call notice.",
+          "input_schema": "capital_call_source_state_v1",
+          "expected_arguments": {
+            "documentId": "doc_notice_1"
+          },
           "result": {
-            "outcome": "success",
-            "source_ids": [
-              "doc_notice_1"
+            "anchors": [
+              {
+                "citation": "x1:vault-document:doc_notice_1:page:1",
+                "field": "issuerName",
+                "page": 1
+              },
+              {
+                "citation": "x1:vault-document:doc_notice_1:page:1",
+                "field": "callAmount",
+                "page": 1
+              },
+              {
+                "citation": "x1:vault-document:doc_notice_1:page:1",
+                "field": "currency",
+                "page": 1
+              },
+              {
+                "citation": "x1:vault-document:doc_notice_1:page:2",
+                "field": "dueDate",
+                "page": 2
+              }
             ],
-            "citations": [
-              "page:1"
-            ],
-            "fields": {
-              "issuer": "Example Growth Fund III",
+            "authority": {
+              "externalCoordinationAuthorized": false,
+              "householdConfirmationRequired": true,
+              "moneyMovementAuthorized": false,
+              "settlementVerified": false,
+              "sourceFactsAreHouseholdTruth": false,
+              "writesAuthorized": false
+            },
+            "contract": "x1_capital_call_source_state_v1",
+            "eventKind": "capital_call",
+            "facts": {
               "amount": "100000",
               "currency": "USD",
-              "due_date": "2026-09-15"
-            }
+              "dueDate": "2026-09-15",
+              "issuerName": "Example Growth Fund III",
+              "noticeIdentifier": "CC-2026-08"
+            },
+            "holds": [],
+            "nextAction": {
+              "code": "review_and_confirm_in_x1",
+              "display": "Review and confirm the proposed obligation in first-party X1."
+            },
+            "projectedAt": "2026-08-29T20:00:00.000Z",
+            "source": {
+              "citation": "x1:vault-document:doc_notice_1",
+              "documentId": "doc_notice_1",
+              "documentLabel": "Capital Call Notice",
+              "uploadedAt": "2026-08-29T19:00:00.000Z"
+            },
+            "state": "source_ready",
+            "writesPerformed": false
           }
         }
       }
@@ -73,7 +117,7 @@
           "result": {
             "outcome": "success",
             "surface": "external_connector",
-            "instructions": "An exact-document metadata preflight can prove the accessible document ID, but current external X1 does not return strict capital-call source state. Hold with CC-GAP-1 and do not infer missing material fields from metadata-only output."
+            "instructions": "This live surface does not mount the strict capital-call source-state read. An exact-document metadata preflight can prove the accessible document ID only. Hold with CC-GAP-1 and do not infer material fields or source-ready state from metadata-only output."
           }
         },
         "get_user_capabilities": {

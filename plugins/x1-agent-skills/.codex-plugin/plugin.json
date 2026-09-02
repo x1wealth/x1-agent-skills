@@ -34,5 +34,5 @@
   "name": "x1-agent-skills",
   "repository": "https://github.com/x1wealth/x1-agent-skills",
   "skills": "./skills/",
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

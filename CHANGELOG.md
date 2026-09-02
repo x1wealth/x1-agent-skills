@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 - 2026-09-01
+
+- Added the strict caller-self capital-call source-state read so an authorized agent can use X1-returned notice facts or stop on a typed hold.
+- Requalified all 13 synthetic scenarios in the exact Codex and Claude Code packages.
+- Kept the package portable and open while X1 continues to own sign-in, permissions, source records, confirmations, and every consequential write.
+
 ## 0.2.0 - 2026-08-31
 
 - Added first-class Grok marketplace metadata, Grok Build installation guidance, and a share-safe Grok Bot profile and routine boundary.

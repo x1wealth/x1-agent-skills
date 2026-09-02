@@ -1,4 +1,4 @@
-// Portable export derived from X1 source revision e91e1658669cc73e0c13ce6444892105edd31955.
+// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -62,6 +62,7 @@ if (
 const EVALUATOR_ALLOWED_READ_TOOLS = new Set([
   "find_coordination_threads",
   "get_client_memory",
+  "get_capital_call_source_state",
   "get_coordination_thread",
   "get_my_action_requests",
   "get_user_capabilities",

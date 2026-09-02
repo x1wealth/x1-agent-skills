@@ -154,7 +154,7 @@ const expectedPublicationStatus = {
     grok: "not_published",
     openai: "not_published",
   },
-  github: { priorVerifiedRelease: "v0.1.1", repository: "published" },
+  github: { priorVerifiedRelease: "v0.2.0", repository: "published" },
 };
 if (
   JSON.stringify(manifest.publicationStatus) !==
@@ -171,10 +171,7 @@ const pluginExportManifest = JSON.parse(
     "utf8"
   )
 );
-if (
-  compatibility.artifactQualificationStatus !==
-  "current_candidate_requires_named_host_qualification"
-) {
+if (compatibility.artifactQualificationStatus !== "exact_bytes_qualified") {
   errors.push("compatibility artifact qualification status disagrees");
 }
 if (

@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
   boundedHostFailure,
   buildClaudeHostEnvironment,
+  buildClaudeMcpEnvironment,
   buildHostEnvironment,
-  buildMcpChildEnvironment,
   buildPrompt,
   enrichEvidence,
   parseClaudeOutput,
@@ -87,6 +88,46 @@ test("host environment carries locators but no ambient provider secrets", () => 
   });
 });
 
+test("Claude keeps its API key while the MCP child gets a scrubbed disposable home", () => {
+  const hostEnvironment = buildClaudeHostEnvironment({
+    ANTHROPIC_API_KEY: "host-only-key",
+    CLAUDE_CODE_OAUTH_TOKEN: "must-not-cross",
+    CLERK_SECRET_KEY: "must-not-cross",
+    DATABASE_URL: "must-not-cross",
+    HOME: "/real/home",
+    PATH: process.env.PATH,
+    USER: "portable-eval",
+  });
+  assert.equal(hostEnvironment.ANTHROPIC_API_KEY, "host-only-key");
+  assert.equal(hostEnvironment.CLAUDE_CODE_SUBPROCESS_ENV_SCRUB, "1");
+  assert.equal(hostEnvironment.CLAUDE_CODE_OAUTH_TOKEN, undefined);
+  assert.equal(hostEnvironment.CLERK_SECRET_KEY, undefined);
+  assert.equal(hostEnvironment.DATABASE_URL, undefined);
+
+  const runDirectory = "/tmp/x1-portable-eval";
+  const childEnvironment = {
+    ...hostEnvironment,
+    ...buildClaudeMcpEnvironment(runDirectory),
+  };
+  const probe = spawnSync(
+    process.execPath,
+    [
+      "-e",
+      "process.stdout.write(JSON.stringify({anthropic: Boolean(process.env.ANTHROPIC_API_KEY), auth: Boolean(process.env.ANTHROPIC_AUTH_TOKEN), claude: Boolean(process.env.CLAUDE_CODE_OAUTH_TOKEN), home: process.env.HOME, config: process.env.CLAUDE_CONFIG_DIR, scrub: process.env.CLAUDE_CODE_SUBPROCESS_ENV_SCRUB}))",
+    ],
+    { encoding: "utf8", env: childEnvironment }
+  );
+  assert.equal(probe.status, 0);
+  assert.deepEqual(JSON.parse(probe.stdout), {
+    anthropic: false,
+    auth: false,
+    claude: false,
+    config: "/tmp/x1-portable-eval/mcp-child-home/.claude",
+    home: "/tmp/x1-portable-eval/mcp-child-home",
+    scrub: "1",
+  });
+});
+
 test("prompt states the synthetic and tool-bounded evaluation contract", () => {
   const prompt = buildPrompt("skill-body", { user_input: "user-input" });
   assert.match(prompt, /synthetic\s+fixtures, not customer data/);
@@ -109,6 +150,10 @@ test("prompt states the synthetic and tool-bounded evaluation contract", () => {
   assert.match(
     prompt,
     /Action-request, refusal, preflight-only, and\s+hostile-wiring cases therefore use an empty evidence array/
+  );
+  assert.match(
+    prompt,
+    /household_member for a matched hold[\s\S]*response_ready after an exact\s+professional-response match/
   );
   assert.match(
     prompt,
@@ -178,34 +223,4 @@ test("Codex parser rejects non-MCP and wrong-server activity", () => {
     new Set(["mcp__x1_capital_call_eval__approved"])
   );
   assert.deepEqual(unexpected, ["command_execution", "mcp:other:approved"]);
-});
-
-test("Claude credential is host-only and exactly one mechanism", () => {
-  assert.deepEqual(
-    buildClaudeHostEnvironment({
-      ANTHROPIC_API_KEY: "host-only",
-      DATABASE_URL: "must-not-cross",
-      HOME: "/tmp/home",
-      PATH: "/usr/bin",
-      USER: "portable-eval",
-    }),
-    {
-      ANTHROPIC_API_KEY: "host-only",
-      HOME: "/tmp/home",
-      PATH: "/usr/bin",
-      USER: "portable-eval",
-    }
-  );
-  assert.deepEqual(buildMcpChildEnvironment(), {
-    ANTHROPIC_API_KEY: "",
-    CLAUDE_CODE_OAUTH_TOKEN: "",
-  });
-  assert.throws(
-    () =>
-      buildClaudeHostEnvironment({
-        ANTHROPIC_API_KEY: "one",
-        CLAUDE_CODE_OAUTH_TOKEN: "two",
-      }),
-    /multiple credential mechanisms/
-  );
 });
