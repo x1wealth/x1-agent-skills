@@ -53,9 +53,9 @@
       "sha256": "69b9858c058c39ecaa96c28c3fcfd2d6b9c9cbe6670c3f42256e99706789e46b"
     },
     {
-      "bytes": 2160,
+      "bytes": 2255,
       "path": "scripts/verify-plugin.mjs",
-      "sha256": "419297310028c44f65e79f18b5688f5af6446b29e81237e185864e8cc6c0aa9e"
+      "sha256": "7490211afdfc686319d8ef35726d11ea52c4ec286a706847f9f8bbf7f5685493"
     },
     {
       "bytes": 32289,
@@ -131,12 +131,12 @@
   "license": "Apache-2.0",
   "publicationStatus": {
     "directories": {
-      "claude": "not_published",
+      "claude": "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
       "grok": "not_published",
-      "openai": "not_published"
+      "openai": "submitted_provider_status_pending_publication_unverified"
     },
     "github": {
-      "priorVerifiedRelease": "v0.2.0",
+      "priorVerifiedRelease": "v0.3.0",
       "repository": "published"
     }
   },

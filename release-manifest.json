@@ -23,14 +23,14 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 1656,
+      "bytes": 1921,
       "path": "CHANGELOG.md",
-      "sha256": "3fb3edb9b6d2de250292e6b5baf1dc9c06f29e6b742e8738c364b2642ec614d4"
+      "sha256": "9ad9cead55cf0214fdfc78883fac6d3e91b1484d0079a47ab308788d06516e56"
     },
     {
-      "bytes": 3539,
+      "bytes": 4036,
       "path": "compatibility.json",
-      "sha256": "7ea97b0fe374e25e9988ef06b2d8780fdce278d47ae7dc8790ce5c15f7ee3200"
+      "sha256": "15b80fc7aa28ed586df0952687ccbe40ce5180bcb7e4caa7f3c2f9e40e8babb0"
     },
     {
       "bytes": 1851,
@@ -93,9 +93,9 @@
       "sha256": "b91d5812745854d097abec92b3d31580b2a209e2b5e0a4418d88cabca77088ce"
     },
     {
-      "bytes": 8718,
+      "bytes": 8813,
       "path": "plugins/x1-agent-skills/export-manifest.json",
-      "sha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22"
+      "sha256": "cf87fc647cac8b1085df489493b2b9822ac5f26153f07be09b3893059d834cec"
     },
     {
       "bytes": 2583,
@@ -138,9 +138,9 @@
       "sha256": "69b9858c058c39ecaa96c28c3fcfd2d6b9c9cbe6670c3f42256e99706789e46b"
     },
     {
-      "bytes": 2160,
+      "bytes": 2255,
       "path": "plugins/x1-agent-skills/scripts/verify-plugin.mjs",
-      "sha256": "419297310028c44f65e79f18b5688f5af6446b29e81237e185864e8cc6c0aa9e"
+      "sha256": "7490211afdfc686319d8ef35726d11ea52c4ec286a706847f9f8bbf7f5685493"
     },
     {
       "bytes": 32289,
@@ -228,9 +228,9 @@
       "sha256": "915eba7e92680d0a9ad25e7bedc147cefd2f78028c33926a2be143b9bfffc7d5"
     },
     {
-      "bytes": 6273,
+      "bytes": 6336,
       "path": "scripts/build-release-archive.mjs",
-      "sha256": "f7cbe1d8d7133a2808a87da8c700dde8a5bbf026f8352c221148781fd3f7613d"
+      "sha256": "d3887112303433fa78c9a48683795034cbca5d7eeda783911524a399126cba9e"
     },
     {
       "bytes": 1995,
@@ -238,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 10863,
+      "bytes": 10964,
       "path": "scripts/verify-release.mjs",
-      "sha256": "96d764b44970017e3bffb40c3c2b77022b451abe1aa44f38fefa7fddb9fd140b"
+      "sha256": "6822248b544cd91db0c70b1e300f2f5ba1c15200c6fb9e4f9536aaba36d903d7"
     },
     {
       "bytes": 625,
@@ -269,15 +269,15 @@
     }
   ],
   "license": "Apache-2.0",
-  "pluginExportManifestSha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22",
+  "pluginExportManifestSha256": "cf87fc647cac8b1085df489493b2b9822ac5f26153f07be09b3893059d834cec",
   "publicationStatus": {
     "directories": {
-      "claude": "not_published",
+      "claude": "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
       "grok": "not_published",
-      "openai": "not_published"
+      "openai": "submitted_provider_status_pending_publication_unverified"
     },
     "github": {
-      "priorVerifiedRelease": "v0.2.0",
+      "priorVerifiedRelease": "v0.3.0",
       "repository": "published"
     }
   },

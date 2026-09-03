@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Corrected current GitHub, Claude, and OpenAI distribution state without treating a submission or hosted marketplace as provider-directory publication.
+- Fixed direct archive-builder invocation across the macOS `/tmp` to `/private/tmp` path alias.
+
 ## 0.3.0 - 2026-09-01
 
 - Added the strict caller-self capital-call source-state read so an authorized agent can use X1-returned notice facts or stop on a typed hold.
