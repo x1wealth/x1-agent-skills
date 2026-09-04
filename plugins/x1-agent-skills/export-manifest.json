@@ -5,12 +5,12 @@
     {
       "bytes": 513,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "e15aca3b1487121ae805e629ecf53147934f4fab1c1d74409c9e8cbc72e3a88c"
+      "sha256": "47ee3254d716f7b44c9efb38d6baeaec976044202cea1052afc125c7b7cb46d5"
     },
     {
       "bytes": 1350,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "b91d5812745854d097abec92b3d31580b2a209e2b5e0a4418d88cabca77088ce"
+      "sha256": "4acf45b83b59b51f8a3debfa4dc03237349da8928a1941dcdacfe9f10b641001"
     },
     {
       "bytes": 2583,
@@ -35,17 +35,17 @@
     {
       "bytes": 2170,
       "path": "integrations/grok/README.md",
-      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
+      "sha256": "6ea9d6bfbd4ec91f75b85e8a7223fb10fe0c4bac211d68d0fffcf03b3e0832ef"
     },
     {
       "bytes": 861,
       "path": "package.json",
-      "sha256": "0f687443f93be38a997a52eb496d41b889d1f0efb8616f278653f949026e7647"
+      "sha256": "f63076e353fd92a4d68496a6522d537175b3d846fa9c7dd18aa063348c18c4bf"
     },
     {
       "bytes": 23714,
       "path": "pnpm-lock.yaml",
-      "sha256": "b5a3967b4ebd55137201116f904ce9a477daea6568ce6efe0735152d3a7bcd94"
+      "sha256": "609108c6eadd1d014330539ce992e09aaed61c0c18a5a413312ce26576d09130"
     },
     {
       "bytes": 477,
@@ -228,5 +228,5 @@
     }
   ],
   "sourceRevision": "8e57a68dba1526633fb820684e9bc58e192dccca",
-  "version": "0.3.0"
+  "version": "0.3.1"
 }

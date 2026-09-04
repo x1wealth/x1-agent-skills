@@ -5,8 +5,8 @@
 Install the exact public plugin from GitHub:
 
 ```bash
-grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills
-grok plugin install x1wealth/x1-agent-skills@v0.3.0#plugins/x1-agent-skills --trust
+grok plugin install x1wealth/x1-agent-skills@v0.3.1#plugins/x1-agent-skills
+grok plugin install x1wealth/x1-agent-skills@v0.3.1#plugins/x1-agent-skills --trust
 grok inspect
 ```
 

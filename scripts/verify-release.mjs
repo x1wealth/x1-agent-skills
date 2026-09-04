@@ -150,8 +150,7 @@ if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
 }
 const expectedPublicationStatus = {
   directories: {
-    claude:
-      "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
+    claude: "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
     grok: "not_published",
     openai: "submitted_provider_status_pending_publication_unverified",
   },
