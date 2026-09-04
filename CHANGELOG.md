@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 - 2026-09-03
+
+- Repaired the no-account demo handoff so it lands on the real install guide.
+- Reconciled current GitHub, X1-hosted Claude marketplace, and pending OpenAI submission state without claiming provider-directory publication.
+- Fixed direct archive-builder invocation across the macOS `/tmp` and `/private/tmp` path alias.
+
 ## 0.3.0 - 2026-09-01
 
 - Added the strict caller-self capital-call source-state read so an authorized agent can use X1-returned notice facts or stop on a typed hold.

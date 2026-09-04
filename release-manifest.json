@@ -10,12 +10,12 @@
     {
       "bytes": 375,
       "path": ".claude-plugin/marketplace.json",
-      "sha256": "180310cf92bed91a3582a7b1360a38726883ef8dca0dde84ad8075977e6cb336"
+      "sha256": "ab3b94e9310fd9f6793422441969ddce6b96f0ee3ee6c03a1ad1beee4aa2363d"
     },
     {
       "bytes": 597,
       "path": ".grok-plugin/marketplace.json",
-      "sha256": "97448d2b9ac62c00ff58030de8dda1f77350cc148efdddb0794481db9ea0a252"
+      "sha256": "4105a36b0e2579ff0f93e280381be82f38eb5adeb2448c565f3ad78d8a0a6696"
     },
     {
       "bytes": 2552,
@@ -23,14 +23,14 @@
       "sha256": "ff8fb3baddb8124e99f881aec0ff366114c1fc5468e929e040908222e54cf8ab"
     },
     {
-      "bytes": 1656,
+      "bytes": 1999,
       "path": "CHANGELOG.md",
-      "sha256": "3fb3edb9b6d2de250292e6b5baf1dc9c06f29e6b742e8738c364b2642ec614d4"
+      "sha256": "5c9ce7b6ee39988c6cbc66ce811a9c743a018830b125b28a2ec47377a77afcd2"
     },
     {
-      "bytes": 3539,
+      "bytes": 4036,
       "path": "compatibility.json",
-      "sha256": "7ea97b0fe374e25e9988ef06b2d8780fdce278d47ae7dc8790ce5c15f7ee3200"
+      "sha256": "70bab5ad89a263737d17f1745180fee98e90c5a77de9917dc5943b69d6f27259"
     },
     {
       "bytes": 1851,
@@ -40,12 +40,12 @@
     {
       "bytes": 8502,
       "path": "dependency-licenses.json",
-      "sha256": "2a5a91ee1d7d4fc9e0bfe2c0b4463be31721199e703de681f5bd60b4324a54df"
+      "sha256": "91fa73a0c524f3f8d4a919f736e778cdd2e88626de6fc957e45b66b4fef6d967"
     },
     {
       "bytes": 3192,
       "path": "discovery-prompts.json",
-      "sha256": "0fd07acb5334fbb8e45581f0cd6efd974cda6de0167b9533d2d2a2bb0e6e1b80"
+      "sha256": "0c3eb58d5083710510df23377238bc08f3d3495f904381f6a2c0a990b3fa6856"
     },
     {
       "bytes": 3909,
@@ -65,7 +65,7 @@
     {
       "bytes": 2170,
       "path": "integrations/grok/README.md",
-      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
+      "sha256": "6ea9d6bfbd4ec91f75b85e8a7223fb10fe0c4bac211d68d0fffcf03b3e0832ef"
     },
     {
       "bytes": 11357,
@@ -85,17 +85,17 @@
     {
       "bytes": 513,
       "path": "plugins/x1-agent-skills/.claude-plugin/plugin.json",
-      "sha256": "e15aca3b1487121ae805e629ecf53147934f4fab1c1d74409c9e8cbc72e3a88c"
+      "sha256": "47ee3254d716f7b44c9efb38d6baeaec976044202cea1052afc125c7b7cb46d5"
     },
     {
       "bytes": 1350,
       "path": "plugins/x1-agent-skills/.codex-plugin/plugin.json",
-      "sha256": "b91d5812745854d097abec92b3d31580b2a209e2b5e0a4418d88cabca77088ce"
+      "sha256": "4acf45b83b59b51f8a3debfa4dc03237349da8928a1941dcdacfe9f10b641001"
     },
     {
-      "bytes": 8718,
+      "bytes": 8813,
       "path": "plugins/x1-agent-skills/export-manifest.json",
-      "sha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22"
+      "sha256": "0ff9e0fc201db0368678a50c7b6d0302642dcc3e1dff5d40f5f2735bdb2af040"
     },
     {
       "bytes": 2583,
@@ -120,17 +120,17 @@
     {
       "bytes": 2170,
       "path": "plugins/x1-agent-skills/integrations/grok/README.md",
-      "sha256": "920f821463397091aca891d413d54efaab906246fc528aa40f39aab3bae59a03"
+      "sha256": "6ea9d6bfbd4ec91f75b85e8a7223fb10fe0c4bac211d68d0fffcf03b3e0832ef"
     },
     {
       "bytes": 861,
       "path": "plugins/x1-agent-skills/package.json",
-      "sha256": "0f687443f93be38a997a52eb496d41b889d1f0efb8616f278653f949026e7647"
+      "sha256": "f63076e353fd92a4d68496a6522d537175b3d846fa9c7dd18aa063348c18c4bf"
     },
     {
       "bytes": 23714,
       "path": "plugins/x1-agent-skills/pnpm-lock.yaml",
-      "sha256": "b5a3967b4ebd55137201116f904ce9a477daea6568ce6efe0735152d3a7bcd94"
+      "sha256": "609108c6eadd1d014330539ce992e09aaed61c0c18a5a413312ce26576d09130"
     },
     {
       "bytes": 477,
@@ -138,9 +138,9 @@
       "sha256": "69b9858c058c39ecaa96c28c3fcfd2d6b9c9cbe6670c3f42256e99706789e46b"
     },
     {
-      "bytes": 2160,
+      "bytes": 2255,
       "path": "plugins/x1-agent-skills/scripts/verify-plugin.mjs",
-      "sha256": "419297310028c44f65e79f18b5688f5af6446b29e81237e185864e8cc6c0aa9e"
+      "sha256": "7490211afdfc686319d8ef35726d11ea52c4ec286a706847f9f8bbf7f5685493"
     },
     {
       "bytes": 32289,
@@ -215,7 +215,7 @@
     {
       "bytes": 8792,
       "path": "README.md",
-      "sha256": "0454f217a66847d44621fa0ced5c1fa20475c3307100a640f7434112ce6bdd01"
+      "sha256": "2d7704af97f632c912f6f33dcb95313c17ff7935bd0599d8f6996cbec2b99709"
     },
     {
       "bytes": 2125,
@@ -225,12 +225,12 @@
     {
       "bytes": 40808,
       "path": "sbom.spdx.json",
-      "sha256": "915eba7e92680d0a9ad25e7bedc147cefd2f78028c33926a2be143b9bfffc7d5"
+      "sha256": "7dcfd9950e6c5ce504a87362c0bc027f517ed3343f84f89346a8dd20b6f1578e"
     },
     {
-      "bytes": 6273,
+      "bytes": 6336,
       "path": "scripts/build-release-archive.mjs",
-      "sha256": "f7cbe1d8d7133a2808a87da8c700dde8a5bbf026f8352c221148781fd3f7613d"
+      "sha256": "d3887112303433fa78c9a48683795034cbca5d7eeda783911524a399126cba9e"
     },
     {
       "bytes": 1995,
@@ -238,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 10863,
+      "bytes": 10958,
       "path": "scripts/verify-release.mjs",
-      "sha256": "96d764b44970017e3bffb40c3c2b77022b451abe1aa44f38fefa7fddb9fd140b"
+      "sha256": "e580d25b20b6f5144d39294a71eccb6cfa2164c5e22a8cb5b02eb826db9c45e3"
     },
     {
       "bytes": 625,
@@ -263,21 +263,21 @@
       "sha256": "36263287e746431d05d44b1aa300909ea5ace5d22ddf34c57f94892b13fcfee1"
     },
     {
-      "bytes": 2019,
+      "bytes": 2016,
       "path": "TRY_IT.md",
-      "sha256": "60aaa555f8d248ebf1f162aaa961401ddca4b1e10b0792ba282f263d54c5fa70"
+      "sha256": "ebd1ae1c9d9a6c8af87dcf346451dd24cd50ad53e8d4d5775237e88e31356710"
     }
   ],
   "license": "Apache-2.0",
-  "pluginExportManifestSha256": "3023b566e7f86360a85daea4e01d7e5225d714f8c08c346459919a4a6f2d7d22",
+  "pluginExportManifestSha256": "0ff9e0fc201db0368678a50c7b6d0302642dcc3e1dff5d40f5f2735bdb2af040",
   "publicationStatus": {
     "directories": {
-      "claude": "not_published",
+      "claude": "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
       "grok": "not_published",
-      "openai": "not_published"
+      "openai": "submitted_provider_status_pending_publication_unverified"
     },
     "github": {
-      "priorVerifiedRelease": "v0.2.0",
+      "priorVerifiedRelease": "v0.3.0",
       "repository": "published"
     }
   },
@@ -295,15 +295,15 @@
     },
     {
       "path": "docs/mcp/x1-agent-skills-public-release-contract.v1.json",
-      "sha256": "40dae29beeb38b20e51b0ad9f364c5d3725b0f17369d6088b60fa12abef5791f"
+      "sha256": "328e16517ceab302e3fd232d9263371e68b1cf93dc2f0e82e5f9a87d6d8d4c45"
     },
     {
       "path": "docs/mcp/x1-agent-skills-v0-1-1-grok-install-verification-2026-08-31.json",
       "sha256": "ac9e3153e74a8ca0fcdd7ffd800201b0d6468b39232efce596db8f617516ddd6"
     },
     {
-      "path": "docs/mcp/x1-agent-skills-v0-2-0-grok-github-release-publication-2026-09-01.json",
-      "sha256": "fc64d334bd74cba3259ce590d6d187369ce300c7a4a03b5da11ea64ec8f8f7fc"
+      "path": "docs/mcp/x1-agent-skills-v0-3-0-github-release-publication-2026-09-02.json",
+      "sha256": "b57d80c34bd92808e95e303dcdfc88a60275cd591041174e28101586319fd601"
     },
     {
       "path": "scripts/build-x1-agent-skills-private-export.mjs",
@@ -311,7 +311,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "d6e520e72e239a0d58801cfc0fdb2796f2e3dc4b76af1095e77f173a4fe41ed6"
+      "sha256": "b4c71a9fa9f956ec068790d2d2c3ffa5b69393a70a9f3227c9e69ceb2a18defe"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -319,7 +319,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/build-release-archive.mjs",
-      "sha256": "f7cbe1d8d7133a2808a87da8c700dde8a5bbf026f8352c221148781fd3f7613d"
+      "sha256": "d3887112303433fa78c9a48683795034cbca5d7eeda783911524a399126cba9e"
     },
     {
       "path": "scripts/templates/x1-agent-skills/dependency-licenses.json",
@@ -339,12 +339,12 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "96d764b44970017e3bffb40c3c2b77022b451abe1aa44f38fefa7fddb9fd140b"
+      "sha256": "e580d25b20b6f5144d39294a71eccb6cfa2164c5e22a8cb5b02eb826db9c45e3"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
       "sha256": "3d290010b2d45d51eac7d3ef6f4b8be545a83b857c7d97587359de483d148879"
     }
   ],
-  "version": "0.3.0"
+  "version": "0.3.1"
 }

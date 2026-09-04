@@ -55,4 +55,4 @@ portable skill, connect a compatible host to `https://mcp.x1wealth.com/mcp`,
 and sign in to X1. X1 decides which records and tools are available to that
 person. Installing this repository grants no additional access.
 
-[Return to the install guide](README.md#start-in-one-command).
+[Return to the install guide](README.md#install-the-skill).

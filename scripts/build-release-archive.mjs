@@ -176,8 +176,11 @@ export function buildReleaseArchive({ outputPath }) {
   };
 }
 
-const invokedPath = process.argv[1] ? resolve(process.argv[1]) : null;
-if (invokedPath === fileURLToPath(import.meta.url)) {
+const invokedPath = process.argv[1]
+  ? realpathSync(resolve(process.argv[1]))
+  : null;
+const modulePath = realpathSync(fileURLToPath(import.meta.url));
+if (invokedPath === modulePath) {
   const outputPath = argValue("--output");
   if (!outputPath) {
     throw new Error("--output is required");
