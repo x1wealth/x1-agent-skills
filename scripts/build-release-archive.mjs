@@ -31,10 +31,23 @@ function safeRelativePath(path) {
   );
 }
 
+function isRootGitMetadata(path, entry) {
+  return path === ".git" && (entry.isDirectory() || entry.isFile());
+}
+
+function releaseEntries(root, directory) {
+  return readdirSync(directory, { withFileTypes: true }).filter((entry) => {
+    const path = relative(root, resolve(directory, entry.name))
+      .split(sep)
+      .join("/");
+    return !isRootGitMetadata(path, entry);
+  });
+}
+
 function listFiles(root) {
   const files = [];
   const visit = (directory) => {
-    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    for (const entry of releaseEntries(root, directory)) {
       const absolute = resolve(directory, entry.name);
       const path = relative(root, absolute).split(sep).join("/");
       const stats = lstatSync(absolute);
@@ -111,9 +124,12 @@ function tarHeader(path, size) {
   return header;
 }
 
-export function buildReleaseArchive({ outputPath }) {
+export function buildReleaseArchive({ outputPath, qualifiedManifestSha256 }) {
   if (!isAbsolute(outputPath)) {
     throw new Error("--output must be an absolute path");
+  }
+  if (!/^[a-f0-9]{64}$/u.test(qualifiedManifestSha256 ?? "")) {
+    throw new Error("--qualified-manifest-sha256 must be an exact SHA-256");
   }
   const resolvedOutput = resolve(outputPath);
   const outputFromRoot = relative(releaseRoot, resolvedOutput)
@@ -124,6 +140,12 @@ export function buildReleaseArchive({ outputPath }) {
   }
 
   const manifestBytes = readFileSync(manifestPath);
+  const manifestSha256 = sha256(manifestBytes);
+  if (manifestSha256 !== qualifiedManifestSha256) {
+    throw new Error(
+      "release manifest does not match the exact qualified manifest SHA-256"
+    );
+  }
   const manifest = JSON.parse(manifestBytes.toString("utf8"));
   if (
     manifest.contractId !== "x1.agent-skills-public-release.v1" ||
@@ -170,7 +192,7 @@ export function buildReleaseArchive({ outputPath }) {
   return {
     archiveSha256: sha256(archive),
     files: expected.length,
-    manifestSha256: sha256(manifestBytes),
+    manifestSha256,
     sourceRevision: manifest.sourceRevision,
     version: manifest.version,
   };
@@ -182,10 +204,15 @@ const invokedPath = process.argv[1]
 const modulePath = realpathSync(fileURLToPath(import.meta.url));
 if (invokedPath === modulePath) {
   const outputPath = argValue("--output");
+  const qualifiedManifestSha256 = argValue("--qualified-manifest-sha256");
   if (!outputPath) {
     throw new Error("--output is required");
   }
   process.stdout.write(
-    `${JSON.stringify(buildReleaseArchive({ outputPath }), null, 2)}\n`
+    `${JSON.stringify(
+      buildReleaseArchive({ outputPath, qualifiedManifestSha256 }),
+      null,
+      2
+    )}\n`
   );
 }

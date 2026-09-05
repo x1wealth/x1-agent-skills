@@ -228,9 +228,9 @@
       "sha256": "2e9d4e7c827ae45639f9cd53e5a514167c7c4f1c665803f18911b4c04a4de34c"
     },
     {
-      "bytes": 6336,
+      "bytes": 7187,
       "path": "scripts/build-release-archive.mjs",
-      "sha256": "d3887112303433fa78c9a48683795034cbca5d7eeda783911524a399126cba9e"
+      "sha256": "973106f266d162535c6568b27d2a48a4baad3d90207a247561d5713d6e117c23"
     },
     {
       "bytes": 1995,
@@ -313,7 +313,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "58e09237129bc64adc6255cc03fe07af14d0efc381c9536dbcd106be34d01262"
+      "sha256": "564d4bec3ad0a3eb7b79d89bc783da7f1c9eec70da7c52ff8b446acd1f8d7020"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -321,7 +321,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/build-release-archive.mjs",
-      "sha256": "d3887112303433fa78c9a48683795034cbca5d7eeda783911524a399126cba9e"
+      "sha256": "973106f266d162535c6568b27d2a48a4baad3d90207a247561d5713d6e117c23"
     },
     {
       "path": "scripts/templates/x1-agent-skills/dependency-licenses.json",
