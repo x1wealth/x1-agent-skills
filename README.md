@@ -6,10 +6,12 @@
 
 First assignment: handle the capital call.
 
-X1 Agent Skills gives the AI you already use a clear role in real household
-work. The agent brings reasoning and initiative. X1 keeps the source,
-permissions, people, waiting state, and history together so the work can
-continue across sessions and supported hosts.
+Most agents are good at answers. Household work rarely ends with one.
+
+X1 Agent Skills gives the AI you already use a job description, not a larger
+prompt. The agent brings reasoning and initiative. X1 keeps the source,
+permission, waiting state, and history together so the work can continue after
+the chat ends.
 
 The first skill is `handle-capital-call`. It helps an agent review a notice,
 surface gaps, bring in the right person, and resume the same work later. People
@@ -33,22 +35,21 @@ Then connect your compatible host to X1's remote MCP service at
 `https://mcp.x1wealth.com/mcp`. X1 handles sign-in and decides which tools and
 records the person can use. Installing the skill grants no additional access.
 
-### Give the agent a real source
+### Give the agent a real job
 
 The synthetic tour needs no account. Connect a free X1 account when you want
 the agent to work from a real document instead of another pasted prompt.
 
-The agent can propose adding a source document to your private X1 vault. You
-review each exact action in X1. Once X1 accepts, scans, and indexes the file,
-the agent can search that source in later work. A free vault holds up to 10
-documents, 10 MB each.
+The free path can carry one source-backed capital-call administrative job from
+notice to household-reported closeout. You review the agent's exact proposal in
+X1. X1 scans and indexes the file, preserves the accepted job while it waits,
+and lets a later authorized session pick it up. When the household closes the
+job, X1 keeps that result for later reuse.
 
-That gives the agent a trusted starting point. It still can't move money,
-verify settlement, write professional or coordination records, or complete a
-capital call on its own.
-
-The package includes native setup for Codex, Claude Code, and Grok. Exact host
-qualification is recorded separately from installation support.
+A free vault holds up to 10 documents, 10 MB each. The skill can't move money,
+verify settlement, invent a missing fact, or claim the job is closed before the
+household says so. Professional and coordination writes remain outside this
+free job.
 
 ### Codex
 
@@ -83,8 +84,8 @@ of each host.
 Preview the exact tagged plugin before trusting it:
 
 ```bash
-grok plugin install x1wealth/x1-agent-skills@v0.3.1#plugins/x1-agent-skills
-grok plugin install x1wealth/x1-agent-skills@v0.3.1#plugins/x1-agent-skills --trust
+grok plugin install x1wealth/x1-agent-skills@v0.4.0#plugins/x1-agent-skills
+grok plugin install x1wealth/x1-agent-skills@v0.4.0#plugins/x1-agent-skills --trust
 grok inspect
 ```
 
@@ -139,8 +140,7 @@ record, or bypass X1 confirmation.
 | Has to reconstruct the job from conversation | Can find the waiting work and continue from the confirmed result |
 | Ends with an answer | Can finish with a handoff, closeout, and result the household can reuse |
 
-The model stays yours. X1 gives it durable household context and a clean path to
-the next person.
+Your model stays yours. X1 keeps the context and handoff.
 
 ## The PDF doesn't get a vote
 
@@ -159,20 +159,27 @@ the reviewed contract, the skill is expected to hold:
 }
 ```
 
-The exact scenario is in the checked-in evaluation suite. [The Stop
-Test](THE_STOP_TEST.md) explains all 37 safe oracle cases and 61 hostile
+[The Stop Test](THE_STOP_TEST.md) explains all 41 safe oracle cases and 74 hostile
 mutations, with no production data.
 
 ## What we proved
 
-One disposable technical trace crossed Codex, Claude Code, and Codex again. The
-second agent got no transcript. A human professional adopted the response, the
-household closed the work, and a later agent reused the governed result. No
-money moved. [Read the bounded product
+We asked two separate questions.
+
+First: can X1 carry the bounded job in production? A synthetic free account
+added a synthetic notice, X1 scanned and indexed it, a person confirmed the
+job, the job waited, the household closed it, and a later authorized read found
+the accepted result. The fixture was removed. No money moved, and X1 did not
+claim to verify settlement.
+
+Second: can the work survive an agent handoff? A separate disposable trace
+crossed Codex, Claude Code, and Codex again, with no transcript passed between
+them. A human professional adopted the response, the household closed the work,
+and a later agent reused the result. [Read the bounded product
 proof](https://x1wealth.com/resources/capital-call-notice-checklist#one-capital-call-review-kept-together).
 
-Against the synthetic MCP server, all 37 deterministic scenarios passed, all 61
-hostile mutations were caught, and both Codex and Claude Code passed 13 of 13
+Against the synthetic MCP server, all 41 deterministic scenarios passed, all 74
+hostile mutations were caught, and both Codex and Claude Code passed 17 of 17
 named-host scenarios. Those host evaluations made no production X1 connection.
 
 See the [evaluation
@@ -204,8 +211,11 @@ clone.
 
 ## Verify the exact checkout
 
+Download the qualification receipt and its `.sig` file from release `v0.4.0`,
+then run:
+
 ```bash
-node scripts/verify-release.mjs
+node scripts/verify-release.mjs --qualification-receipt /absolute/path/to/x1-agent-skills-v0.4.0-qualification.json
 cd plugins/x1-agent-skills
 pnpm install --frozen-lockfile --ignore-scripts
 pnpm verify

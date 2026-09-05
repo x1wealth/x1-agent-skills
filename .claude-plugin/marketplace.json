@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Official X1 Wealth agent skills",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "name": "x1-wealth",
   "owner": {

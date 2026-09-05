@@ -5,13 +5,13 @@
     {
       "host": "Codex CLI",
       "minimumVersion": "0.150.1",
-      "referenceQualifiedVersion": "0.152.1",
+      "referenceQualifiedVersion": "0.153.4",
       "status": "qualified"
     },
     {
       "host": "Claude Code",
       "minimumVersion": "2.1.154",
-      "referenceQualifiedVersion": "2.1.259",
+      "referenceQualifiedVersion": "2.1.261",
       "status": "qualified"
     },
     {
@@ -96,12 +96,13 @@
     }
   ],
   "notes": [
-    "The exact public plugin bytes passed the clean mock-only host suite in Codex CLI 0.152.1 and Claude Code 2.1.259.",
+    "The exact public plugin bytes passed the clean mock-only host suite in Codex CLI 0.153.4 and Claude Code 2.1.261.",
     "Grok Build 1.0.13 qualified the published v0.2.0 package for installation, discovery, and the expected OAuth stop. The current release was not rerun in Grok.",
-    "Mat directly observed the existing OpenAI plugin submission as Pending on 2026-09-01. The exact submitted bytes, acceptance, and directory publication remain unverified; do not create a duplicate submission.",
+    "The existing OpenAI plugin submission was observed as Pending on 2026-09-01. The exact submitted bytes, acceptance, and directory publication remain unverified; do not create a duplicate submission.",
     "X1's GitHub-hosted Claude marketplace is published and installable. Anthropic's reviewed community directory remains a separate unsubmitted distribution surface.",
     "Installing the plugin does not grant X1 authority or make every X1 tool available."
   ],
+  "publicationAuthorized": true,
   "publicationStatus": {
     "directories": {
       "claude": "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
@@ -109,10 +110,11 @@
       "openai": "submitted_provider_status_pending_publication_unverified"
     },
     "github": {
-      "priorVerifiedRelease": "v0.3.0",
+      "priorVerifiedRelease": "v0.3.1",
       "repository": "published"
     }
   },
+  "releaseStatus": "exact_bytes_qualified_for_publication",
   "requiredCapabilities": [
     "MCP streamable HTTP",
     "OAuth-capable remote connection",
@@ -120,5 +122,5 @@
     "plugin marketplace installation",
     "user-visible confirmation for consequential proposals"
   ],
-  "version": "0.3.1"
+  "version": "0.4.0"
 }

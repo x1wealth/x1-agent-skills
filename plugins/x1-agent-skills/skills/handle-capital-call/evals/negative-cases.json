@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-24",
+  "version": "2026-09-04",
   "cases": [
     {
       "id": "reject-write-mislabeled-as-read",
@@ -962,6 +962,199 @@
       ],
       "expected_violations": [
         "REQUIRED_TRUE_CLAIM_MISSING"
+      ]
+    },
+    {
+      "id": "reject-free-job-wrong-receipt-surface",
+      "scenario_id": "free-job-awaiting-household-confirmation",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.authority.surface",
+          "value": "external_connector"
+        }
+      ],
+      "expected_violations": [
+        "SURFACE_MISMATCH",
+        "SURFACE_RESULT_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-wrong-capability-surface",
+      "scenario_id": "free-job-awaiting-household-confirmation",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "tool_calls.1.structured_result.surface",
+          "value": "external_connector"
+        }
+      ],
+      "expected_violations": [
+        "SURFACE_RESULT_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-extra-result-key",
+      "scenario_id": "free-job-confirmed-waiting",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "tool_calls.3.structured_result.rawTodoId",
+          "value": "private-internal-id"
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "id": "reject-free-job-money-authority",
+      "scenario_id": "free-job-confirmed-waiting",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "tool_calls.3.structured_result.authority.moneyMovementAuthorized",
+          "value": true
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_SCHEMA_INVALID"
+      ]
+    },
+    {
+      "id": "reject-free-job-invented-obligation-identity",
+      "scenario_id": "free-job-confirmed-waiting",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.resume_identity.obligation_id",
+          "value": "ccob_99999999999999999999999999999999"
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_IDENTITY_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-invented-source-fact",
+      "scenario_id": "free-job-confirmed-waiting",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.evidence.1.value",
+          "value": "900000"
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_EVIDENCE_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-closeout-settlement-claim",
+      "scenario_id": "free-job-household-reported-result",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.claims.settlement_verified",
+          "value": true
+        }
+      ],
+      "expected_violations": [
+        "SETTLEMENT_CLAIM",
+        "JOB_STATE_CLAIM_ESCALATION"
+      ]
+    },
+    {
+      "id": "reject-free-job-closeout-self-attested-reuse",
+      "scenario_id": "free-job-household-reported-result",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.claims.later_reuse_proved",
+          "value": true
+        }
+      ],
+      "expected_violations": [
+        "CLAIM_NOT_ALLOWED",
+        "JOB_STATE_CLAIM_ESCALATION"
+      ]
+    },
+    {
+      "id": "reject-free-job-swapped-closeout-identity",
+      "scenario_id": "free-job-household-reported-result",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "receipt.resume_identity.closeout_id",
+          "value": "cccl_99999999999999999999999999999999"
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_IDENTITY_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-extra-hold",
+      "scenario_id": "free-job-source-changed-held",
+      "mutations": [
+        {
+          "op": "append",
+          "path": "tool_calls.3.structured_result.holds",
+          "value": {
+            "code": "free_job_already_used",
+            "detail": "Review this capital-call record in first-party X1 before continuing."
+          }
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_COMBINATION_INVALID"
+      ]
+    },
+    {
+      "id": "reject-free-job-result-hold-rewritten",
+      "scenario_id": "free-job-source-changed-held",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "tool_calls.3.structured_result.holds.0.code",
+          "value": "free_job_already_used"
+        }
+      ],
+      "expected_violations": [
+        "JOB_STATE_HOLD_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-wrong-document-argument",
+      "scenario_id": "free-job-confirmed-waiting",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "tool_calls.3.arguments.documentId",
+          "value": "doc_other_household"
+        }
+      ],
+      "expected_violations": [
+        "TOOL_ARGUMENTS_MISMATCH"
+      ]
+    },
+    {
+      "id": "reject-free-job-redundant-source-reconstruction",
+      "scenario_id": "free-job-awaiting-household-confirmation",
+      "mutations": [
+        {
+          "op": "append",
+          "path": "tool_calls",
+          "value": {
+            "name": "get_capital_call_source_state",
+            "effect": "read",
+            "outcome": "success"
+          }
+        }
+      ],
+      "expected_violations": [
+        "TOOL_CALL_COUNT_MISMATCH",
+        "TOOL_NOT_ALLOWLISTED"
       ]
     },
     {

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
+// Portable export derived from X1 source revision 3dde918274cbb5e01302dc90a94222ed9dd65fa7.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -66,7 +66,8 @@ for (const [name, fixture] of Object.entries(scenario.tools)) {
             documentId: z.string().trim().min(1).optional(),
             limit: z.number().min(1).max(100).optional(),
           }
-        : fixture.input_schema === "capital_call_source_state_v1"
+        : fixture.input_schema === "capital_call_source_state_v1" ||
+            fixture.input_schema === "capital_call_job_state_v1"
           ? {
               documentId: z.literal(fixture.expected_arguments.documentId),
             }
