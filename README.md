@@ -140,8 +140,7 @@ record, or bypass X1 confirmation.
 | Has to reconstruct the job from conversation | Can find the waiting work and continue from the confirmed result |
 | Ends with an answer | Can finish with a handoff, closeout, and result the household can reuse |
 
-The model stays yours. X1 gives it durable household context and a clean path to
-the next person.
+Your model stays yours. X1 keeps the context and handoff.
 
 ## The PDF doesn't get a vote
 
@@ -160,8 +159,7 @@ the reviewed contract, the skill is expected to hold:
 }
 ```
 
-The exact scenario is in the checked-in evaluation suite. [The Stop
-Test](THE_STOP_TEST.md) explains all 41 safe oracle cases and 74 hostile
+[The Stop Test](THE_STOP_TEST.md) explains all 41 safe oracle cases and 74 hostile
 mutations, with no production data.
 
 ## What we proved
@@ -213,8 +211,11 @@ clone.
 
 ## Verify the exact checkout
 
+Download the qualification receipt and its `.sig` file from release `v0.4.0`,
+then run:
+
 ```bash
-node scripts/verify-release.mjs
+node scripts/verify-release.mjs --qualification-receipt /absolute/path/to/x1-agent-skills-v0.4.0-qualification.json
 cd plugins/x1-agent-skills
 pnpm install --frozen-lockfile --ignore-scripts
 pnpm verify

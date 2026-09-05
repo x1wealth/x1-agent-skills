@@ -639,8 +639,8 @@
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "BSD-3-Clause",
       "name": "qs",
-      "SPDXID": "SPDXRef-Package-qs-6.15.3",
-      "versionInfo": "6.15.3"
+      "SPDXID": "SPDXRef-Package-qs-6.16.0",
+      "versionInfo": "6.16.0"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -1192,7 +1192,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-qs-6.15.3",
+      "relatedSpdxElement": "SPDXRef-Package-qs-6.16.0",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },

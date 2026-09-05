@@ -40,7 +40,7 @@
     {
       "bytes": 8502,
       "path": "dependency-licenses.json",
-      "sha256": "061d27958c3cb3ea70a0b082200e9085fde23b26812b895904c63164e3f36a77"
+      "sha256": "ef3e7ab14fde7187d32df9686c0f103dddad8ac91da9f0d01724ed1bc91764b5"
     },
     {
       "bytes": 3192,
@@ -213,9 +213,9 @@
       "sha256": "64ab1ad90d0cc0dc6141a311a3ad09e8e4f22ec3dd0df3cb35176b2aab4eeda3"
     },
     {
-      "bytes": 9262,
+      "bytes": 9337,
       "path": "README.md",
-      "sha256": "c6bbfaa2830b4c2ea96e22accf428fec2c6e7da5419379a19f1debb54cef71fe"
+      "sha256": "fad42c25cb3288dd2fb2244e72f2a2e2fe1bbe0de587bd34cf60e868e47925c7"
     },
     {
       "bytes": 2125,
@@ -225,12 +225,12 @@
     {
       "bytes": 40808,
       "path": "sbom.spdx.json",
-      "sha256": "2e9d4e7c827ae45639f9cd53e5a514167c7c4f1c665803f18911b4c04a4de34c"
+      "sha256": "78c3774f53d4e78dc525710b8f666f9a73ecb6357bf95088fc63609edd7fb4c4"
     },
     {
-      "bytes": 10576,
+      "bytes": 15977,
       "path": "scripts/build-release-archive.mjs",
-      "sha256": "deb6812018cbf6a8f1eb0239236d35ac1d80a4cd4d17343fccffebf389d3c44d"
+      "sha256": "a5762dbae65ba52145a8973ff84aac8812a23f53bdb48164635f4e8bd04d881a"
     },
     {
       "bytes": 1995,
@@ -238,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 11475,
+      "bytes": 20317,
       "path": "scripts/verify-release.mjs",
-      "sha256": "c4cf1ebdfe147ccfc75f52ba3b6b7a02997c8a621d6c220872d9b37298b0aca3"
+      "sha256": "61dddeef6f02d2a19c2b5176cdc476136a05213b3c8e5f70b9284991a3302597"
     },
     {
       "bytes": 625,
@@ -313,7 +313,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "76c854516de7ba93aa6d163fa7da7d3937e57744407e75281bc89a5407955ea4"
+      "sha256": "70d80ac8729f77b024b72ddd3f1ebbfb3803ba3557bbcd37936708606e1b6215"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -321,11 +321,11 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/build-release-archive.mjs",
-      "sha256": "deb6812018cbf6a8f1eb0239236d35ac1d80a4cd4d17343fccffebf389d3c44d"
+      "sha256": "a5762dbae65ba52145a8973ff84aac8812a23f53bdb48164635f4e8bd04d881a"
     },
     {
       "path": "scripts/templates/x1-agent-skills/dependency-licenses.json",
-      "sha256": "a0018132f62a67309da911917a06a27043ba9611b4472c287cb26a630723da99"
+      "sha256": "9e889af045f6ed4695d8e308d443dde5f0b84b73ccc31363ca8c5fe6e66e09b0"
     },
     {
       "path": "scripts/templates/x1-agent-skills/pnpm-lock.yaml",
@@ -341,7 +341,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "c4cf1ebdfe147ccfc75f52ba3b6b7a02997c8a621d6c220872d9b37298b0aca3"
+      "sha256": "61dddeef6f02d2a19c2b5176cdc476136a05213b3c8e5f70b9284991a3302597"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",

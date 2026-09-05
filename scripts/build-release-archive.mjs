@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
-import { createHash } from "node:crypto";
+import {
+  createHash,
+  createPublicKey,
+  timingSafeEqual,
+  verify,
+} from "node:crypto";
 import {
   lstatSync,
   readdirSync,
@@ -20,6 +25,9 @@ import { fileURLToPath } from "node:url";
 
 const releaseRoot = realpathSync(fileURLToPath(new URL("..", import.meta.url)));
 const manifestPath = resolve(releaseRoot, "release-manifest.json");
+const QUALIFICATION_SIGNATURE_NAMESPACE = "x1-agent-skills-v0.4.0";
+const QUALIFICATION_SIGNING_PUBLIC_KEY =
+  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1PEUvCxkxFyNwITXDaOCGPs57EP3n1k1R06CbvKRdc";
 
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
 
@@ -143,22 +151,186 @@ function tarHeader(path, size) {
   return header;
 }
 
-function readQualificationReceipt(path) {
+function readExternalFile(path, label) {
   if (!isAbsolute(path ?? "")) {
-    throw new Error("--qualification-receipt must be an absolute path");
+    throw new Error(`${label} must be an absolute path`);
   }
-  const stats = lstatSync(path);
+  let stats;
+  try {
+    stats = lstatSync(path);
+  } catch (error) {
+    throw new Error(`${label} must be one regular file`, { cause: error });
+  }
   if (stats.isSymbolicLink() || !stats.isFile() || stats.nlink !== 1) {
-    throw new Error("qualification receipt must be one regular file");
+    throw new Error(`${label} must be one regular file`);
   }
   const canonicalPath = realpathSync(path);
   const fromReleaseRoot = relative(releaseRoot, canonicalPath)
     .split(sep)
     .join("/");
-  if (fromReleaseRoot !== ".." && !fromReleaseRoot.startsWith("../")) {
-    throw new Error("qualification receipt must be outside the release tree");
+  if (
+    !isAbsolute(fromReleaseRoot) &&
+    fromReleaseRoot !== ".." &&
+    !fromReleaseRoot.startsWith("../")
+  ) {
+    throw new Error(`${label} must be outside the release tree`);
   }
-  const receipt = JSON.parse(readFileSync(canonicalPath, "utf8"));
+  return {
+    bytes: readFileSync(canonicalPath),
+    canonicalPath,
+  };
+}
+
+function sshString(bytes) {
+  const header = Buffer.alloc(4);
+  header.writeUInt32BE(bytes.length);
+  return Buffer.concat([header, bytes]);
+}
+
+function readSshString(bytes, offset, label) {
+  if (offset + 4 > bytes.length) {
+    throw new Error(`${label} is truncated`);
+  }
+  const length = bytes.readUInt32BE(offset);
+  const start = offset + 4;
+  const end = start + length;
+  if (end > bytes.length) {
+    throw new Error(`${label} is truncated`);
+  }
+  return { bytes: bytes.subarray(start, end), offset: end };
+}
+
+function parseExactEd25519KeyBlob(bytes, label) {
+  const type = readSshString(bytes, 0, label);
+  const key = readSshString(bytes, type.offset, label);
+  if (
+    type.bytes.toString("ascii") !== "ssh-ed25519" ||
+    key.bytes.length !== 32 ||
+    key.offset !== bytes.length
+  ) {
+    throw new Error(`${label} is not an exact Ed25519 key`);
+  }
+  return key.bytes;
+}
+
+function decodeSshSignatureArmor(bytes) {
+  const lines = bytes.toString("utf8").trim().split(/\r?\n/u);
+  if (
+    lines.length < 3 ||
+    lines[0] !== "-----BEGIN SSH SIGNATURE-----" ||
+    lines.at(-1) !== "-----END SSH SIGNATURE-----"
+  ) {
+    throw new Error("qualification receipt signature is invalid");
+  }
+  const encoded = lines.slice(1, -1).join("");
+  if (!/^[A-Za-z0-9+/]+={0,2}$/u.test(encoded)) {
+    throw new Error("qualification receipt signature is invalid");
+  }
+  return Buffer.from(encoded, "base64");
+}
+
+function verifyQualificationSignature(receiptPath, receiptBytes) {
+  const signature = readExternalFile(
+    `${receiptPath}.sig`,
+    "qualification signature"
+  );
+  try {
+    const decoded = decodeSshSignatureArmor(signature.bytes);
+    if (decoded.subarray(0, 6).toString("ascii") !== "SSHSIG") {
+      throw new Error("qualification receipt signature is invalid");
+    }
+    let offset = 6;
+    if (offset + 4 > decoded.length || decoded.readUInt32BE(offset) !== 1) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+    offset += 4;
+    const publicKey = readSshString(decoded, offset, "signature public key");
+    offset = publicKey.offset;
+    const namespace = readSshString(decoded, offset, "signature namespace");
+    offset = namespace.offset;
+    const reserved = readSshString(decoded, offset, "signature reserved field");
+    offset = reserved.offset;
+    const hashAlgorithm = readSshString(
+      decoded,
+      offset,
+      "signature hash algorithm"
+    );
+    offset = hashAlgorithm.offset;
+    const signatureBlob = readSshString(decoded, offset, "signature blob");
+    if (signatureBlob.offset !== decoded.length) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+
+    const expectedKeyBlob = Buffer.from(
+      QUALIFICATION_SIGNING_PUBLIC_KEY.split(" ")[1],
+      "base64"
+    );
+    if (
+      publicKey.bytes.length !== expectedKeyBlob.length ||
+      !timingSafeEqual(publicKey.bytes, expectedKeyBlob) ||
+      namespace.bytes.toString("utf8") !== QUALIFICATION_SIGNATURE_NAMESPACE ||
+      reserved.bytes.length !== 0 ||
+      hashAlgorithm.bytes.toString("ascii") !== "sha512"
+    ) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+
+    const embeddedKey = parseExactEd25519KeyBlob(
+      publicKey.bytes,
+      "signature public key"
+    );
+    const expectedKey = parseExactEd25519KeyBlob(
+      expectedKeyBlob,
+      "qualification public key"
+    );
+    if (!timingSafeEqual(embeddedKey, expectedKey)) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+
+    const algorithm = readSshString(
+      signatureBlob.bytes,
+      0,
+      "signature algorithm"
+    );
+    const rawSignature = readSshString(
+      signatureBlob.bytes,
+      algorithm.offset,
+      "signature value"
+    );
+    if (
+      algorithm.bytes.toString("ascii") !== "ssh-ed25519" ||
+      rawSignature.bytes.length !== 64 ||
+      rawSignature.offset !== signatureBlob.bytes.length
+    ) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+
+    const signedPayload = Buffer.concat([
+      Buffer.from("SSHSIG", "ascii"),
+      sshString(namespace.bytes),
+      sshString(reserved.bytes),
+      sshString(hashAlgorithm.bytes),
+      sshString(createHash("sha512").update(receiptBytes).digest()),
+    ]);
+    const spki = Buffer.concat([
+      Buffer.from("302a300506032b6570032100", "hex"),
+      expectedKey,
+    ]);
+    const key = createPublicKey({ format: "der", key: spki, type: "spki" });
+    if (!verify(null, signedPayload, key, rawSignature.bytes)) {
+      throw new Error("qualification receipt signature is invalid");
+    }
+  } catch (error) {
+    throw new Error("qualification receipt signature is invalid", {
+      cause: error,
+    });
+  }
+}
+
+function readQualificationReceipt(path) {
+  const receiptFile = readExternalFile(path, "--qualification-receipt");
+  verifyQualificationSignature(receiptFile.canonicalPath, receiptFile.bytes);
+  const receipt = JSON.parse(receiptFile.bytes.toString("utf8"));
   if (
     !(
       hasExactKeys(receipt, [
@@ -230,7 +402,11 @@ export function buildReleaseArchive({ outputPath, qualificationReceiptPath }) {
   const outputFromRoot = relative(releaseRoot, canonicalOutput)
     .split(sep)
     .join("/");
-  if (outputFromRoot !== ".." && !outputFromRoot.startsWith("../")) {
+  if (
+    !isAbsolute(outputFromRoot) &&
+    outputFromRoot !== ".." &&
+    !outputFromRoot.startsWith("../")
+  ) {
     throw new Error("release archive output must be outside the release tree");
   }
 
