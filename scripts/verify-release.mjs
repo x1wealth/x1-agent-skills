@@ -316,10 +316,7 @@ const forbiddenInternalStrategyText = [
   /(?:^|[/\\])\.beads(?:[/\\]|$)/imu,
   /docs\/plans\//iu,
   /strategy\/agent-native/iu,
-  /X1_AGENT_(?:FIRST_FINANCIAL_EVENT_ACQUISITION_PROGRAM|NATIVE_HOUSEHOLD_CONTROL_PLANE)/u,
-  /45[- ]day assisted commercial cohort/iu,
-  /household\/operator\/professional distribution barbell/iu,
-  /repeated professional initiation/iu,
+  /\bX1_[A-Z0-9_]{8,}_(?:PROGRAM|STRATEGY|PLANE)(?:_\d{4}(?:-\d{2}){2})?\b/u,
 ];
 
 function isRootGitMetadata(path, entry) {

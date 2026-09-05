@@ -28,9 +28,9 @@
       "sha256": "663b0a0458d137d18de6e183c3863b39a316b748556763ba007ed4f9b48d06c0"
     },
     {
-      "bytes": 4129,
+      "bytes": 4120,
       "path": "compatibility.json",
-      "sha256": "329a75a6f7bd8bb821bd7b415448d7aaea05655b751cf139dcb632465015a3b7"
+      "sha256": "70bfd3ba05068cd4054a6d5fb35467749209431e7f77ca7410265ce5d07d8ba8"
     },
     {
       "bytes": 1851,
@@ -238,9 +238,9 @@
       "sha256": "8106a200f27910bc27815a9bca91a26420d0f8e3b916558758ae97f95e8e5dac"
     },
     {
-      "bytes": 20317,
+      "bytes": 20157,
       "path": "scripts/verify-release.mjs",
-      "sha256": "61dddeef6f02d2a19c2b5176cdc476136a05213b3c8e5f70b9284991a3302597"
+      "sha256": "4adc05cf196bae0adc4923723710b1305272972240f996d79f6cb7380026a16f"
     },
     {
       "bytes": 625,
@@ -313,7 +313,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "70d80ac8729f77b024b72ddd3f1ebbfb3803ba3557bbcd37936708606e1b6215"
+      "sha256": "40d44c9e11dd582ebb1b034e6727c5aa1c597789a4c0986150ba8c8ce1b916fe"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
@@ -341,7 +341,7 @@
     },
     {
       "path": "scripts/templates/x1-agent-skills/verify-public-release.mjs",
-      "sha256": "61dddeef6f02d2a19c2b5176cdc476136a05213b3c8e5f70b9284991a3302597"
+      "sha256": "4adc05cf196bae0adc4923723710b1305272972240f996d79f6cb7380026a16f"
     },
     {
       "path": "scripts/verify-agent-skills-public-export-contract.mjs",
