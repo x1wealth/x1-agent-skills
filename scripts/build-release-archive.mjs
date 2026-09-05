@@ -8,13 +8,32 @@ import {
   realpathSync,
   writeFileSync,
 } from "node:fs";
-import { isAbsolute, relative, resolve, sep } from "node:path";
+import {
+  basename,
+  dirname,
+  isAbsolute,
+  relative,
+  resolve,
+  sep,
+} from "node:path";
 import { fileURLToPath } from "node:url";
 
 const releaseRoot = realpathSync(fileURLToPath(new URL("..", import.meta.url)));
 const manifestPath = resolve(releaseRoot, "release-manifest.json");
 
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
+
+function hasExactKeys(value, keys) {
+  if (!(value && typeof value === "object" && !Array.isArray(value))) {
+    return false;
+  }
+  const actual = Object.keys(value).sort();
+  const expected = [...keys].sort();
+  return (
+    actual.length === expected.length &&
+    actual.every((key, index) => key === expected[index])
+  );
+}
 
 function argValue(flag) {
   const index = process.argv.indexOf(flag);
@@ -124,15 +143,91 @@ function tarHeader(path, size) {
   return header;
 }
 
-export function buildReleaseArchive({ outputPath, qualifiedManifestSha256 }) {
+function readQualificationReceipt(path) {
+  if (!isAbsolute(path ?? "")) {
+    throw new Error("--qualification-receipt must be an absolute path");
+  }
+  const stats = lstatSync(path);
+  if (stats.isSymbolicLink() || !stats.isFile() || stats.nlink !== 1) {
+    throw new Error("qualification receipt must be one regular file");
+  }
+  const canonicalPath = realpathSync(path);
+  const fromReleaseRoot = relative(releaseRoot, canonicalPath)
+    .split(sep)
+    .join("/");
+  if (fromReleaseRoot !== ".." && !fromReleaseRoot.startsWith("../")) {
+    throw new Error("qualification receipt must be outside the release tree");
+  }
+  const receipt = JSON.parse(readFileSync(canonicalPath, "utf8"));
+  if (
+    !(
+      hasExactKeys(receipt, [
+        "candidate",
+        "claimBoundary",
+        "contractId",
+        "hostReceiptDigestRule",
+        "namedHostQualification",
+        "priorGrokQualification",
+        "published",
+        "qualified",
+        "qualifiedDate",
+        "releaseGates",
+        "releaseTarget",
+        "sourceRevision",
+        "staticQualification",
+        "status",
+      ]) &&
+      hasExactKeys(receipt.candidate, [
+        "artifactQualificationStatus",
+        "containsCustomerData",
+        "containsGitHistory",
+        "containsInternalStrategy",
+        "containsProductionAdapter",
+        "containsProductionTrace",
+        "containsProviderCredential",
+        "declaredFilesIncludingManifest",
+        "deterministicArchiveSha256",
+        "pluginExportManifestSha256",
+        "releaseManifestSha256",
+        "version",
+      ])
+    ) ||
+    receipt.contractId !== "x1.agent-skills.github-release-qualification.v4" ||
+    receipt.qualified !== true ||
+    receipt.published !== false ||
+    receipt.status !== "exact_v0_4_0_release_bytes_qualified_not_published" ||
+    receipt.candidate.artifactQualificationStatus !== "exact_bytes_qualified" ||
+    receipt.candidate.declaredFilesIncludingManifest !== 54 ||
+    !/^[a-f0-9]{64}$/u.test(
+      receipt.candidate.deterministicArchiveSha256 ?? ""
+    ) ||
+    !/^[a-f0-9]{64}$/u.test(receipt.candidate.releaseManifestSha256 ?? "") ||
+    !/^[a-f0-9]{40}$/u.test(receipt.sourceRevision ?? "") ||
+    receipt.candidate.version !== "0.4.0"
+  ) {
+    throw new Error("qualification receipt is not the exact reviewed contract");
+  }
+  return {
+    deterministicArchiveSha256: receipt.candidate.deterministicArchiveSha256,
+    releaseManifestSha256: receipt.candidate.releaseManifestSha256,
+    sourceRevision: receipt.sourceRevision,
+    version: receipt.candidate.version,
+  };
+}
+
+export function buildReleaseArchive({ outputPath, qualificationReceiptPath }) {
   if (!isAbsolute(outputPath)) {
     throw new Error("--output must be an absolute path");
   }
-  if (!/^[a-f0-9]{64}$/u.test(qualifiedManifestSha256 ?? "")) {
-    throw new Error("--qualified-manifest-sha256 must be an exact SHA-256");
-  }
+  const qualificationReceipt = readQualificationReceipt(
+    qualificationReceiptPath
+  );
   const resolvedOutput = resolve(outputPath);
-  const outputFromRoot = relative(releaseRoot, resolvedOutput)
+  const canonicalOutput = resolve(
+    realpathSync(dirname(resolvedOutput)),
+    basename(resolvedOutput)
+  );
+  const outputFromRoot = relative(releaseRoot, canonicalOutput)
     .split(sep)
     .join("/");
   if (outputFromRoot !== ".." && !outputFromRoot.startsWith("../")) {
@@ -141,7 +236,7 @@ export function buildReleaseArchive({ outputPath, qualifiedManifestSha256 }) {
 
   const manifestBytes = readFileSync(manifestPath);
   const manifestSha256 = sha256(manifestBytes);
-  if (manifestSha256 !== qualifiedManifestSha256) {
+  if (manifestSha256 !== qualificationReceipt.releaseManifestSha256) {
     throw new Error(
       "release manifest does not match the exact qualified manifest SHA-256"
     );
@@ -150,7 +245,9 @@ export function buildReleaseArchive({ outputPath, qualifiedManifestSha256 }) {
   if (
     manifest.contractId !== "x1.agent-skills-public-release.v1" ||
     manifest.artifactQualificationStatus !== "exact_bytes_qualified" ||
-    !Array.isArray(manifest.files)
+    !Array.isArray(manifest.files) ||
+    manifest.sourceRevision !== qualificationReceipt.sourceRevision ||
+    manifest.version !== qualificationReceipt.version
   ) {
     throw new Error(
       "release manifest is not an exact qualified X1 public release"
@@ -188,9 +285,15 @@ export function buildReleaseArchive({ outputPath, qualifiedManifestSha256 }) {
   }
   chunks.push(Buffer.alloc(1024));
   const archive = Buffer.concat(chunks);
-  writeFileSync(resolvedOutput, archive, { flag: "wx", mode: 0o600 });
+  const archiveSha256 = sha256(archive);
+  if (archiveSha256 !== qualificationReceipt.deterministicArchiveSha256) {
+    throw new Error(
+      `release archive does not match the exact qualified archive SHA-256 (actual archive SHA-256: ${archiveSha256})`
+    );
+  }
+  writeFileSync(canonicalOutput, archive, { flag: "wx", mode: 0o600 });
   return {
-    archiveSha256: sha256(archive),
+    archiveSha256,
     files: expected.length,
     manifestSha256,
     sourceRevision: manifest.sourceRevision,
@@ -204,13 +307,13 @@ const invokedPath = process.argv[1]
 const modulePath = realpathSync(fileURLToPath(import.meta.url));
 if (invokedPath === modulePath) {
   const outputPath = argValue("--output");
-  const qualifiedManifestSha256 = argValue("--qualified-manifest-sha256");
+  const qualificationReceiptPath = argValue("--qualification-receipt");
   if (!outputPath) {
     throw new Error("--output is required");
   }
   process.stdout.write(
     `${JSON.stringify(
-      buildReleaseArchive({ outputPath, qualifiedManifestSha256 }),
+      buildReleaseArchive({ outputPath, qualificationReceiptPath }),
       null,
       2
     )}\n`
