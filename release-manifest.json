@@ -313,7 +313,7 @@
     },
     {
       "path": "scripts/build-x1-agent-skills-public-release.mjs",
-      "sha256": "564d4bec3ad0a3eb7b79d89bc783da7f1c9eec70da7c52ff8b446acd1f8d7020"
+      "sha256": "e147689e4f11ef1684a99d46c29fb481ea27a90f56844084dea5859d1a704219"
     },
     {
       "path": "scripts/templates/x1-agent-skills/APACHE-2.0.txt",
