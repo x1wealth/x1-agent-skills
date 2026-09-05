@@ -159,6 +159,18 @@ test("prompt states the synthetic and tool-bounded evaluation contract", () => {
     prompt,
     /Copy every non-null\s+resume_identity value into source_ids/
   );
+  assert.match(
+    prompt,
+    /unrelated intent stops before\s+startup and there is no capability result, use external_connector as the\s+portable receipt surface/
+  );
+  assert.match(
+    prompt,
+    /For a bounded free job whose capability result returns free_connector,\s+preserve free_connector as the receipt surface/
+  );
+  assert.match(
+    prompt,
+    /Evidence must include\s+the four safe source facts returned by the job state with their exact source ID\s+and citation/
+  );
   assert.match(prompt, /Do not use shell,\s+filesystem, browser, web/);
   assert.match(prompt, /<skill>\nskill-body/);
   assert.match(prompt, /<user_request>\nuser-input/);

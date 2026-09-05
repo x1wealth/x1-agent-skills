@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-24",
+  "version": "2026-09-04",
   "scenarios": [
     {
       "id": "host-notice-present",
@@ -91,7 +91,7 @@
             "holds": [],
             "nextAction": {
               "code": "review_and_confirm_in_x1",
-              "display": "Review and confirm the proposed obligation in first-party X1."
+              "display": "Ask the household owner to review and confirm this obligation in first-party X1."
             },
             "projectedAt": "2026-08-29T20:00:00.000Z",
             "source": {
@@ -213,9 +213,9 @@
                 "committedResultState": "not_committed",
                 "effectiveDisposition": "pending",
                 "effectiveTerminal": false,
-                "expiresAt": "2026-08-25T13:00:00.000Z",
+                "expiresAt": "2036-08-25T13:00:00.000Z",
                 "nativeTerminal": false,
-                "proposedAt": "2026-08-25T11:00:00.000Z",
+                "proposedAt": "2036-08-25T11:00:00.000Z",
                 "publicReasonCode": "review_pending",
                 "reconciliationRequired": false,
                 "requestId": "1b29df7a-094b-4ccc-8583-e90fb2700a11",
@@ -688,6 +688,363 @@
               ]
             }
           ]
+        }
+      }
+    },
+    {
+      "id": "host-free-job-awaiting-confirmation",
+      "score_scenario_id": "free-job-awaiting-household-confirmation",
+      "user_input": "Open the finance document doc_free_job_1 in X1 and tell me the exact next step for this free capital-call job. Do not move money.",
+      "tools": {
+        "get_x1_guide": {
+          "effect": "read",
+          "description": "Return the live bounded free capital-call workflow and authority boundary.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "instructions": "Use the exact job-state read. Household confirmation happens only in first-party X1."
+          }
+        },
+        "get_user_capabilities": {
+          "effect": "read",
+          "description": "Return the exact tools on this free connection.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "available_tools": [
+              "get_vault_documents",
+              "get_capital_call_job_state"
+            ]
+          }
+        },
+        "get_vault_documents": {
+          "effect": "read",
+          "description": "Return the one exact accessible finance document.",
+          "input_schema": "exact_finance_document_metadata_v1",
+          "result": {
+            "outcome": "success",
+            "documents": [
+              {
+                "category": "finance",
+                "id": "doc_free_job_1",
+                "title": "Synthetic Capital Call Notice"
+              }
+            ]
+          }
+        },
+        "get_capital_call_job_state": {
+          "effect": "read",
+          "description": "Return the exact source-backed free capital-call job state.",
+          "input_schema": "capital_call_job_state_v1",
+          "expected_arguments": {
+            "documentId": "doc_free_job_1"
+          },
+          "result": {
+            "authority": {
+              "closeoutReportedByHousehold": false,
+              "householdConfirmationRecorded": false,
+              "moneyMovementAuthorized": false,
+              "settlementVerified": false,
+              "writesAuthorized": false
+            },
+            "closeout": null,
+            "contract": "x1_capital_call_job_state_v1",
+            "eventKind": "capital_call",
+            "facts": {
+              "amount": "100000",
+              "currency": "USD",
+              "dueDate": "2026-09-15",
+              "issuerName": "Example Growth Fund III",
+              "noticeIdentifier": "CC-2026-08"
+            },
+            "firstPartyUrl": "/capital-call?documentId=doc_free_job_1",
+            "holds": [],
+            "nextAction": {
+              "code": "review_and_confirm_in_x1",
+              "display": "Ask the household owner to review and confirm this obligation in first-party X1."
+            },
+            "obligation": null,
+            "projectedAt": "2026-09-04T01:00:00.000Z",
+            "source": {
+              "citation": "x1:vault-document:doc_free_job_1",
+              "documentId": "doc_free_job_1",
+              "documentLabel": "Synthetic Capital Call Notice"
+            },
+            "state": "awaiting_household_confirmation",
+            "writesPerformed": false
+          }
+        }
+      }
+    },
+    {
+      "id": "host-free-job-confirmed-waiting",
+      "score_scenario_id": "free-job-confirmed-waiting",
+      "user_input": "I am in a later agent session. Resume the free capital-call job for finance document doc_free_job_1 from X1 itself, without the earlier transcript.",
+      "tools": {
+        "get_x1_guide": {
+          "effect": "read",
+          "description": "Return the live bounded free capital-call workflow and authority boundary.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "instructions": "Resume by the exact document and job-state read. Do not reconstruct from an earlier host."
+          }
+        },
+        "get_user_capabilities": {
+          "effect": "read",
+          "description": "Return the exact tools on this free connection.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "available_tools": [
+              "get_vault_documents",
+              "get_capital_call_job_state"
+            ]
+          }
+        },
+        "get_vault_documents": {
+          "effect": "read",
+          "description": "Return the one exact accessible finance document.",
+          "input_schema": "exact_finance_document_metadata_v1",
+          "result": {
+            "outcome": "success",
+            "documents": [
+              {
+                "category": "finance",
+                "id": "doc_free_job_1",
+                "title": "Synthetic Capital Call Notice"
+              }
+            ]
+          }
+        },
+        "get_capital_call_job_state": {
+          "effect": "read",
+          "description": "Return the exact household-confirmed waiting job state.",
+          "input_schema": "capital_call_job_state_v1",
+          "expected_arguments": {
+            "documentId": "doc_free_job_1"
+          },
+          "result": {
+            "authority": {
+              "closeoutReportedByHousehold": false,
+              "householdConfirmationRecorded": true,
+              "moneyMovementAuthorized": false,
+              "settlementVerified": false,
+              "writesAuthorized": false
+            },
+            "closeout": null,
+            "contract": "x1_capital_call_job_state_v1",
+            "eventKind": "capital_call",
+            "facts": {
+              "amount": "100000",
+              "currency": "USD",
+              "dueDate": "2026-09-15",
+              "issuerName": "Example Growth Fund III",
+              "noticeIdentifier": "CC-2026-08"
+            },
+            "firstPartyUrl": "/capital-call?documentId=doc_free_job_1",
+            "holds": [],
+            "nextAction": {
+              "code": "wait_for_household_closeout",
+              "display": "Keep this job waiting. The household can close it out in first-party X1."
+            },
+            "obligation": {
+              "amount": "100000",
+              "currency": "USD",
+              "dueDate": "2026-09-15",
+              "holdingLabel": "Example Growth Fund III",
+              "id": "ccob_11111111111111111111111111111111",
+              "status": "open"
+            },
+            "projectedAt": "2026-09-04T02:00:00.000Z",
+            "source": {
+              "citation": "x1:vault-document:doc_free_job_1",
+              "documentId": "doc_free_job_1",
+              "documentLabel": "Synthetic Capital Call Notice"
+            },
+            "state": "confirmed_waiting",
+            "writesPerformed": false
+          }
+        }
+      }
+    },
+    {
+      "id": "host-free-job-household-reported-result",
+      "score_scenario_id": "free-job-household-reported-result",
+      "user_input": "Use X1 to revisit the free capital-call job for finance document doc_free_job_1. Tell me the household-reported result without claiming the fund or bank verified it.",
+      "tools": {
+        "get_x1_guide": {
+          "effect": "read",
+          "description": "Return the live bounded free capital-call workflow and authority boundary.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "instructions": "A household closeout is reusable X1 context, not settlement verification."
+          }
+        },
+        "get_user_capabilities": {
+          "effect": "read",
+          "description": "Return the exact tools on this free connection.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "available_tools": [
+              "get_vault_documents",
+              "get_capital_call_job_state"
+            ]
+          }
+        },
+        "get_vault_documents": {
+          "effect": "read",
+          "description": "Return the one exact accessible finance document.",
+          "input_schema": "exact_finance_document_metadata_v1",
+          "result": {
+            "outcome": "success",
+            "documents": [
+              {
+                "category": "finance",
+                "id": "doc_free_job_1",
+                "title": "Synthetic Capital Call Notice"
+              }
+            ]
+          }
+        },
+        "get_capital_call_job_state": {
+          "effect": "read",
+          "description": "Return the exact household-reported closeout and opaque relation.",
+          "input_schema": "capital_call_job_state_v1",
+          "expected_arguments": {
+            "documentId": "doc_free_job_1"
+          },
+          "result": {
+            "authority": {
+              "closeoutReportedByHousehold": true,
+              "householdConfirmationRecorded": true,
+              "moneyMovementAuthorized": false,
+              "settlementVerified": false,
+              "writesAuthorized": false
+            },
+            "closeout": {
+              "id": "cccl_22222222222222222222222222222222",
+              "outcome": "funded",
+              "reportedAt": "2026-09-04T03:00:00.000Z"
+            },
+            "contract": "x1_capital_call_job_state_v1",
+            "eventKind": "capital_call",
+            "facts": {
+              "amount": "100000",
+              "currency": "USD",
+              "dueDate": "2026-09-15",
+              "issuerName": "Example Growth Fund III",
+              "noticeIdentifier": "CC-2026-08"
+            },
+            "firstPartyUrl": "/capital-call?documentId=doc_free_job_1",
+            "holds": [],
+            "nextAction": {
+              "code": "reuse_household_reported_result",
+              "display": "Reuse this household-reported result as prior X1 context. Do not claim settlement was verified."
+            },
+            "obligation": {
+              "amount": "100000",
+              "currency": "USD",
+              "dueDate": "2026-09-15",
+              "holdingLabel": "Example Growth Fund III",
+              "id": "ccob_11111111111111111111111111111111",
+              "status": "closed"
+            },
+            "projectedAt": "2026-09-04T04:00:00.000Z",
+            "source": {
+              "citation": "x1:vault-document:doc_free_job_1",
+              "documentId": "doc_free_job_1",
+              "documentLabel": "Synthetic Capital Call Notice"
+            },
+            "state": "household_reported_funded",
+            "writesPerformed": false
+          }
+        }
+      }
+    },
+    {
+      "id": "host-free-job-source-changed-held",
+      "score_scenario_id": "free-job-source-changed-held",
+      "user_input": "Resume the free capital-call job for finance document doc_free_job_1. If X1 says the source changed, stop safely and do not create a replacement request.",
+      "tools": {
+        "get_x1_guide": {
+          "effect": "read",
+          "description": "Return the live bounded free capital-call workflow and authority boundary.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "instructions": "A changed source is a first-party hold. Do not reconstruct or retry a write."
+          }
+        },
+        "get_user_capabilities": {
+          "effect": "read",
+          "description": "Return the exact tools on this free connection.",
+          "result": {
+            "outcome": "success",
+            "surface": "free_connector",
+            "available_tools": [
+              "get_vault_documents",
+              "get_capital_call_job_state"
+            ]
+          }
+        },
+        "get_vault_documents": {
+          "effect": "read",
+          "description": "Return the one exact accessible finance document.",
+          "input_schema": "exact_finance_document_metadata_v1",
+          "result": {
+            "outcome": "success",
+            "documents": [
+              {
+                "category": "finance",
+                "id": "doc_free_job_1",
+                "title": "Synthetic Capital Call Notice"
+              }
+            ]
+          }
+        },
+        "get_capital_call_job_state": {
+          "effect": "read",
+          "description": "Return the exact held job state after source drift.",
+          "input_schema": "capital_call_job_state_v1",
+          "expected_arguments": {
+            "documentId": "doc_free_job_1"
+          },
+          "result": {
+            "authority": {
+              "closeoutReportedByHousehold": false,
+              "householdConfirmationRecorded": true,
+              "moneyMovementAuthorized": false,
+              "settlementVerified": false,
+              "writesAuthorized": false
+            },
+            "closeout": null,
+            "contract": "x1_capital_call_job_state_v1",
+            "eventKind": "capital_call",
+            "facts": null,
+            "firstPartyUrl": "/capital-call?documentId=doc_free_job_1",
+            "holds": [
+              {
+                "code": "source_changed_after_confirmation",
+                "detail": "Review this capital-call record in first-party X1 before continuing."
+              }
+            ],
+            "nextAction": {
+              "code": "inspect_capital_call_in_x1",
+              "display": "Review this capital-call record in first-party X1 before continuing."
+            },
+            "obligation": null,
+            "projectedAt": "2026-09-04T05:00:00.000Z",
+            "source": {
+              "citation": "x1:vault-document:doc_free_job_1",
+              "documentId": "doc_free_job_1",
+              "documentLabel": "Synthetic Capital Call Notice"
+            },
+            "state": "held",
+            "writesPerformed": false
+          }
         }
       }
     },

@@ -73,7 +73,8 @@
         "surface": {
           "type": "string",
           "enum": [
-            "external_connector"
+            "external_connector",
+            "free_connector"
           ]
         },
         "allowed_effect": {
@@ -129,9 +130,11 @@
         "resolve_access_in_x1",
         "resolve_conflict_in_x1",
         "route_money_movement_outside_skill",
+        "reuse_household_reported_result",
         "upload_notice_in_x1",
         "use_context_without_reuse_claim",
         "use_other_skill",
+        "wait_for_household_closeout",
         "wait_for_governed_intake_reconciliation"
       ]
     },
@@ -143,21 +146,23 @@
         "Resolve access or household scope in first-party X1.",
         "Resolve the contradictory closeout state in first-party X1.",
         "Reuse only the stable governed result returned by X1.",
-        "Review and confirm the proposed obligation in first-party X1.",
+        "Ask the household owner to review and confirm this obligation in first-party X1.",
         "Review both closeout states and confirm the household outcome in first-party X1.",
-        "Review the capital-call evidence and hold in first-party X1.",
+        "Review this capital-call record in first-party X1 before continuing.",
         "Review the committed intake result in first-party X1; do not replay the request.",
         "Review the expired intake request in first-party X1; create a fresh request there only if still needed.",
         "Review the governed intake request in first-party X1.",
         "Review the incomplete notice in first-party X1.",
         "Review the obligation and coordination relationship in first-party X1.",
         "Review the obligation in first-party X1; this skill cannot move money or verify settlement.",
+        "Reuse this household-reported result as prior X1 context. Do not claim settlement was verified.",
         "Review the pending capital-call proposal in first-party X1.",
         "Review the professional response and proposed closeout in first-party X1.",
         "Review the unsupported currency and notice in first-party X1.",
         "Upload the notice in first-party X1.",
         "Use a skill appropriate to the user's request.",
         "Use the returned records as context; do not claim trace-correlated reuse.",
+        "Keep this job waiting. The household can close it out in first-party X1.",
         "Wait for X1 to reconcile the consumed intake request; do not retry or replay it."
       ]
     },
@@ -175,15 +180,24 @@
       ],
       "properties": {
         "document_id": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1
         },
         "obligation_id": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1
         },
         "thread_id": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1
         },
         "closeout_id": {

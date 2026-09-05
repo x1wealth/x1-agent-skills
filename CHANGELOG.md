@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-09-05
+
+- Added the production-qualified bounded free capital-call administrative job: governed source intake, human confirmation, durable waiting, household-reported closeout, and later reuse.
+- Expanded the public Stop Test to 41 deterministic cases, 74 hostile mutations, and 17 named-host scenarios in both Codex and Claude Code.
+- Kept money movement, settlement verification, professional and coordination writes, X1 server authority, customer data, and production traces outside the open package.
+
 ## 0.3.1 - 2026-09-03
 
 - Repaired the no-account demo handoff so it lands on the real install guide.

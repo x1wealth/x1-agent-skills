@@ -32,8 +32,17 @@ for (const entry of manifest.files) {
     errors.push(`plugin file mismatch: ${entry.path}`);
   }
 }
-if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
+if (
+  manifest.artifactQualificationStatus !==
+  "exact_bytes_qualified"
+) {
   errors.push("unexpected plugin artifact qualification status");
+}
+if (
+  manifest.publicationAuthorized !== true ||
+  manifest.releaseStatus !== "exact_bytes_qualified_for_publication"
+) {
+  errors.push("plugin release authorization status is not exact");
 }
 const expectedPublicationStatus = {
   "directories": {
@@ -42,7 +51,7 @@ const expectedPublicationStatus = {
     "openai": "submitted_provider_status_pending_publication_unverified"
   },
   "github": {
-    "priorVerifiedRelease": "v0.3.0",
+    "priorVerifiedRelease": "v0.3.1",
     "repository": "published"
   }
 };

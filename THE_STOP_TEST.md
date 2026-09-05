@@ -45,8 +45,8 @@ pnpm test
 pnpm eval:oracle
 ```
 
-The deterministic layer runs without a model. It checks 37 safe oracle cases
-and rejects 61 hostile mutations. Named-host evaluation is separate because it
+The deterministic layer runs without a model. It checks 41 safe oracle cases
+and rejects 74 hostile mutations. Named-host evaluation is separate because it
 invokes the installed host and may use the operator's model account:
 
 ```bash

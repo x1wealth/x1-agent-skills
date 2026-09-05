@@ -148,13 +148,19 @@ if (manifest.contractId !== "x1.agent-skills-public-release.v1") {
 if (manifest.artifactQualificationStatus !== "exact_bytes_qualified") {
   errors.push("unexpected artifact qualification status");
 }
+if (
+  manifest.publicationAuthorized !== true ||
+  manifest.releaseStatus !== "exact_bytes_qualified_for_publication"
+) {
+  errors.push("release authorization status is not exact");
+}
 const expectedPublicationStatus = {
   directories: {
     claude: "x1_hosted_marketplace_published_anthropic_directory_not_submitted",
     grok: "not_published",
     openai: "submitted_provider_status_pending_publication_unverified",
   },
-  github: { priorVerifiedRelease: "v0.3.0", repository: "published" },
+  github: { priorVerifiedRelease: "v0.3.1", repository: "published" },
 };
 if (
   JSON.stringify(manifest.publicationStatus) !==
@@ -178,6 +184,17 @@ if (
   pluginExportManifest.artifactQualificationStatus !== "exact_bytes_qualified"
 ) {
   errors.push("plugin export manifest artifact qualification status disagrees");
+}
+for (const [label, metadata] of [
+  ["compatibility", compatibility],
+  ["plugin export manifest", pluginExportManifest],
+]) {
+  if (
+    metadata.publicationAuthorized !== true ||
+    metadata.releaseStatus !== "exact_bytes_qualified_for_publication"
+  ) {
+    errors.push(`${label} release authorization status disagrees`);
+  }
 }
 for (const [label, metadata] of [
   ["compatibility", compatibility],

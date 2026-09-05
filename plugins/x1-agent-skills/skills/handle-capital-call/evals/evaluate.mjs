@@ -1,4 +1,4 @@
-// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
+// Portable export derived from X1 source revision 3dde918274cbb5e01302dc90a94222ed9dd65fa7.
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -31,6 +31,9 @@ const NEXT_ACTION_CONTRACT = JSON.parse(
 const ALLOWED_NEXT_ACTORS = new Set(
   RECEIPT_SCHEMA.properties.authority.properties.next_actor.enum
 );
+const ALLOWED_SURFACES = new Set(
+  RECEIPT_SCHEMA.properties.authority.properties.surface.enum
+);
 const NEXT_ACTION_TEMPLATES = new Map(
   NEXT_ACTION_CONTRACT.actions.map((action) => [action.code, action.display])
 );
@@ -62,6 +65,7 @@ if (
 const EVALUATOR_ALLOWED_READ_TOOLS = new Set([
   "find_coordination_threads",
   "get_client_memory",
+  "get_capital_call_job_state",
   "get_capital_call_source_state",
   "get_coordination_thread",
   "get_my_action_requests",
@@ -306,7 +310,13 @@ function checkToolCalls(violations, suite, expected, calls) {
   checkIndexedToolCalls(violations, expected, calls);
 }
 
-function checkStateAndAuthority(violations, scenario, expected, receipt) {
+function checkStateAndAuthority(
+  violations,
+  scenario,
+  expected,
+  receipt,
+  calls
+) {
   if (receipt.state !== expected.state) {
     addViolation(
       violations,
@@ -329,11 +339,33 @@ function checkStateAndAuthority(violations, scenario, expected, receipt) {
       `Next actor ${String(receipt?.authority?.next_actor)} is outside the portable contract.`
     );
   }
-  if (receipt?.authority?.surface !== "external_connector") {
+  const expectedSurface = expected.surface ?? "external_connector";
+  if (receipt?.authority?.surface !== expectedSurface) {
     addViolation(
       violations,
       "SURFACE_MISMATCH",
-      "Portable skill receipt must describe the external_connector surface."
+      `Portable skill receipt must describe the ${expectedSurface} surface.`
+    );
+  }
+  if (!ALLOWED_SURFACES.has(receipt?.authority?.surface)) {
+    addViolation(
+      violations,
+      "SURFACE_NOT_ALLOWED",
+      `Surface ${String(receipt?.authority?.surface)} is outside the portable contract.`
+    );
+  }
+  const returnedSurface = calls.find(
+    (call) =>
+      call?.name === "get_user_capabilities" && call?.outcome === "success"
+  )?.structured_result?.surface;
+  if (
+    typeof returnedSurface === "string" &&
+    receipt?.authority?.surface !== returnedSurface
+  ) {
+    addViolation(
+      violations,
+      "SURFACE_RESULT_MISMATCH",
+      "Receipt surface must match the live capability result."
     );
   }
   const expectedAllowedEffect =
@@ -636,6 +668,370 @@ function sameIdentity(left, right) {
   return isDeepStrictEqual(left, right);
 }
 
+function hasExactObjectKeys(value, keys) {
+  return (
+    value &&
+    typeof value === "object" &&
+    !Array.isArray(value) &&
+    sameIdentity(Object.keys(value).sort(), [...keys].sort())
+  );
+}
+
+const JOB_STATE_ACTIONS = new Map([
+  [
+    "awaiting_household_confirmation",
+    {
+      code: "review_and_confirm_in_x1",
+      display:
+        "Ask the household owner to review and confirm this obligation in first-party X1.",
+      receiptState: "awaiting_first_party",
+    },
+  ],
+  [
+    "confirmed_waiting",
+    {
+      code: "wait_for_household_closeout",
+      display:
+        "Keep this job waiting. The household can close it out in first-party X1.",
+      receiptState: "confirmed_waiting",
+    },
+  ],
+  [
+    "household_reported_funded",
+    {
+      code: "reuse_household_reported_result",
+      display:
+        "Reuse this household-reported result as prior X1 context. Do not claim settlement was verified.",
+      receiptState: "closed",
+    },
+  ],
+  [
+    "household_reported_no_longer_due",
+    {
+      code: "reuse_household_reported_result",
+      display:
+        "Reuse this household-reported result as prior X1 context. Do not claim settlement was verified.",
+      receiptState: "closed",
+    },
+  ],
+  [
+    "held",
+    {
+      code: "inspect_capital_call_in_x1",
+      display:
+        "Review this capital-call record in first-party X1 before continuing.",
+      receiptState: "held",
+    },
+  ],
+]);
+
+const JOB_STATE_HOLDS = new Set([
+  "obligation_metadata_invalid",
+  "obligation_relation_ambiguous",
+  "obligation_removed",
+  "obligation_state_unsupported",
+  "free_job_already_used",
+  "source_changed_after_confirmation",
+  "source_not_ready",
+]);
+
+function isExactDateOnly(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return false;
+  }
+  const [year, month, day] = value.split("-").map(Number);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  return (
+    parsed.getUTCFullYear() === year &&
+    parsed.getUTCMonth() + 1 === month &&
+    parsed.getUTCDate() === day
+  );
+}
+
+function validJobFacts(facts) {
+  return (
+    hasExactObjectKeys(facts, [
+      "amount",
+      "currency",
+      "dueDate",
+      "issuerName",
+      "noticeIdentifier",
+    ]) &&
+    /^\d{1,13}(?:\.\d{1,2})?$/.test(facts.amount) &&
+    /^[A-Z]{3}$/.test(facts.currency) &&
+    isExactDateOnly(facts.dueDate) &&
+    typeof facts.issuerName === "string" &&
+    facts.issuerName.length > 0 &&
+    facts.issuerName.length <= 300 &&
+    (facts.noticeIdentifier === null ||
+      (typeof facts.noticeIdentifier === "string" &&
+        facts.noticeIdentifier.length > 0 &&
+        facts.noticeIdentifier.length <= 200))
+  );
+}
+
+function validJobObligation(obligation) {
+  return (
+    hasExactObjectKeys(obligation, [
+      "amount",
+      "currency",
+      "dueDate",
+      "holdingLabel",
+      "id",
+      "status",
+    ]) &&
+    /^ccob_[a-f0-9]{32}$/.test(obligation.id) &&
+    ["open", "closed", "removed"].includes(obligation.status) &&
+    /^\d{1,13}(?:\.\d{1,2})?$/.test(obligation.amount) &&
+    /^[A-Z]{3}$/.test(obligation.currency) &&
+    isExactDateOnly(obligation.dueDate) &&
+    typeof obligation.holdingLabel === "string" &&
+    obligation.holdingLabel.length > 0 &&
+    obligation.holdingLabel.length <= 180
+  );
+}
+
+function expectedFreeJobIdentity(result) {
+  return {
+    closeout_id: result.closeout?.id ?? null,
+    document_id: result.source?.documentId ?? null,
+    obligation_id: result.obligation?.id ?? null,
+    thread_id: null,
+  };
+}
+
+function validJobStateCommon(result, action) {
+  return (
+    hasExactObjectKeys(result, [
+      "authority",
+      "closeout",
+      "contract",
+      "eventKind",
+      "facts",
+      "firstPartyUrl",
+      "holds",
+      "nextAction",
+      "obligation",
+      "projectedAt",
+      "source",
+      "state",
+      "writesPerformed",
+    ]) &&
+    result.contract === "x1_capital_call_job_state_v1" &&
+    result.eventKind === "capital_call" &&
+    hasExactObjectKeys(result.source, [
+      "citation",
+      "documentId",
+      "documentLabel",
+    ]) &&
+    typeof result.source.documentId === "string" &&
+    result.source.documentId.length > 0 &&
+    result.source.documentId.length <= 300 &&
+    result.source.citation ===
+      `x1:vault-document:${encodeURIComponent(result.source.documentId)}` &&
+    typeof result.source.documentLabel === "string" &&
+    result.source.documentLabel.length > 0 &&
+    result.source.documentLabel.length <= 240 &&
+    result.firstPartyUrl ===
+      `/capital-call?documentId=${encodeURIComponent(result.source.documentId)}` &&
+    typeof result.projectedAt === "string" &&
+    !Number.isNaN(Date.parse(result.projectedAt)) &&
+    new Date(result.projectedAt).toISOString() === result.projectedAt &&
+    result.writesPerformed === false &&
+    hasExactObjectKeys(result.authority, [
+      "closeoutReportedByHousehold",
+      "householdConfirmationRecorded",
+      "moneyMovementAuthorized",
+      "settlementVerified",
+      "writesAuthorized",
+    ]) &&
+    result.authority.moneyMovementAuthorized === false &&
+    result.authority.settlementVerified === false &&
+    result.authority.writesAuthorized === false &&
+    action &&
+    sameIdentity(result.nextAction, {
+      code: action.code,
+      display: action.display,
+    })
+  );
+}
+
+function validAwaitingJobState(result) {
+  return (
+    validJobFacts(result.facts) &&
+    result.obligation === null &&
+    result.closeout === null &&
+    sameIdentity(result.holds, []) &&
+    result.authority.householdConfirmationRecorded === false &&
+    result.authority.closeoutReportedByHousehold === false
+  );
+}
+
+function validWaitingJobState(result) {
+  return (
+    validJobFacts(result.facts) &&
+    validJobObligation(result.obligation) &&
+    result.obligation.status === "open" &&
+    result.closeout === null &&
+    sameIdentity(result.holds, []) &&
+    result.authority.householdConfirmationRecorded === true &&
+    result.authority.closeoutReportedByHousehold === false
+  );
+}
+
+function validClosedJobState(result) {
+  const expectedOutcome =
+    result.state === "household_reported_funded" ? "funded" : "no_longer_due";
+  return (
+    validJobFacts(result.facts) &&
+    validJobObligation(result.obligation) &&
+    result.obligation.status === "closed" &&
+    hasExactObjectKeys(result.closeout, ["id", "outcome", "reportedAt"]) &&
+    /^cccl_[a-f0-9]{32}$/.test(result.closeout.id) &&
+    result.closeout.outcome === expectedOutcome &&
+    typeof result.closeout.reportedAt === "string" &&
+    !Number.isNaN(Date.parse(result.closeout.reportedAt)) &&
+    new Date(result.closeout.reportedAt).toISOString() ===
+      result.closeout.reportedAt &&
+    sameIdentity(result.holds, []) &&
+    result.authority.householdConfirmationRecorded === true &&
+    result.authority.closeoutReportedByHousehold === true
+  );
+}
+
+function validHeldJobState(result) {
+  return (
+    result.facts === null &&
+    result.closeout === null &&
+    (result.obligation === null || validJobObligation(result.obligation)) &&
+    Array.isArray(result.holds) &&
+    result.holds.length === 1 &&
+    hasExactObjectKeys(result.holds[0], ["code", "detail"]) &&
+    JOB_STATE_HOLDS.has(result.holds[0].code) &&
+    result.holds[0].detail ===
+      "Review this capital-call record in first-party X1 before continuing." &&
+    result.authority.closeoutReportedByHousehold === false
+  );
+}
+
+const JOB_STATE_VALIDATORS = new Map([
+  ["awaiting_household_confirmation", validAwaitingJobState],
+  ["confirmed_waiting", validWaitingJobState],
+  ["household_reported_funded", validClosedJobState],
+  ["household_reported_no_longer_due", validClosedJobState],
+  ["held", validHeldJobState],
+]);
+
+function checkJobStateReceiptEvidence(violations, receipt, result) {
+  const expectedEvidence = result.facts
+    ? [
+        ["issuer", result.facts.issuerName],
+        ["amount", result.facts.amount],
+        ["currency", result.facts.currency],
+        ["due_date", result.facts.dueDate],
+      ]
+    : [];
+  const evidence = Array.isArray(receipt.evidence) ? receipt.evidence : [];
+  if (
+    evidence.length === expectedEvidence.length &&
+    expectedEvidence.every(([field, value]) =>
+      evidence.some(
+        (item) =>
+          item?.field === field &&
+          item?.value === value &&
+          item?.source_id === result.source.documentId &&
+          item?.citation === result.source.citation
+      )
+    )
+  ) {
+    return;
+  }
+  addViolation(
+    violations,
+    "JOB_STATE_EVIDENCE_MISMATCH",
+    "The receipt evidence must exactly bind the four safe source facts returned by the job-state result."
+  );
+}
+
+function checkJobStateReceiptHolds(violations, receipt, result) {
+  const expectedReceiptHolds =
+    result.state === "awaiting_household_confirmation"
+      ? ["first_party_confirmation_required"]
+      : result.state === "held"
+        ? result.holds.map((hold) => hold.code)
+        : [];
+  if (
+    sameIdentity(
+      (receipt.holds ?? []).map((hold) => hold?.code),
+      expectedReceiptHolds
+    )
+  ) {
+    return;
+  }
+  addViolation(
+    violations,
+    "JOB_STATE_HOLD_MISMATCH",
+    "The receipt holds must match the exact job-state routing rule."
+  );
+}
+
+function checkJobStateProjection(violations, receipt, claims, calls) {
+  const call = calls.find(
+    (candidate) =>
+      candidate?.outcome === "success" &&
+      candidate.name === "get_capital_call_job_state"
+  );
+  if (!call) {
+    return;
+  }
+  const result = call.structured_result;
+  const action = JOB_STATE_ACTIONS.get(result?.state);
+  if (!validJobStateCommon(result, action)) {
+    addViolation(
+      violations,
+      "JOB_STATE_SCHEMA_INVALID",
+      "The free job-state result must match the exact safe V1 projection."
+    );
+    return;
+  }
+
+  if (!JOB_STATE_VALIDATORS.get(result.state)?.(result)) {
+    addViolation(
+      violations,
+      "JOB_STATE_COMBINATION_INVALID",
+      "The free job-state fields do not match the returned lifecycle state."
+    );
+  }
+  if (receipt.state !== action.receiptState) {
+    addViolation(
+      violations,
+      "JOB_STATE_RECEIPT_MISMATCH",
+      "The receipt state must be derived from the exact X1 job state."
+    );
+  }
+  checkJobStateReceiptHolds(violations, receipt, result);
+  checkJobStateReceiptEvidence(violations, receipt, result);
+  if (!sameIdentity(receipt.resume_identity, expectedFreeJobIdentity(result))) {
+    addViolation(
+      violations,
+      "JOB_STATE_IDENTITY_MISMATCH",
+      "The free job resume identity must come only from the exact job-state result."
+    );
+  }
+  if (
+    claims.money_moved === true ||
+    claims.settlement_verified === true ||
+    claims.exact_resume_proved === true ||
+    claims.later_reuse_proved === true
+  ) {
+    addViolation(
+      violations,
+      "JOB_STATE_CLAIM_ESCALATION",
+      "A portable free job-state read cannot self-attest money, settlement, cross-session resume, or later-reuse proof."
+    );
+  }
+}
+
 function checkClosedResultProjection(violations, receipt, claims, calls) {
   const call = calls.find(
     (candidate) =>
@@ -733,6 +1129,38 @@ function checkReturnedResumeIdentity(violations, receipt, calls) {
   const sourceIds = new Set(
     Array.isArray(receipt.source_ids) ? receipt.source_ids : []
   );
+  const jobStateCall = calls.find(
+    (call) =>
+      call?.outcome === "success" &&
+      call.name === "get_capital_call_job_state" &&
+      call.structured_result?.contract === "x1_capital_call_job_state_v1"
+  );
+  if (jobStateCall) {
+    const expectedIdentity = expectedFreeJobIdentity(
+      jobStateCall.structured_result
+    );
+    if (!sameIdentity(receipt.resume_identity, expectedIdentity)) {
+      addViolation(
+        violations,
+        "JOB_STATE_IDENTITY_MISMATCH",
+        "The free job resume identity must match the exact job-state result."
+      );
+    }
+    if (
+      !Object.values(receipt.resume_identity)
+        .filter((value) => value !== null)
+        .every(
+          (identity) => typeof identity === "string" && sourceIds.has(identity)
+        )
+    ) {
+      addViolation(
+        violations,
+        "RESUME_IDENTITY_SOURCE_NOT_RETURNED",
+        "Every non-null free job identity must be returned by the job-state tool."
+      );
+    }
+    return;
+  }
   // OpenAI structured outputs require every declared object property to be
   // required. The transport therefore carries closeout_id=null for an active
   // relation; semantically that is still the exact three-ID active identity.
@@ -880,10 +1308,11 @@ export function scoreRun(suite, scenario, run) {
 
   checkToolSequence(violations, expected, callNames);
   checkToolCalls(violations, suite, expected, calls);
-  checkStateAndAuthority(violations, scenario, expected, receipt);
+  checkStateAndAuthority(violations, scenario, expected, receipt, calls);
   checkHolds(violations, scenario, expected, receipt);
   checkSourceIds(violations, receipt, calls);
   checkEvidence(violations, expected, receipt, calls);
+  checkJobStateProjection(violations, receipt, claims, calls);
   checkClosedResultProjection(violations, receipt, claims, calls);
   checkClaims(violations, scenario, expected, claims);
   checkIdentityClaims(violations, expected, receipt, claims, calls);

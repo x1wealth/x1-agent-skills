@@ -1,4 +1,4 @@
-// Portable export derived from X1 source revision 8e57a68dba1526633fb820684e9bc58e192dccca.
+// Portable export derived from X1 source revision 3dde918274cbb5e01302dc90a94222ed9dd65fa7.
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
@@ -80,6 +80,38 @@ test("the suite covers the required control families", () => {
     "workflow-state",
   ]) {
     assert.ok(categories.has(category), `Missing category: ${category}`);
+  }
+  assert.ok(categories.has("complete-free-job"));
+  assert.ok(categories.has("complete-free-job-negative-control"));
+});
+
+test("the complete free job owns each durable state and hostile control", () => {
+  const scenarioIds = new Set(
+    scenarios.scenarios.map((scenario) => scenario.id)
+  );
+  for (const id of [
+    "free-job-awaiting-household-confirmation",
+    "free-job-confirmed-waiting",
+    "free-job-household-reported-result",
+    "free-job-source-changed-held",
+  ]) {
+    assert.ok(scenarioIds.has(id), `Missing free job scenario: ${id}`);
+  }
+  const negativeIds = new Set(negative.cases.map((entry) => entry.id));
+  for (const id of [
+    "reject-free-job-wrong-receipt-surface",
+    "reject-free-job-extra-result-key",
+    "reject-free-job-money-authority",
+    "reject-free-job-invented-obligation-identity",
+    "reject-free-job-invented-source-fact",
+    "reject-free-job-closeout-settlement-claim",
+    "reject-free-job-closeout-self-attested-reuse",
+    "reject-free-job-swapped-closeout-identity",
+    "reject-free-job-extra-hold",
+    "reject-free-job-result-hold-rewritten",
+    "reject-free-job-redundant-source-reconstruction",
+  ]) {
+    assert.ok(negativeIds.has(id), `Missing free job negative: ${id}`);
   }
 });
 

@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-24",
+  "version": "2026-09-04",
   "actions": [
     {
       "code": "create_fresh_intake_request_in_x1",
@@ -7,7 +7,7 @@
     },
     {
       "code": "inspect_capital_call_in_x1",
-      "display": "Review the capital-call evidence and hold in first-party X1."
+      "display": "Review this capital-call record in first-party X1 before continuing."
     },
     {
       "code": "inspect_resume_join_in_x1",
@@ -31,7 +31,7 @@
     },
     {
       "code": "review_and_confirm_in_x1",
-      "display": "Review and confirm the proposed obligation in first-party X1."
+      "display": "Ask the household owner to review and confirm this obligation in first-party X1."
     },
     {
       "code": "review_closeout_in_x1",
@@ -70,6 +70,10 @@
       "display": "Review the obligation in first-party X1; this skill cannot move money or verify settlement."
     },
     {
+      "code": "reuse_household_reported_result",
+      "display": "Reuse this household-reported result as prior X1 context. Do not claim settlement was verified."
+    },
+    {
       "code": "upload_notice_in_x1",
       "display": "Upload the notice in first-party X1."
     },
@@ -80,6 +84,10 @@
     {
       "code": "use_other_skill",
       "display": "Use a skill appropriate to the user's request."
+    },
+    {
+      "code": "wait_for_household_closeout",
+      "display": "Keep this job waiting. The household can close it out in first-party X1."
     },
     {
       "code": "wait_for_governed_intake_reconciliation",
