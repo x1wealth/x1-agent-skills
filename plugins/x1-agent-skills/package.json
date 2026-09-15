@@ -17,8 +17,9 @@
   },
   "scripts": {
     "eval:host": "node skills/handle-capital-call/evals/run-host-eval.mjs",
+    "eval:meetings": "node scripts/evaluate-meeting-skill.mjs",
     "eval:oracle": "node skills/handle-capital-call/evals/evaluate.mjs --suite all",
-    "test": "node --test skills/handle-capital-call/evals/evaluate.test.mjs skills/handle-capital-call/evals/run-host-eval.test.mjs",
+    "test": "node --test skills/handle-capital-call/evals/evaluate.test.mjs skills/handle-capital-call/evals/run-host-eval.test.mjs scripts/evaluate-meeting-skill.test.mjs",
     "verify": "node scripts/verify-plugin.mjs"
   },
   "type": "module",

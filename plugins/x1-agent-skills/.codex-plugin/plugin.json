@@ -3,7 +3,7 @@
     "name": "X1 Wealth",
     "url": "https://x1wealth.com"
   },
-  "description": "Review and coordinate capital-call notices through X1 while keeping money movement and household authority outside the agent.",
+  "description": "Review capital-call notices, prepare meetings, and record meeting outcomes through X1 while keeping money movement and household authority outside the agent.",
   "homepage": "https://x1wealth.com",
   "interface": {
     "capabilities": [
@@ -13,13 +13,15 @@
     "category": "Productivity",
     "defaultPrompt": [
       "Help me review this capital-call notice through X1.",
-      "Resume my open capital-call work in X1."
+      "Resume my open capital-call work in X1.",
+      "Get me ready for my meeting with a client using X1.",
+      "Log my meeting outcomes in X1 and show me the batch first."
     ],
     "developerName": "X1 Wealth",
-    "displayName": "X1 Capital Call",
-    "longDescription": "A portable workflow for reviewing a capital-call notice, preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
+    "displayName": "X1 Agent Skills",
+    "longDescription": "Portable workflows for reviewing a capital-call notice, preparing a client or household meeting from the X1 record, and recording meeting outcomes as approved proposals, all while preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
     "privacyPolicyURL": "https://x1wealth.com/legal/privacy-policy",
-    "shortDescription": "Review and coordinate capital calls through X1",
+    "shortDescription": "Capital calls, meeting prep, and meeting outcomes through X1",
     "termsOfServiceURL": "https://x1wealth.com/legal/terms-and-conditions",
     "websiteURL": "https://x1wealth.com"
   },
@@ -28,7 +30,9 @@
     "capital-call",
     "drawdown-notice",
     "private-investments",
-    "household-coordination"
+    "household-coordination",
+    "meeting-prep",
+    "meeting-follow-up"
   ],
   "license": "Apache-2.0",
   "name": "x1-agent-skills",
