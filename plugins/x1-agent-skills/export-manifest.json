@@ -3,19 +3,24 @@
   "contractId": "x1.agent-skills-public-plugin.v1",
   "files": [
     {
-      "bytes": 513,
+      "bytes": 560,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "26292813915fa3338d23ad7e475343edf8f351a35a97cc76afb5192989ef4ee3"
+      "sha256": "2e6196a8556d57dcbf0a674b971f78e39609ab0ef9433369559ece2ff6933d1b"
     },
     {
-      "bytes": 1350,
+      "bytes": 1693,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "b9d02ca6685ed8998069ba17a716cd9389d6031a21585c3c36cb37c3c39aa0de"
+      "sha256": "cad27477556fb13cd2d739e61f7713a37bbee8c0827efb902edc8ffaeb6f1ccd"
     },
     {
       "bytes": 2583,
       "path": "GROK_BOT_PROFILE.md",
       "sha256": "13138b6735374f0f9928d9bf5801331efc5d0a5f848520aefcc25b88b9ab0381"
+    },
+    {
+      "bytes": 1036,
+      "path": "README.md",
+      "sha256": "63aa1b601939f99c3bc7e4247c0f5ef819eb101afac4f4461b05aeb709b9c5e5"
     },
     {
       "bytes": 674,
@@ -38,9 +43,9 @@
       "sha256": "5740898007c6c558d2909e4a19e0e378c0de4efbdcb5c3f7a3da753c6232f41c"
     },
     {
-      "bytes": 861,
+      "bytes": 965,
       "path": "package.json",
-      "sha256": "a18244834f3586df3fa0d54db6c3e23cc3b23082d178d08d2318eb485da700d3"
+      "sha256": "3d8bc817a95dc39cb2776698120f467eca30d986541eff0ea503c9aa012c0bed"
     },
     {
       "bytes": 23714,
@@ -48,14 +53,29 @@
       "sha256": "609108c6eadd1d014330539ce992e09aaed61c0c18a5a413312ce26576d09130"
     },
     {
-      "bytes": 477,
-      "path": "README.md",
-      "sha256": "69b9858c058c39ecaa96c28c3fcfd2d6b9c9cbe6670c3f42256e99706789e46b"
+      "bytes": 12167,
+      "path": "scripts/evaluate-meeting-skill.mjs",
+      "sha256": "6b990c11427f76b465e7c125e033bc90f5b517ebf80134ff653f4a8555ff921b"
+    },
+    {
+      "bytes": 1877,
+      "path": "scripts/evaluate-meeting-skill.test.mjs",
+      "sha256": "a5f022751b5f9796e4894c64d92ecbbe168f28a3241569634f2b0313d9148fa3"
     },
     {
       "bytes": 2453,
       "path": "scripts/verify-plugin.mjs",
       "sha256": "a04b1ca641b6f12b1ec9d8c30e73748f71c206cd9cdec92fedea3d339b28a2dd"
+    },
+    {
+      "bytes": 29538,
+      "path": "skills/handle-capital-call/SKILL.md",
+      "sha256": "64ab1ad90d0cc0dc6141a311a3ad09e8e4f22ec3dd0df3cb35176b2aab4eeda3"
+    },
+    {
+      "bytes": 1077,
+      "path": "skills/handle-capital-call/evals/README.md",
+      "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
       "bytes": 45084,
@@ -98,11 +118,6 @@
       "sha256": "bbaee046e1878ef75280c946bb48fd2c1bfe0ca41fcb6b134475eccbae502bdf"
     },
     {
-      "bytes": 1077,
-      "path": "skills/handle-capital-call/evals/README.md",
-      "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
-    },
-    {
       "bytes": 20477,
       "path": "skills/handle-capital-call/evals/run-host-eval.mjs",
       "sha256": "956c1d01d98f4e5c50eb188309fe8731e7d6349fd4ad80a09190f17bcaa5dba8"
@@ -123,9 +138,44 @@
       "sha256": "a0890e36675278d4a2c8e9a63a291a444d5d94be502403d6d1acce2ae88e029f"
     },
     {
-      "bytes": 29538,
-      "path": "skills/handle-capital-call/SKILL.md",
-      "sha256": "64ab1ad90d0cc0dc6141a311a3ad09e8e4f22ec3dd0df3cb35176b2aab4eeda3"
+      "bytes": 10137,
+      "path": "skills/prepare-meeting/SKILL.md",
+      "sha256": "fe83e507938b27f05c5a3ede5f353e511b35bdbeb22d053909369926c284c78b"
+    },
+    {
+      "bytes": 1519,
+      "path": "skills/prepare-meeting/evals/README.md",
+      "sha256": "9428f4668a244fd2cdbd6031b2f0e4659f31fb8209550540b97507ba1bcfc90a"
+    },
+    {
+      "bytes": 16122,
+      "path": "skills/prepare-meeting/evals/scenarios.json",
+      "sha256": "1313eea9a016893168dbb7a9b5c31c7e20ceffb0385ed52465ecfc26f0834446"
+    },
+    {
+      "bytes": 6286,
+      "path": "skills/prepare-meeting/references/current-x1-contract.md",
+      "sha256": "15c075cbd32cee11f0d965baea78af562b617b9a5f6f2c2d63df0d1f41677f16"
+    },
+    {
+      "bytes": 11307,
+      "path": "skills/record-meeting-outcomes/SKILL.md",
+      "sha256": "5e31730aad86657647eea4169e7110706b6074515f5b5705f8c6f66913322773"
+    },
+    {
+      "bytes": 2262,
+      "path": "skills/record-meeting-outcomes/evals/README.md",
+      "sha256": "3f9a5e2c157a48a3b5b6e47216565d24dd0712dbbac3fb452ff7786f7d5a4f14"
+    },
+    {
+      "bytes": 23392,
+      "path": "skills/record-meeting-outcomes/evals/scenarios.json",
+      "sha256": "a247921fd30660781cc60c2882aac48d664f02a8425e03bd0eb5e93e355ca33b"
+    },
+    {
+      "bytes": 7011,
+      "path": "skills/record-meeting-outcomes/references/current-x1-contract.md",
+      "sha256": "cd36d181227cbad5123cadbe66cbaa1c9c06d2573157e7bccd2cb8c8fd6f2a90"
     }
   ],
   "license": "Apache-2.0",
