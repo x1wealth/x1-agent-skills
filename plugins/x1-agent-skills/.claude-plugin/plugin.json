@@ -3,8 +3,20 @@
     "name": "X1 Wealth"
   },
   "defaultEnabled": false,
-  "description": "Review and coordinate capital-call notices, prepare meetings, and record meeting outcomes through X1 without moving money or bypassing first-party authority.",
+  "description": "Your family's own record in Claude. Ask what your trusts, LLCs, K-1s and policies say and get answers tied to the page, add documents one at a time, work through capital calls, and get ready for and follow up on meetings with your CPA, attorney or advisor. Never moves money.",
   "homepage": "https://github.com/x1wealth/x1-agent-skills",
+  "keywords": [
+    "family office",
+    "household",
+    "trust",
+    "estate",
+    "llc",
+    "k-1",
+    "documents",
+    "capital call",
+    "meeting prep",
+    "wealth"
+  ],
   "license": "Apache-2.0",
   "mcpServers": {
     "x1": {

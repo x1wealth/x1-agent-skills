@@ -4,7 +4,7 @@
 
 ## Your family office just hired an agent.
 
-First assignment: handle the capital call.
+First assignment: learn the household.
 
 Most agents are good at answers. Household work rarely ends with one.
 
@@ -13,10 +13,17 @@ prompt. The agent brings reasoning and initiative. X1 keeps the source,
 permission, waiting state, and history together so the work can continue after
 the chat ends.
 
-The first skill is `handle-capital-call`. It helps an agent review a notice,
-surface gaps, bring in the right person, and resume the same work later. People
-remain accountable for consequential decisions, and the skill never moves
-money.
+Start with `ask-household-record`. Give it one real document, such as an
+operating agreement, a trust, a K-1, or an insurance policy, and it answers
+from that document with the page behind each answer. X1 files what it finds
+under the right entity for the person to confirm, so the next question starts
+from what is already known.
+
+From there, `handle-capital-call` reviews a notice, surfaces gaps, brings in
+the right person, and resumes the same work later. `prepare-meeting` and
+`record-meeting-outcomes` get the household ready for a conversation with its
+CPA, attorney, or advisor and keep what was decided. People remain accountable
+for consequential decisions, and no skill moves money.
 
 Read [The job is bigger than the chat](FIELD_GUIDE.md) for the idea, or [try the
 weird parts first](TRY_IT.md) to see the skill under pressure. The synthetic
@@ -28,6 +35,7 @@ Install the portable skill with the open-source [skills
 CLI](https://github.com/vercel-labs/skills):
 
 ```bash
+npx skills add x1wealth/x1-agent-skills --skill ask-household-record
 npx skills add x1wealth/x1-agent-skills --skill handle-capital-call
 ```
 
