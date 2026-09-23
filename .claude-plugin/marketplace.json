@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "description": "Review and coordinate capital-call notices through X1 without moving money.",
+      "description": "Your family's own record in Claude: cited answers from your trusts, LLCs and policies, plus capital calls and meeting follow-through.",
       "name": "x1-agent-skills",
       "source": "./plugins/x1-agent-skills"
     }

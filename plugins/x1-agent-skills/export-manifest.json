@@ -3,9 +3,9 @@
   "contractId": "x1.agent-skills-public-plugin.v1",
   "files": [
     {
-      "bytes": 560,
+      "bytes": 856,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "2e6196a8556d57dcbf0a674b971f78e39609ab0ef9433369559ece2ff6933d1b"
+      "sha256": "09aadc674d33e8557998471842133e8d1d42d33a37965f5405ba561cc5e728ca"
     },
     {
       "bytes": 1693,
@@ -18,9 +18,9 @@
       "sha256": "13138b6735374f0f9928d9bf5801331efc5d0a5f848520aefcc25b88b9ab0381"
     },
     {
-      "bytes": 1036,
+      "bytes": 1217,
       "path": "README.md",
-      "sha256": "63aa1b601939f99c3bc7e4247c0f5ef819eb101afac4f4461b05aeb709b9c5e5"
+      "sha256": "4a6193a11dcb0804ce2417bb9e16bec2171a2a3b08fce14469f2ebacf76005ba"
     },
     {
       "bytes": 674,
@@ -66,6 +66,11 @@
       "bytes": 2453,
       "path": "scripts/verify-plugin.mjs",
       "sha256": "a04b1ca641b6f12b1ec9d8c30e73748f71c206cd9cdec92fedea3d339b28a2dd"
+    },
+    {
+      "bytes": 5272,
+      "path": "skills/ask-household-record/SKILL.md",
+      "sha256": "c3e00d54648717946f580fce725af640a794e1fb5ed09b4225d13f37ba9f8070"
     },
     {
       "bytes": 29538,
