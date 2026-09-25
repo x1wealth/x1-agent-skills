@@ -3,7 +3,7 @@
     "name": "X1 Wealth",
     "url": "https://x1wealth.com"
   },
-  "description": "Review capital-call notices, prepare meetings, and record meeting outcomes through X1 while keeping money movement and household authority outside the agent.",
+  "description": "Review capital-call notices and K-1s, prepare meetings, and record meeting outcomes through X1 while keeping money movement and household authority outside the agent.",
   "homepage": "https://x1wealth.com",
   "interface": {
     "capabilities": [
@@ -12,16 +12,15 @@
     ],
     "category": "Productivity",
     "defaultPrompt": [
+      "Review the K-1s that came in against my X1 record.",
       "Help me review this capital-call notice through X1.",
-      "Resume my open capital-call work in X1.",
-      "Get me ready for my meeting with a client using X1.",
-      "Log my meeting outcomes in X1 and show me the batch first."
+      "Get me ready for my meeting with a client using X1."
     ],
     "developerName": "X1 Wealth",
     "displayName": "X1 Agent Skills",
-    "longDescription": "Portable workflows for reviewing a capital-call notice, preparing a client or household meeting from the X1 record, and recording meeting outcomes as approved proposals, all while preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
+    "longDescription": "Portable workflows for reviewing a capital-call notice, reviewing each K-1 against the household's entities, agreements, and prior year with a CPA handoff, preparing a client or household meeting from the X1 record, and recording meeting outcomes as approved proposals, all while preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
     "privacyPolicyURL": "https://x1wealth.com/legal/privacy-policy",
-    "shortDescription": "Capital calls, meeting prep, and meeting outcomes through X1",
+    "shortDescription": "K-1s, capital calls, meeting prep, and meeting outcomes through X1",
     "termsOfServiceURL": "https://x1wealth.com/legal/terms-and-conditions",
     "websiteURL": "https://x1wealth.com"
   },
@@ -32,7 +31,10 @@
     "private-investments",
     "household-coordination",
     "meeting-prep",
-    "meeting-follow-up"
+    "meeting-follow-up",
+    "k-1",
+    "schedule-k-1",
+    "tax-documents"
   ],
   "license": "Apache-2.0",
   "name": "x1-agent-skills",

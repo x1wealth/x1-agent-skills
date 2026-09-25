@@ -1,0 +1,31 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1041) 2025
+Beneficiary's Share of Income, Deductions, Credits, etc.
+For calendar year 2025
+[X] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE ESTATE OR TRUST
+A  Estate's or trust's employer identification number: 00-9014473
+B  Estate's or trust's name: Estate of Walter Quill
+C  Fiduciary's name, address, city, state, and ZIP code:
+   Rosalind Quill Park, Executor
+   50 Example Court
+   Walla Walla, WA 99000
+D  [ ] Check if Form 1041-T was filed and enter the date it was filed
+E  [X] Check if this is the final Form 1041 for the estate or trust
+
+PART II. INFORMATION ABOUT THE BENEFICIARY
+F  Beneficiary's identifying number: XXX-XX-0000 (synthetic)
+G  Beneficiary's name, address, city, state, and ZIP code:
+   Marcus Quill
+   10 Example Street
+   Portland, OR 97000
+H  [X] Domestic beneficiary   [ ] Foreign beneficiary
+
+PART III. BENEFICIARY'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+1   Interest income: 2,310
+2a  Ordinary dividends: 4,875
+2b  Qualified dividends: 4,120
+4a  Net long-term capital gain: 22,640
+11  Final year deductions: A  Excess deductions 1,850

@@ -48,6 +48,26 @@ reject it.
 If you find a believable synthetic case that passes when it should stop, that
 is exactly the kind of contribution we want.
 
+## K-1 season, in one command
+
+```bash
+node plugins/x1-agent-skills/scripts/try-review-k1.mjs
+```
+
+This prints a complete K-1 review of the synthetic Quill household, the way
+the family and its CPA would read it: what is still missing and how many days
+remain, the question to send the CPA as is, and the register by legal owner.
+Behind it are a look-alike issuer, an estimate letter, a K-1 that names the
+wrong owner and carries an instruction aimed at automated reviewers, an
+amended K-1 after filing, a fiscal-year K-1, two missing K-1s, and a
+short-year 2026 K-1 printed on the 2025 form. Then it shows five mistakes a
+capable agent could make, and the grader stopping each one.
+
+To run your own agent against the same household, start the synthetic X1
+server described in
+`plugins/x1-agent-skills/skills/review-k1/evals/README.md`, then grade the
+trace it writes.
+
 ## Take the job into X1
 
 The synthetic tour needs no account. Real household work does. Install the

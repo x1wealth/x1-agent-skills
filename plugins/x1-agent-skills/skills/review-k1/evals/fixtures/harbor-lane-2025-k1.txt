@@ -1,0 +1,48 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. Shared X1 public fixture (review-k1, and the X1 Household Finance Workflow Cost Index fixture set v1).
+
+Schedule K-1 (Form 1065) 2025
+Partner's Share of Income, Deductions, Credits, etc.
+For calendar year 2025
+[ ] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE PARTNERSHIP
+A  Partnership's employer identification number: 00-4417362
+B  Partnership's name, address, city, state, and ZIP code:
+   Harbor Lane Rentals LLC
+   90 Example Lane
+   Astoria, OR 97000
+C  IRS center where partnership filed return: Ogden, UT
+D  [ ] Check if this is a publicly traded partnership (PTP)
+
+PART II. INFORMATION ABOUT THE PARTNER
+E  Partner's SSN or TIN: XXX-XX-0000 (synthetic)
+F  Name, address, city, state, and ZIP code for partner entered in E:
+   Quill Family Revocable Trust dated March 4, 2019
+   Elena Quill and Marcus Quill, Trustees
+   10 Example Street
+   Portland, OR 97000
+G  [ ] General partner or LLC member-manager   [X] Limited partner or other LLC member
+H1 [X] Domestic partner   [ ] Foreign partner
+I1 What type of entity is this partner? Grantor trust
+J  Partner's share of profit, loss, and capital:
+                Beginning     Ending
+   Profit       60%           60%
+   Loss         60%           60%
+   Capital      60%           60%
+L  Partner's capital account analysis:
+   Beginning capital account          $412,300
+   Capital contributed during the year  $0
+   Current year net income (loss)     ($18,206)
+   Other increase (decrease)            $0
+   Withdrawals and distributions      ($12,000)
+   Ending capital account             $382,094
+
+PART III. PARTNER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+1   Ordinary business income (loss): 0
+2   Net rental real estate income (loss): (18,420)
+3   Other net rental income (loss): 0
+5   Interest income: 214
+19  Distributions: A  12,000
+20  Other information: Z  Section 199A information: see attached statement
+
+Statement attached to Schedule K-1, box 20 code Z: The rental activity is not treated as a trade or business for Section 199A purposes for 2025.

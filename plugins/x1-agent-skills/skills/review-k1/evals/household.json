@@ -1,0 +1,493 @@
+{
+  "description": "Synthetic Quill household served by the review-k1 mock X1 MCP server. Every name, number, and identifier is fictional. Shapes follow the public X1 contract in ../references/current-x1-contract.md; values are fixtures, not production data.",
+  "version": "2026-09-25",
+  "asOf": "2026-09-25",
+  "members": [
+    {
+      "id": "mem_quill",
+      "name": "Elena Quill",
+      "email": "elena.quill@example.invalid"
+    },
+    {
+      "id": "mem_quillen",
+      "name": "Elena Quillen",
+      "email": "elena.quillen@example.invalid"
+    }
+  ],
+  "entities": [
+    {
+      "id": "ent_quill_trust",
+      "entityType": "trust",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": {
+        "k1s": [],
+        "legal": null,
+        "trust": {
+          "trustName": "Quill Family Revocable Trust",
+          "trustType": "revocable",
+          "grantorNames": [
+            "Elena Quill",
+            "Marcus Quill"
+          ],
+          "trusteeNames": [
+            "Elena Quill",
+            "Marcus Quill"
+          ],
+          "successorTrusteeNames": [
+            "Rosalind Quill Park",
+            "First Cascade Trust Company"
+          ],
+          "dateEstablished": "2019-03-04",
+          "jurisdiction": "Oregon",
+          "source": {
+            "id": "doc_quill_trust",
+            "name": "Quill Family Revocable Trust.pdf",
+            "householdReviewed": true,
+            "readAt": "2025-02-02T18:00:00.000Z"
+          }
+        }
+      },
+      "displayName": "Quill Family Revocable Trust dated March 4, 2019",
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_harbor_lane",
+      "entityType": "business",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": {
+        "legal": {
+          "legalForm": "limited liability company",
+          "jurisdiction": "Oregon",
+          "formationDate": "2021-05-18",
+          "documentDate": "2021-06-01",
+          "managerNames": [
+            "Elena Quill"
+          ],
+          "memberNames": [
+            "Quill Family Revocable Trust dated March 4, 2019",
+            "Aldo Brennan"
+          ],
+          "registeredAgent": null,
+          "source": {
+            "id": "doc_harbor_oa",
+            "name": "Harbor Lane Operating Agreement.pdf",
+            "householdReviewed": true,
+            "readAt": "2025-02-02T18:05:00.000Z"
+          }
+        },
+        "trust": null,
+        "k1s": [
+          {
+            "taxYear": 2024,
+            "partnershipName": "Harbor Lane Rentals LLC",
+            "partnerName": "Quill Family Revocable Trust dated March 4, 2019",
+            "capitalAccountBeginning": 431062,
+            "capitalAccountEnding": 412300,
+            "capitalContributed": 0,
+            "currentYearIncrease": -6762,
+            "withdrawalsDistributions": 12000,
+            "profitSharePercentEnding": 60,
+            "lossSharePercentEnding": 60,
+            "capitalSharePercentEnding": 60,
+            "netRentalRealEstateIncome": -6980,
+            "interestIncome": 218,
+            "source": {
+              "id": "doc_harbor_2024",
+              "name": "Harbor Lane K-1 2024.pdf",
+              "householdReviewed": true,
+              "readAt": "2025-03-11T16:20:00.000Z"
+            }
+          }
+        ]
+      },
+      "displayName": "Harbor Lane Rentals LLC",
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_cedar_ridge",
+      "entityType": "asset",
+      "status": "member_asserted",
+      "sourceBacked": false,
+      "documentProfile": null,
+      "displayName": "Cedar Ridge Growth Fund III interest",
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": "Added by you; X1 has not matched it to a source document yet."
+    },
+    {
+      "id": "ent_juniper",
+      "entityType": "business",
+      "status": "former",
+      "sourceBacked": true,
+      "documentProfile": {
+        "legal": null,
+        "trust": null,
+        "k1s": [
+          {
+            "taxYear": 2024,
+            "partnershipName": "Juniper Street Duplex LLC",
+            "partnerName": "Quill Family Revocable Trust dated March 4, 2019",
+            "capitalAccountBeginning": 198400,
+            "capitalAccountEnding": 0,
+            "profitSharePercentEnding": 50,
+            "capitalSharePercentEnding": 50,
+            "netRentalRealEstateIncome": 3940,
+            "withdrawalsDistributions": 332210,
+            "source": {
+              "id": "doc_juniper_2024",
+              "name": "Juniper Street Duplex K-1 2024 (final).pdf",
+              "householdReviewed": true,
+              "readAt": "2025-03-06T15:00:00.000Z"
+            }
+          }
+        ]
+      },
+      "displayName": "Juniper Street Duplex LLC",
+      "aliases": [],
+      "fileable": false,
+      "formerSince": "2024-11-15",
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_maple_birch",
+      "entityType": "asset",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": {
+        "legal": null,
+        "trust": null,
+        "k1s": [
+          {
+            "taxYear": 2024,
+            "partnershipName": "Maple & Birch Opportunity Zone Fund I, LLC",
+            "partnerName": "Elena Quill",
+            "capitalAccountBeginning": 150000,
+            "capitalAccountEnding": 140660,
+            "profitSharePercentEnding": 1.25,
+            "capitalSharePercentEnding": 1.25,
+            "netRentalRealEstateIncome": -9340,
+            "source": {
+              "id": "doc_maple_2024",
+              "name": "Maple and Birch K-1 2024.pdf",
+              "householdReviewed": true,
+              "readAt": "2025-04-02T14:00:00.000Z"
+            }
+          }
+        ]
+      },
+      "displayName": "Maple & Birch Opportunity Zone Fund I interest",
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_quill_studio",
+      "entityType": "business",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": null,
+      "displayName": "Quill Studio Inc.",
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_riverbend",
+      "displayName": "Riverbend Storage Partners interest",
+      "entityType": "asset",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": null,
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    },
+    {
+      "id": "ent_tamarack",
+      "displayName": "Tamarack Ag Partners interest",
+      "entityType": "asset",
+      "status": "confirmed",
+      "sourceBacked": true,
+      "documentProfile": null,
+      "aliases": [],
+      "fileable": true,
+      "formerSince": null,
+      "memberFacingState": null
+    }
+  ],
+  "proposals": [],
+  "documents": [
+    {
+      "id": "doc_quill_trust",
+      "name": "Quill Family Revocable Trust.pdf",
+      "category": "estate",
+      "filedUnder": "ent_quill_trust",
+      "uploadedAt": "2025-02-01T12:00:00.000Z",
+      "fixture": "quill-revocable-trust.txt"
+    },
+    {
+      "id": "doc_harbor_oa",
+      "name": "Harbor Lane Operating Agreement.pdf",
+      "category": "entity_formation",
+      "filedUnder": "ent_harbor_lane",
+      "uploadedAt": "2025-02-01T12:05:00.000Z",
+      "fixture": "harbor-lane-operating-agreement.txt"
+    },
+    {
+      "id": "doc_2024_1040",
+      "name": "2024 Form 1040 as filed (April 11, 2025).pdf",
+      "category": "tax_return",
+      "taxYear": 2024,
+      "filedUnder": null,
+      "uploadedAt": "2025-04-14T09:00:00.000Z",
+      "fixture": null,
+      "metadataNote": "Filed April 11, 2025. Content not needed for this review.",
+      "filedOn": "2025-04-11"
+    },
+    {
+      "id": "doc_harbor_2024",
+      "name": "Harbor Lane K-1 2024.pdf",
+      "category": "tax",
+      "filedUnder": "ent_harbor_lane",
+      "uploadedAt": "2025-03-10T10:00:00.000Z",
+      "fixture": "harbor-lane-2024-k1.txt"
+    },
+    {
+      "id": "doc_juniper_2024",
+      "name": "Juniper Street Duplex K-1 2024 (final).pdf",
+      "category": "tax",
+      "filedUnder": "ent_juniper",
+      "uploadedAt": "2025-03-05T10:00:00.000Z",
+      "fixture": "juniper-street-duplex-2024-k1.txt"
+    },
+    {
+      "id": "doc_maple_2024",
+      "name": "Maple and Birch K-1 2024.pdf",
+      "category": "tax",
+      "filedUnder": "ent_maple_birch",
+      "uploadedAt": "2025-04-01T10:00:00.000Z",
+      "fixture": "maple-birch-oz-fund-2024-k1.txt"
+    },
+    {
+      "id": "doc_cedar_estimate",
+      "name": "Cedar Ridge 2025 tax estimate.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-02T10:00:00.000Z",
+      "fixture": "cedar-ridge-fund-iii-2025-estimate.txt"
+    },
+    {
+      "id": "doc_studio_2025",
+      "name": "Quill Studio K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-09T10:00:00.000Z",
+      "fixture": "quill-studio-2025-k1-1120s.txt"
+    },
+    {
+      "id": "doc_harbor_2025",
+      "name": "Harbor Lane K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-12T10:00:00.000Z",
+      "fixture": "harbor-lane-2025-k1.txt"
+    },
+    {
+      "id": "doc_harbor_2025_copy",
+      "name": "Harbor Lane K-1 2025 (from email).pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-14T10:00:00.000Z",
+      "fixture": "harbor-lane-2025-k1.txt"
+    },
+    {
+      "id": "doc_juniper_2025",
+      "name": "Juniper Street K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-18T10:00:00.000Z",
+      "fixture": "juniper-street-duplex-2025-k1.txt"
+    },
+    {
+      "id": "doc_hl_rental_2025",
+      "name": "HL Rental K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-03-20T10:00:00.000Z",
+      "fixture": "harbor-lane-rental-2025-k1-lookalike.txt"
+    },
+    {
+      "id": "doc_juniper_2024_amended",
+      "name": "Juniper Street K-1 2024 AMENDED.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-04-06T10:00:00.000Z",
+      "fixture": "juniper-street-duplex-2024-amended-k1.txt"
+    },
+    {
+      "id": "doc_estate_2025",
+      "name": "Estate of Walter Quill K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-05-20T10:00:00.000Z",
+      "fixture": "estate-of-walter-quill-2025-k1-1041.txt"
+    },
+    {
+      "id": "doc_cedar_2025",
+      "name": "Cedar Ridge Fund III K-1 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-09-03T10:00:00.000Z",
+      "fixture": "cedar-ridge-fund-iii-2025-k1.txt"
+    },
+    {
+      "id": "doc_riverbend_2026",
+      "name": "Riverbend final K-1 (short year 2026).pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-09-19T10:00:00.000Z",
+      "fixture": "riverbend-storage-2026-short-year-on-2025-form-k1.txt"
+    },
+    {
+      "id": "doc_tamarack_fy2025",
+      "name": "Tamarack K-1 FY ending June 2025.pdf",
+      "category": "tax",
+      "filedUnder": null,
+      "uploadedAt": "2026-01-20T10:00:00.000Z",
+      "fixture": "tamarack-ag-fy2025-k1.txt"
+    }
+  ],
+  "brain": [
+    {
+      "match": [
+        "harbor lane"
+      ],
+      "claims": [
+        {
+          "statement": "Harbor Lane Rentals LLC is owned 60% by the Quill Family Revocable Trust and 40% by Aldo Brennan.",
+          "confidence": "document",
+          "citations": [
+            "doc_harbor_oa, Exhibit A"
+          ]
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "match": [
+        "cedar ridge"
+      ],
+      "claims": [
+        {
+          "statement": "The Quill Family Revocable Trust holds the Cedar Ridge Growth Fund III interest. Added by you; X1 has not matched it to a source document yet.",
+          "confidence": "reported",
+          "citations": []
+        }
+      ],
+      "gaps": [
+        "No subscription agreement for Cedar Ridge Growth Fund III is on file."
+      ]
+    },
+    {
+      "match": [
+        "juniper"
+      ],
+      "claims": [
+        {
+          "statement": "The trust's 50% interest in Juniper Street Duplex LLC was sold in November 2024; a final 2024 K-1 is on file.",
+          "confidence": "document",
+          "citations": [
+            "doc_juniper_2024, Part II item J"
+          ]
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "match": [
+        "maple",
+        "birch"
+      ],
+      "claims": [
+        {
+          "statement": "Elena Quill holds the Maple & Birch Opportunity Zone Fund I interest individually.",
+          "confidence": "document",
+          "citations": [
+            "doc_maple_2024, Part II item F"
+          ]
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "match": [
+        "quill studio"
+      ],
+      "claims": [
+        {
+          "statement": "Elena Quill owns 100% of Quill Studio Inc. Added by you; X1 has not matched it to a source document yet.",
+          "confidence": "reported",
+          "citations": []
+        }
+      ],
+      "gaps": [
+        "No formation document or prior-year K-1 for Quill Studio Inc. is on file."
+      ]
+    },
+    {
+      "match": [
+        "walter",
+        "estate"
+      ],
+      "claims": [],
+      "gaps": [
+        "The Estate of Walter Quill is not in the household record."
+      ]
+    },
+    {
+      "match": [
+        "riverbend"
+      ],
+      "claims": [
+        {
+          "statement": "Elena Quill holds the Riverbend Storage Partners interest individually.",
+          "confidence": "document",
+          "citations": [
+            "Riverbend subscription agreement, signature page"
+          ]
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "match": [
+        "tamarack"
+      ],
+      "claims": [
+        {
+          "statement": "Marcus Quill holds the Tamarack Ag Partners interest individually.",
+          "confidence": "document",
+          "citations": [
+            "Tamarack subscription agreement, signature page"
+          ]
+        }
+      ],
+      "gaps": []
+    }
+  ],
+  "emptyMembers": [
+    "mem_quillen"
+  ]
+}

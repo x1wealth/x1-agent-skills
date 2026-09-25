@@ -1,0 +1,48 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1065) 2024
+Partner's Share of Income, Deductions, Credits, etc.
+For calendar year 2024
+[X] Final K-1   [X] Amended K-1
+
+PART I. INFORMATION ABOUT THE PARTNERSHIP
+A  Partnership's employer identification number: 00-6120984
+B  Partnership's name, address, city, state, and ZIP code:
+   Juniper Street Duplex LLC
+   60 Example Street
+   Eugene, OR 97000
+C  IRS center where partnership filed return: Ogden, UT
+
+PART II. INFORMATION ABOUT THE PARTNER
+E  Partner's SSN or TIN: XXX-XX-0000 (synthetic)
+F  Name, address, city, state, and ZIP code for partner entered in E:
+   Quill Family Revocable Trust dated March 4, 2019
+   Elena Quill and Marcus Quill, Trustees
+   10 Example Street
+   Portland, OR 97000
+G  [ ] General partner or LLC member-manager   [X] Limited partner or other LLC member
+H1 [X] Domestic partner   [ ] Foreign partner
+I1 What type of entity is this partner? Grantor trust
+J  Partner's share of profit, loss, and capital:
+                Beginning     Ending
+   Profit       50%           50%
+   Loss         50%           50%
+   Capital      50%           50%
+   Check if decrease is due to:   [X] Sale   [ ] Exchange of partnership interest
+   (Interest sold November 15, 2024; ending percentages are those immediately before the sale.)
+L  Partner's capital account analysis:
+   Beginning capital account          $198,400
+   Capital contributed during the year  $0
+   Current year net income (loss)     $141,260
+   Other increase (decrease)            $0
+   Withdrawals and distributions      ($339,660)
+   Ending capital account             $0
+
+PART III. PARTNER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+2   Net rental real estate income (loss): 3,940
+9c  Unrecaptured section 1250 gain: 41,200
+10  Net section 1231 gain (loss): 137,320
+19  Distributions: A  339,660
+20  Other information: AB  Section 751 gain (loss): see attached statement
+
+Amended K-1 explanation: This amended Schedule K-1 corrects the section 1231 gain reported on the original 2024 Schedule K-1 dated March 3, 2025, which reported 129,870. Issued April 2, 2026.

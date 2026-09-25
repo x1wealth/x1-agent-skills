@@ -1,0 +1,68 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. Shared X1 public fixture (review-k1, and the X1 Household Finance Workflow Cost Index fixture set v1).
+
+OPERATING AGREEMENT
+OF
+HARBOR LANE RENTALS LLC
+An Oregon Limited Liability Company
+
+This Operating Agreement is made effective as of June 1, 2021, by and among the Members listed on Exhibit A.
+
+ARTICLE 1. FORMATION
+
+1.1 Formation. The Company was formed as a limited liability company under the Oregon Limited Liability Company Act by filing Articles of Organization with the Oregon Secretary of State on May 18, 2021.
+
+1.2 Name. The name of the Company is Harbor Lane Rentals LLC.
+
+1.3 Purpose. The Company is formed to acquire, hold, lease, and manage residential rental real estate, including the property at 90 Example Lane, Astoria, Oregon, and to engage in any lawful activity related to that purpose.
+
+1.4 Tax Classification. The Members intend that the Company be classified as a partnership for federal and state income tax purposes. The Company's federal employer identification number is 00-4417362.
+
+ARTICLE 2. MEMBERS AND CAPITAL
+
+2.1 Members. The Members of the Company, their initial Capital Contributions, and their Percentage Interests are set forth on Exhibit A.
+
+2.2 Additional Contributions. No Member is required to make any additional Capital Contribution unless approved by Members holding a majority of the Percentage Interests.
+
+2.3 Capital Accounts. A separate capital account shall be maintained for each Member in accordance with Treasury Regulations Section 1.704-1(b)(2)(iv).
+
+ARTICLE 3. ALLOCATIONS AND DISTRIBUTIONS
+
+3.1 Allocations. Profits and losses for each fiscal year shall be allocated among the Members in proportion to their Percentage Interests.
+
+3.2 Distributions. Distributions of available cash shall be made at the times and in the amounts determined by the Manager, in proportion to the Members' Percentage Interests.
+
+ARTICLE 4. MANAGEMENT
+
+4.1 Manager-Managed. The Company is manager-managed. The Manager of the Company is Elena Quill, who shall serve until her resignation, removal, or death.
+
+4.2 Authority of the Manager. The Manager has sole authority to sign leases, open and close Company bank accounts, and execute documents on behalf of the Company, except that the sale or refinancing of any real property requires the written consent of Members holding at least seventy-five percent (75%) of the Percentage Interests.
+
+4.3 Successor Manager. If the Manager ceases to serve, Members holding a majority of the Percentage Interests shall appoint a successor Manager.
+
+ARTICLE 5. TRANSFERS
+
+5.1 Restrictions. No Member may transfer all or any part of its interest without the prior written consent of the other Members, except a transfer by a Member to a revocable trust of which that Member is a trustee.
+
+ARTICLE 6. BOOKS, RECORDS, AND TAX RETURNS
+
+6.1 Fiscal Year. The fiscal year of the Company is the calendar year.
+
+6.2 Tax Returns. The Manager shall cause the Company to file its federal partnership return on Form 1065 and to furnish each Member a Schedule K-1 within the time required by law.
+
+IN WITNESS WHEREOF, the Members have executed this Operating Agreement as of the effective date.
+
+Quill Family Revocable Trust dated March 4, 2019
+By: Elena Quill, Trustee
+By: Marcus Quill, Trustee
+
+Aldo Brennan
+
+EXHIBIT A. MEMBERS
+
+Member: Quill Family Revocable Trust dated March 4, 2019, Elena Quill and Marcus Quill, Trustees
+Initial Capital Contribution: $420,000
+Percentage Interest: 60%
+
+Member: Aldo Brennan
+Initial Capital Contribution: $280,000
+Percentage Interest: 40%

@@ -1,0 +1,37 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1065) 2025
+Partner's Share of Income, Deductions, Credits, etc.
+For calendar year 2025, or tax year beginning 01/01/2026 ending 03/31/2026
+[X] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE PARTNERSHIP
+A  Partnership's employer identification number: 00-5528817
+B  Partnership's name, address, city, state, and ZIP code:
+   Riverbend Storage Partners, L.P.
+   70 Example Avenue
+   Boise, ID 83000
+
+PART II. INFORMATION ABOUT THE PARTNER
+F  Name, address, city, state, and ZIP code for partner entered in E:
+   Elena Quill
+   10 Example Street
+   Portland, OR 97000
+I1 What type of entity is this partner? Individual
+J  Partner's share of profit, loss, and capital:
+                Beginning     Ending
+   Profit       2.00%         0%
+   Loss         2.00%         0%
+   Capital      2.00%         0%
+L  Partner's capital account analysis:
+   Beginning capital account          $61,300
+   Current year net income (loss)     $8,450
+   Withdrawals and distributions      ($69,750)
+   Ending capital account             $0
+
+PART III. PARTNER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+2   Net rental real estate income (loss): 1,210
+10  Net section 1231 gain (loss): 7,240
+19  Distributions: A  69,750
+
+Partnership terminated March 31, 2026. This is the final Schedule K-1 for the short tax year beginning January 1, 2026. The 2026 form was not available when this return was filed, so the partnership used the 2025 form.

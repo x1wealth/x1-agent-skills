@@ -3,7 +3,7 @@
     "name": "X1 Wealth"
   },
   "defaultEnabled": false,
-  "description": "Your family's own record in Claude. Ask what your trusts, LLCs, K-1s and policies say and get answers tied to the page, add documents one at a time, work through capital calls, and get ready for and follow up on meetings with your CPA, attorney or advisor. Never moves money.",
+  "description": "Your family's own record in Claude. Ask what your trusts, LLCs, K-1s and policies say and get answers tied to the page, review each K-1 against your record and hand your CPA what is missing, add documents one at a time, work through capital calls, and get ready for and follow up on meetings with your CPA, attorney or advisor. Never moves money.",
   "homepage": "https://github.com/x1wealth/x1-agent-skills",
   "keywords": [
     "family office",
