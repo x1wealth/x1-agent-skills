@@ -19,8 +19,12 @@
     "eval:host": "node skills/handle-capital-call/evals/run-host-eval.mjs",
     "eval:meetings": "node scripts/evaluate-meeting-skill.mjs",
     "eval:oracle": "node skills/handle-capital-call/evals/evaluate.mjs --suite all",
-    "test": "node --test skills/handle-capital-call/evals/evaluate.test.mjs skills/handle-capital-call/evals/run-host-eval.test.mjs scripts/evaluate-meeting-skill.test.mjs",
-    "verify": "node scripts/verify-plugin.mjs"
+    "test": "node --test skills/handle-capital-call/evals/evaluate.test.mjs skills/handle-capital-call/evals/run-host-eval.test.mjs scripts/evaluate-meeting-skill.test.mjs scripts/evaluate-review-k1.test.mjs scripts/mock-x1-k1-household.test.mjs",
+    "verify": "node scripts/verify-plugin.mjs",
+    "eval:k1": "node scripts/evaluate-review-k1.mjs",
+    "try:k1": "node scripts/try-review-k1.mjs",
+    "mock:k1": "node scripts/mock-x1-k1-household.mjs",
+    "agent:k1": "node scripts/run-agent-review-k1.mjs"
   },
   "type": "module",
   "version": "0.4.0"

@@ -3,14 +3,14 @@
   "contractId": "x1.agent-skills-public-plugin.v1",
   "files": [
     {
-      "bytes": 856,
+      "bytes": 927,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "09aadc674d33e8557998471842133e8d1d42d33a37965f5405ba561cc5e728ca"
+      "sha256": "e086b336d3df47f48d7de882dc723340a7a8c538d7319beb62d8603d836cac12"
     },
     {
-      "bytes": 1693,
+      "bytes": 1803,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "cad27477556fb13cd2d739e61f7713a37bbee8c0827efb902edc8ffaeb6f1ccd"
+      "sha256": "fad12f8ef33a430b1123c36400539a2036b74cc674b1f150a7fc6c75d2d858a2"
     },
     {
       "bytes": 2583,
@@ -18,9 +18,9 @@
       "sha256": "13138b6735374f0f9928d9bf5801331efc5d0a5f848520aefcc25b88b9ab0381"
     },
     {
-      "bytes": 1217,
+      "bytes": 1416,
       "path": "README.md",
-      "sha256": "4a6193a11dcb0804ce2417bb9e16bec2171a2a3b08fce14469f2ebacf76005ba"
+      "sha256": "02af2120d712de1ae1b485f987e0819f8b1b88a3bb70d64d03a61bfbd3c99682"
     },
     {
       "bytes": 674,
@@ -43,9 +43,9 @@
       "sha256": "5740898007c6c558d2909e4a19e0e378c0de4efbdcb5c3f7a3da753c6232f41c"
     },
     {
-      "bytes": 965,
+      "bytes": 1253,
       "path": "package.json",
-      "sha256": "3d8bc817a95dc39cb2776698120f467eca30d986541eff0ea503c9aa012c0bed"
+      "sha256": "79e58b1500f81f23e9acd49020b5e4b8373cea453749fc4e4855def84bc6dd84"
     },
     {
       "bytes": 23714,
@@ -61,6 +61,36 @@
       "bytes": 1877,
       "path": "scripts/evaluate-meeting-skill.test.mjs",
       "sha256": "a5f022751b5f9796e4894c64d92ecbbe168f28a3241569634f2b0313d9148fa3"
+    },
+    {
+      "bytes": 30102,
+      "path": "scripts/evaluate-review-k1.mjs",
+      "sha256": "fcbebb89cee26e022421bed58b825562b14221a805b887bf59cb01868f44baec"
+    },
+    {
+      "bytes": 3588,
+      "path": "scripts/evaluate-review-k1.test.mjs",
+      "sha256": "7fe79e8fa084a71096aa679ebf8aa03feb4eb640d721331eb71a210fd8c5f8a3"
+    },
+    {
+      "bytes": 13879,
+      "path": "scripts/mock-x1-k1-household.mjs",
+      "sha256": "445e399db9931c504a9ef5e89fd23558229563bee320f5cc89025d46e8789109"
+    },
+    {
+      "bytes": 6209,
+      "path": "scripts/mock-x1-k1-household.test.mjs",
+      "sha256": "d5205f465bc4d21d13f31dab4868bab274573439b7b0a8161221670ffbc288d9"
+    },
+    {
+      "bytes": 4008,
+      "path": "scripts/run-agent-review-k1.mjs",
+      "sha256": "b4b5816225ade3e843b056dbf5f56c01b5d3033342182fd8f806ce4f3672db8d"
+    },
+    {
+      "bytes": 7254,
+      "path": "scripts/try-review-k1.mjs",
+      "sha256": "09cffd3cfdf0eceb1bd99dfe201796611450a2426198d277c1aceccea51cfa99"
     },
     {
       "bytes": 2453,
@@ -181,6 +211,141 @@
       "bytes": 7011,
       "path": "skills/record-meeting-outcomes/references/current-x1-contract.md",
       "sha256": "cd36d181227cbad5123cadbe66cbaa1c9c06d2573157e7bccd2cb8c8fd6f2a90"
+    },
+    {
+      "bytes": 24932,
+      "path": "skills/review-k1/SKILL.md",
+      "sha256": "eeebe6574292c6ab74264d74fbbfd9b41676c636c29dff5fbf54f5239493c1da"
+    },
+    {
+      "bytes": 5582,
+      "path": "skills/review-k1/evals/README.md",
+      "sha256": "c58daba13b0f27f9a3181d39f864fde216abf6d9177dfbfc925bcc858d315cd9"
+    },
+    {
+      "bytes": 1755,
+      "path": "skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/README.md",
+      "sha256": "eeb7d87fad96a055a21e43a7e56fa665a2dfc13900bf8647e26e00984ca57005"
+    },
+    {
+      "bytes": 33827,
+      "path": "skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/answer.md",
+      "sha256": "4e17f61fe3857616e88695eaa1000f3ebe87e65c21c5b17cb9600ff52b2e1f96"
+    },
+    {
+      "bytes": 71,
+      "path": "skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/grade.json",
+      "sha256": "d2c6a1e212eab24d2ddd81cb3e69d914b90f5fa4429ca218e8f964c009b49514"
+    },
+    {
+      "bytes": 32871,
+      "path": "skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/receipt.json",
+      "sha256": "52a956090d792422f752e139911c69a9ed201bb63238ce36635dc93ebad303b2"
+    },
+    {
+      "bytes": 103638,
+      "path": "skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/trace.json",
+      "sha256": "11d6dee505bd03907d96bdda8a87e618a55c7d2577ffe277fc4696e8dc5efbd2"
+    },
+    {
+      "bytes": 23444,
+      "path": "skills/review-k1/evals/answer-key.json",
+      "sha256": "e12af252e467210491e7d8030cdc01c5f28de05316c250b6b28ff5f8272f634b"
+    },
+    {
+      "bytes": 1105,
+      "path": "skills/review-k1/evals/fixtures/cedar-ridge-fund-iii-2025-estimate.txt",
+      "sha256": "dbb188e3fe48b2e7f4af3c43808ebdcc203f6d0eb834cf58449af777067fa88f"
+    },
+    {
+      "bytes": 2411,
+      "path": "skills/review-k1/evals/fixtures/cedar-ridge-fund-iii-2025-k1.txt",
+      "sha256": "568c61046632cd0cb8f7d808eaaf60e96274e3310df1d3ce4aa15758b74dba41"
+    },
+    {
+      "bytes": 1240,
+      "path": "skills/review-k1/evals/fixtures/estate-of-walter-quill-2025-k1-1041.txt",
+      "sha256": "d4c90b3a31b5ac7c2aca17cfe87a05d07d7ce105b54206e7422c4e751a1827cd"
+    },
+    {
+      "bytes": 2068,
+      "path": "skills/review-k1/evals/fixtures/harbor-lane-2024-k1.txt",
+      "sha256": "032d566cdf22c58a867b81f5dd55fac543c16698c08fdc73eb78e7cf5f0dc201"
+    },
+    {
+      "bytes": 2140,
+      "path": "skills/review-k1/evals/fixtures/harbor-lane-2025-k1.txt",
+      "sha256": "720d2a20c25468db3e6abe2dc9a13d2b06a960f333549fb413e4009027771035"
+    },
+    {
+      "bytes": 3618,
+      "path": "skills/review-k1/evals/fixtures/harbor-lane-operating-agreement.txt",
+      "sha256": "8f33fe15e2f3ca8d72bbd8d5cfb10a30022d83d4d0dd660f9f746978fb978e28"
+    },
+    {
+      "bytes": 1686,
+      "path": "skills/review-k1/evals/fixtures/harbor-lane-rental-2025-k1-lookalike.txt",
+      "sha256": "d588d6027a0937fb43febc558b949d4f4a4976cb79946c8fafe152ba30947e2d"
+    },
+    {
+      "bytes": 2213,
+      "path": "skills/review-k1/evals/fixtures/juniper-street-duplex-2024-amended-k1.txt",
+      "sha256": "b1037812246c1acd0989bd24587e30432901d5cfa6cb078f2903d5eb2ec4cd85"
+    },
+    {
+      "bytes": 1676,
+      "path": "skills/review-k1/evals/fixtures/juniper-street-duplex-2024-k1.txt",
+      "sha256": "cb4614484777d765ccfa4eea7c229898fe5a2669bec9d0b0fd5bc708fa285169"
+    },
+    {
+      "bytes": 1279,
+      "path": "skills/review-k1/evals/fixtures/juniper-street-duplex-2025-k1.txt",
+      "sha256": "bf9c8f3847924daa2fdf2cd0e7d769f07274dee69e429b7d7dab07f189b22bc1"
+    },
+    {
+      "bytes": 1548,
+      "path": "skills/review-k1/evals/fixtures/maple-birch-oz-fund-2024-k1.txt",
+      "sha256": "da422de7b1173d93e2bf347087e1ba5c4d20c941d1dffe8e75d3b7faa20d34ca"
+    },
+    {
+      "bytes": 2777,
+      "path": "skills/review-k1/evals/fixtures/quill-revocable-trust.txt",
+      "sha256": "8eb343fcab32b02180e57048ccac1a11ddfd8a669afdde7fd5293eae220773ba"
+    },
+    {
+      "bytes": 1409,
+      "path": "skills/review-k1/evals/fixtures/quill-studio-2025-k1-1120s.txt",
+      "sha256": "2ce5e304a7b35e3504de1ab8623678a3c50f9a3a86dd5d1730af1713936491b0"
+    },
+    {
+      "bytes": 1586,
+      "path": "skills/review-k1/evals/fixtures/riverbend-storage-2026-short-year-on-2025-form-k1.txt",
+      "sha256": "2129e424f9fbb141b0c6da474cb74dcead38964c3309cac6f50509d8230fb876"
+    },
+    {
+      "bytes": 1458,
+      "path": "skills/review-k1/evals/fixtures/tamarack-ag-fy2025-k1.txt",
+      "sha256": "8668f7682bed2f2339f709a495eae189b2b8735d0bb14f9e2dbb6c04a2f86810"
+    },
+    {
+      "bytes": 14385,
+      "path": "skills/review-k1/evals/household.json",
+      "sha256": "d2c7a0251793a73e23edb3ae76bba556b916f80141a0881f071dff64393a4525"
+    },
+    {
+      "bytes": 189222,
+      "path": "skills/review-k1/evals/scenarios.json",
+      "sha256": "ce9a274287929505228867c743996b000eb28935f42aa204e1dba5d3c88dd0bb"
+    },
+    {
+      "bytes": 6169,
+      "path": "skills/review-k1/references/current-x1-contract.md",
+      "sha256": "278e3686bef7122a8474e974e6dff0403d2e77bc8195d4c091651599f3b41341"
+    },
+    {
+      "bytes": 8249,
+      "path": "skills/review-k1/references/k1-review-reference.md",
+      "sha256": "64920e98081e9cd5ad45baaac64552466d8d862eefb36afa2cd39421573edf1f"
     }
   ],
   "license": "Apache-2.0",

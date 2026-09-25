@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added `review-k1`: each tax year 2025 K-1 is matched to the household's legal owner, checked against the operating agreement, the trust, and the prior-year K-1, sorted by version (estimate, original, amended, Form 8986), and summarized in an expected-versus-received register by legal owner and a CPA handoff, with a cited page behind every question. K-1s are routed by the tax period they cover, and one outside the shipped rule set is flagged rather than checked with the wrong year's rules. Professionals get chase drafts for every missing K-1 and a queue across their book.
+- Added a synthetic Quill household served over MCP, an independent answer key, seven graded scenarios with 80 rejected mutations, a no-account tour (`node plugins/x1-agent-skills/scripts/try-review-k1.mjs`), a runner that grades a real Claude Code agent against the household, and one recorded Claude Opus 5.5 run that passes.
+- Trimmed the Codex plugin's default prompts to three, as the host requires.
+
 ## 0.4.0 - 2026-09-05
 
 - Added the production-qualified bounded free capital-call administrative job: governed source intake, human confirmation, durable waiting, household-reported closeout, and later reuse.

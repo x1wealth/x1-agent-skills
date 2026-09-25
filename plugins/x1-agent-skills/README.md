@@ -1,8 +1,8 @@
 # X1 Agent Skills plugin
 
-This plugin packages four skills for Codex, Claude Code, and Grok:
-`ask-household-record`, `handle-capital-call`, `prepare-meeting`, and
-`record-meeting-outcomes`. It
+This plugin packages five skills for Codex, Claude Code, and Grok:
+`ask-household-record`, `handle-capital-call`, `prepare-meeting`,
+`record-meeting-outcomes`, and `review-k1`. It
 connects to X1's existing remote MCP service. It does not bundle a server,
 credentials, production code, or household data.
 
@@ -10,7 +10,9 @@ Every workflow reviews, drafts, and coordinates. None moves money, verifies
 settlement, sends to an outside recipient, or treats a proposal as a completed
 action. `ask-household-record` answers from the person's own documents with
 the page behind each answer and adds documents only after the person approves
-them in X1. `prepare-meeting` is read only. `record-meeting-outcomes` drafts every
+them in X1. `prepare-meeting` is read only. `review-k1` reads the tax year's K-1s against
+the household record and drafts a CPA handoff; it files a K-1 under an entity
+or commits a request only after the person approves it in X1. `record-meeting-outcomes` drafts every
 proposal first, shows one exact batch for approval before any write, and then
 follows the write authority X1 reports for the connection: a first-party
 confirmation receipt where X1 requires one, or a direct call under the

@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "description": "Your family's own record in Claude: cited answers from your trusts, LLCs and policies, plus capital calls and meeting follow-through.",
+      "description": "Your family's own record in Claude: cited answers from your trusts, LLCs and policies, K-1 review with a CPA handoff, capital calls, and meeting follow-through.",
       "name": "x1-agent-skills",
       "source": "./plugins/x1-agent-skills"
     }

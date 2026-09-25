@@ -1,0 +1,42 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1065) 2025
+Partner's Share of Income, Deductions, Credits, etc.
+For calendar year 2025
+[ ] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE PARTNERSHIP
+A  Partnership's employer identification number: 00-4417326
+B  Partnership's name, address, city, state, and ZIP code:
+   Harbor Lane Rental LLC
+   PO Box 0000
+   Bend, OR 97000
+C  IRS center where partnership filed return: Ogden, UT
+D  [ ] Check if this is a publicly traded partnership (PTP)
+
+PART II. INFORMATION ABOUT THE PARTNER
+E  Partner's SSN or TIN: XXX-XX-0000 (synthetic)
+F  Name, address, city, state, and ZIP code for partner entered in E:
+   Elena Quill
+   10 Example Street
+   Portland, OR 97000
+G  [ ] General partner or LLC member-manager   [X] Limited partner or other LLC member
+H1 [X] Domestic partner   [ ] Foreign partner
+I1 What type of entity is this partner? Individual
+J  Partner's share of profit, loss, and capital:
+                Beginning     Ending
+   Profit       25%           25%
+   Loss         25%           25%
+   Capital      25%           25%
+L  Partner's capital account analysis:
+   Beginning capital account          $88,400
+   Capital contributed during the year  $0
+   Current year net income (loss)     $6,150
+   Other increase (decrease)            $0
+   Withdrawals and distributions      ($4,000)
+   Ending capital account             $90,550
+
+PART III. PARTNER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+1   Ordinary business income (loss): 0
+2   Net rental real estate income (loss): 6,150
+19  Distributions: A  4,000

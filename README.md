@@ -22,8 +22,11 @@ from what is already known.
 From there, `handle-capital-call` reviews a notice, surfaces gaps, brings in
 the right person, and resumes the same work later. `prepare-meeting` and
 `record-meeting-outcomes` get the household ready for a conversation with its
-CPA, attorney, or advisor and keep what was decided. People remain accountable
-for consequential decisions, and no skill moves money.
+CPA, attorney, or advisor and keep what was decided. `review-k1` takes each
+K-1 as it arrives, works out whose it is, checks it against the operating
+agreement, the trust, and last year's K-1, and hands the CPA what arrived,
+what is still missing, and the questions worth asking. People remain
+accountable for consequential decisions, and no skill moves money.
 
 Read [The job is bigger than the chat](FIELD_GUIDE.md) for the idea, or [try the
 weird parts first](TRY_IT.md) to see the skill under pressure. The synthetic
@@ -37,6 +40,7 @@ CLI](https://github.com/vercel-labs/skills):
 ```bash
 npx skills add x1wealth/x1-agent-skills --skill ask-household-record
 npx skills add x1wealth/x1-agent-skills --skill handle-capital-call
+npx skills add x1wealth/x1-agent-skills --skill review-k1
 ```
 
 Then connect your compatible host to X1's remote MCP service at
@@ -138,6 +142,73 @@ coordination thread from another supported host.
 
 It can't send a wire, verify settlement, sign a document, invent a missing
 record, or bypass X1 confirmation.
+
+## Your K-1 arrived
+
+It is late September. Partnerships on extension had until September 15 to
+file and send K-1s, and your own extended return is due October 15. A K-1
+lands in your inbox, then another, and one you were counting on still hasn't
+come.
+
+`review-k1` reads each one against the household's X1 record and answers the
+questions a K-1 can't answer on its own:
+
+- **Whose is it?** A "Harbor Lane Rental LLC" K-1 with two EIN digits
+  transposed doesn't match the Harbor Lane Rentals LLC in your record, however
+  close the name, so X1 lists it as unmatched instead of filing it there.
+- **Does it agree with everything else?** The Cedar Ridge fund addressed its
+  K-1 to Marcus, but you told X1 the trust holds that interest. That is a
+  question for your CPA and the fund, not something to quietly refile.
+- **Does it tie out?** This year's beginning capital matches last year's
+  ending capital, or the review asks why.
+- **What is it telling you about the rest of your record?** Both Harbor Lane
+  K-1s say the trust owns 60%, but the trust's own schedule never lists the
+  interest. That question goes to your estate attorney. You would never see
+  it from the K-1 alone.
+- **What is still missing?** Maple and Birch sent a 2024 K-1 and nothing for
+  2025, and nothing on file shows an extension, so the review asks instead of
+  assuming one. Riverbend's final 2026 K-1 already came, but its 2025 K-1
+  never did. A list built from last year's K-1s would miss it; the register
+  is built from the interests your X1 record shows, and asks about anything
+  new.
+
+It works for the tax year 2025 K-1s arriving now, and routes each K-1 by the
+tax period it covers rather than the year printed on the form. A short-year
+2026 K-1 on the 2025 form gets a plain note that X1's 2026 checks aren't
+published yet, and no checks from the wrong year. The review ends with an
+expected-versus-received register by legal owner and a CPA handoff, each
+question addressed to the person who can answer it and tied to the page it
+rests on. It is built to ask your CPA rather than give tax advice, and it never files a return or moves money.
+
+Here is the top of the review it writes for the synthetic Quill household:
+
+> **If you only read one thing.** Two K-1s are still missing: Maple & Birch
+> Opportunity Zone Fund I, and Riverbend Storage Partners' 2025 K-1. If you
+> extended your return, it is due October 15, 20 days from now.
+>
+> **Send your CPA this, as is:** "The 2025 Cedar Ridge Growth Fund III K-1
+> names Marcus. We told X1 the trust holds this investment, but no
+> subscription agreement is on file. Which owner should the 2025 K-1 name,
+> and should we ask the fund to correct it?"
+>
+> **Expected versus received, Quill Family Revocable Trust:** Harbor Lane
+> Rentals LLC received. Cedar Ridge received, owner unresolved (the estimate
+> letter is superseded; the K-3 is indicated but not found). Juniper Street
+> received, though the interest was sold in 2024.
+
+By default the skill only reads and drafts. Filing a K-1 under an entity in
+X1, or sending a request for a missing one, is a separate step that happens
+only after you approve that exact action.
+
+We ran Claude Opus 5.5 against the same synthetic household, with only this
+skill for instructions; its trace, its review, and its passing grade are in
+[the agent run record](plugins/x1-agent-skills/skills/review-k1/evals/agent-runs/2026-09-25-claude-opus-member-review/README.md).
+
+See the whole review, and five mistakes it stops, with no account:
+
+```bash
+node plugins/x1-agent-skills/scripts/try-review-k1.mjs
+```
 
 ## The job is bigger than the chat
 

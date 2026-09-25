@@ -1,0 +1,40 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1065) 2024
+Partner's Share of Income, Deductions, Credits, etc.
+For calendar year 2024
+[X] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE PARTNERSHIP
+A  Partnership's employer identification number: 00-6120984
+B  Partnership's name, address, city, state, and ZIP code:
+   Juniper Street Duplex LLC
+   60 Example Street
+   Eugene, OR 97000
+
+PART II. INFORMATION ABOUT THE PARTNER
+F  Name, address, city, state, and ZIP code for partner entered in E:
+   Quill Family Revocable Trust dated March 4, 2019
+   Elena Quill and Marcus Quill, Trustees
+I1 What type of entity is this partner? Grantor trust
+J  Partner's share of profit, loss, and capital:
+                Beginning     Ending
+   Profit       50%           50%
+   Loss         50%           50%
+   Capital      50%           50%
+   Check if decrease is due to:   [X] Sale   [ ] Exchange of partnership interest
+   (Interest sold November 15, 2024; ending percentages are those immediately before the sale.)
+L  Partner's capital account analysis:
+   Beginning capital account          $198,400
+   Current year net income (loss)     $133,810
+   Withdrawals and distributions      ($332,210)
+   Ending capital account             $0
+
+PART III. PARTNER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+2   Net rental real estate income (loss): 3,940
+9c  Unrecaptured section 1250 gain: 41,200
+10  Net section 1231 gain (loss): 129,870
+19  Distributions: A  332,210
+20  Other information: AB  Section 751 gain (loss): see attached statement
+
+Issued March 3, 2025.

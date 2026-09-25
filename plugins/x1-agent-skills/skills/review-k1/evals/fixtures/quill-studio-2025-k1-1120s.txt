@@ -1,0 +1,32 @@
+SYNTHETIC TEST DOCUMENT. All names, numbers, and identifiers are fictional. X1 public fixture for review-k1.
+
+Schedule K-1 (Form 1120-S) 2025
+Shareholder's Share of Income, Deductions, Credits, etc.
+For calendar year 2025
+[ ] Final K-1   [ ] Amended K-1
+
+PART I. INFORMATION ABOUT THE CORPORATION
+A  Corporation's employer identification number: 00-2256190
+B  Corporation's name, address, city, state, and ZIP code:
+   Quill Studio Inc.
+   20 Example Street
+   Portland, OR 97000
+C  IRS center where corporation filed return: e-file
+D  Corporation's total number of shares: Beginning of tax year 1,000; End of tax year 1,000
+
+PART II. INFORMATION ABOUT THE SHAREHOLDER
+E  Shareholder's identifying number: XXX-XX-0000 (synthetic)
+F1 Shareholder's name, address, city, state, and ZIP code:
+   Elena Quill
+   10 Example Street
+   Portland, OR 97000
+F3 What type of entity is this shareholder? Individual
+G  Current year allocation percentage: 100%
+H  Shareholder's number of shares: Beginning of tax year 1,000; End of tax year 1,000
+I  Loans from shareholder: Beginning of tax year $0; End of tax year $40,000
+
+PART III. SHAREHOLDER'S SHARE OF CURRENT YEAR INCOME, DEDUCTIONS, CREDITS, AND OTHER ITEMS
+1   Ordinary business income (loss): 186,420
+4   Interest income: 96
+16  Items affecting shareholder basis: D  Distributions 120,000
+17  Other information: V  Section 199A information: see attached statement
