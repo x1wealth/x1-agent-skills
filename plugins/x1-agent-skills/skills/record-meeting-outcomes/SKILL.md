@@ -1,6 +1,6 @@
 ---
 name: record-meeting-outcomes
-description: Turn meeting notes or a transcript the user supplies into X1 record proposals: decisions, follow-ups, document requests, and profile facts, drafted first and shown as one exact batch for approval before any write. Use when a user says post-meeting, log the meeting, meeting follow-up, or record what we decided. Never sends to an outside recipient and never creates a client.
+description: "Turn meeting notes or a transcript the user supplies into X1 record proposals: decisions, follow-ups, document requests, and profile facts, drafted first and shown as one exact batch for approval before any write. Use when a user says post-meeting, log the meeting, meeting follow-up, or record what we decided. Never sends to an outside recipient and never creates a client."
 metadata:
   version: 2026-09-15
 ---
