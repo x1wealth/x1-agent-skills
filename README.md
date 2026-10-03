@@ -107,11 +107,11 @@ the [Grok setup and qualification boundary](integrations/grok/README.md).
 
 ### Grok Bot
 
-Create a focused Bot, connect X1 as a Custom MCP connector at
-`https://mcp.x1wealth.com/mcp`, and enable the installed
-`handle-capital-call` skill under Settings -> Plugins -> Yours. Use the
-[share-safe Bot profile](GROK_BOT_PROFILE.md) so X1 remains the authority while
-the Bot owns the administrative job.
+Add X1 by asking the Bot in chat: `Add a custom MCP server called x1 at https://mcp.x1wealth.com/mcp`. The Bot asks you to confirm, then adds an `x1` connector to your account. Connectors apply to every Bot on the account.
+
+Sign in from the Bot's connect card, or from Marketplace -> Your plugins -> x1 -> Authenticate, and complete X1 sign-in in the browser on the same computer. The desktop app receives the sign-in callback locally.
+
+Then ask the Bot to create a private skill named `handle-capital-call` from this repository's exact files at a pinned commit, and confirm its first heading reads "Handle a Capital Call Through X1". A Grok Bot template packs each skill as a single text, with no companion files, so don't rely on a template to carry the skill. The [Grok setup guide](integrations/grok/README.md) lists the files and what to check before sharing a Bot as a template. Use the [share-safe Bot profile](GROK_BOT_PROFILE.md) so X1 remains the authority while the Bot owns the administrative job.
 
 Start with one manual notice. Save a routine only after the Bot stops correctly
 on missing evidence, changed payment details, and required human confirmation.
