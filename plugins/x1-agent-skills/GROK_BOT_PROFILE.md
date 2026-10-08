@@ -28,10 +28,14 @@ not proved, stop and name the hold.
 
 ## First handoff
 
-`Help me review this capital-call notice through X1. Use
-/x1-agent-skills:handle-capital-call. Show the bounded receipt and stop before
-money movement, external contact, or any action that has not been visibly
-confirmed in X1.`
+`Help me review this capital-call notice through X1. Use the
+handle-capital-call skill. Show the bounded receipt and stop before money
+movement, external contact, or any action that has not been visibly confirmed
+in X1.`
+
+In Grok Bot, this names the private `handle-capital-call` skill created or
+installed in this Bot. With the plugin installed in Grok Build, invoke
+`/x1-agent-skills:handle-capital-call` instead.
 
 ## Routine candidate
 
