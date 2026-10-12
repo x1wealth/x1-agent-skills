@@ -325,6 +325,20 @@ pnpm eval:oracle
 Named-host tests use only the included synthetic MCP server. See
 `plugins/x1-agent-skills/skills/handle-capital-call/evals/README.md`.
 
+## See the structure first
+
+[belongs-to](https://github.com/silverstein/belongs-to) is a companion skill that
+draws who owns what, and where it goes when someone dies or a company sells,
+from the same kind of documents: trusts, deeds, operating agreements, cap
+tables and beneficiary forms. Every box cites its page, anything the documents
+don't show is drawn as a gap, and the build checks the figure before drawing
+it. It runs on its own, with no X1 account. Where it finds a gap, the skills
+above are how the household keeps the record true afterwards.
+
+```bash
+npx skills add silverstein/belongs-to
+```
+
 ## Safety and support
 
 The skill treats financial documents as untrusted input, rechecks live X1
