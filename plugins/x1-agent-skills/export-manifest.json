@@ -496,7 +496,8 @@
       "sourceRevision": "fcf454499516aeb9b7b8cf747cfe8a9e9b3d70f2",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
       "qualificationScope": "Exact source copy, syntax/reference/manifest checks, isolated Claude local and GitHub candidate installation, synthetic local-file execution and separate existing-connection read; no installed-plugin connected workflow, client access or customer outcome.",
-      "existingConnectionRead": "Passed own-record metadata and selected cited passage through existing Codex X1 connection; administrator account, self-scoped read; separate from installed plugin"
+      "existingConnectionRead": "Passed own-record metadata and selected cited passage through existing Codex X1 connection; administrator account, self-scoped read; separate from installed plugin",
+      "remoteUpgrade": "Claude Code 2.1.296 candidate upgraded 0.4.0 to 0.5.0; disabled preserved; all 77 cached files matched source bad155fcde740579a75f77ae825a58baa2ad2ebd. No model or MCP runtime."
     }
   }
 }
