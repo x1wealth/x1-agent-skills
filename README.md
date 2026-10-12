@@ -325,6 +325,13 @@ clone.
 
 ## Verify the exact checkout
 
+The qualification receipt describes one exact artifact: the signed `v0.4.0`
+release. `main` moves on between releases, and `release-manifest.json` is not
+regenerated until the next release is built and signed, so on a checkout of
+`main` the verifier reports which files differ from the last release and that
+they are unqualified until then. That is the expected state of a development
+branch, not a defect. To check the release itself, verify the release archive.
+
 Download the qualification receipt and its `.sig` file from release `v0.4.0`,
 then run:
 

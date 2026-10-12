@@ -635,7 +635,19 @@ if (
 }
 
 if (errors.length > 0) {
-  process.stdout.write(`${JSON.stringify({ errors, ok: false }, null, 2)}\n`);
+  // Manifest mismatches on a checkout that is simply ahead of the last signed
+  // release are expected, and they are not a defect in the release. Say so
+  // first, so the wall of SHA lines reads as "unreleased" rather than "broken".
+  const manifestDrift = errors.filter((e) => /mismatch|not in manifest|missing from checkout/.test(e)).length;
+  const other = errors.length - manifestDrift;
+  const summary =
+    manifestDrift > 0
+      ? `This checkout differs from release ${manifest.version} in ${manifestDrift} file${manifestDrift === 1 ? "" : "s"}. ` +
+        `The v${manifest.version} manifest and qualification receipt describe that release's exact bytes, not this checkout. ` +
+        `Unreleased changes on this branch are unqualified until a new release is built and signed.` +
+        (other > 0 ? ` ${other} other error${other === 1 ? "" : "s"} also need attention.` : "")
+      : undefined;
+  process.stdout.write(`${JSON.stringify({ summary, errors, ok: false }, null, 2)}\n`);
   process.exitCode = 1;
 } else {
   process.stdout.write(
