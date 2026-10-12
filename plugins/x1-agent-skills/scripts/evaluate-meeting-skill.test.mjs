@@ -48,3 +48,33 @@ test("claim keys must be present as booleans", () => {
   const scored = scoreRun(suite, scenario, run);
   assert.ok(scored.failures.includes("claim_missing"));
 });
+
+test("a second direct write against an already-written approved row is a replay", () => {
+  const suite = loadScenarios("record-meeting-outcomes");
+  const scenario = suite.scenarios.find((item) => item.id === "advisor-batch-approved-direct-writes");
+  const run = structuredClone(scenario.reference_run);
+  const index = run.tool_calls.findIndex((step) => step.name === "log_decision");
+  run.tool_calls.splice(index + 1, 0, structuredClone(run.tool_calls[index]));
+  const scored = scoreRun(suite, scenario, run);
+  assert.equal(scored.ok, false);
+  assert.ok(scored.failures.includes("write_replayed"));
+});
+
+test("a retried direct write after a failure is still a replay of the same approval", () => {
+  const suite = loadScenarios("record-meeting-outcomes");
+  const scenario = suite.scenarios.find((item) => item.id === "advisor-batch-approved-direct-writes");
+  const run = structuredClone(scenario.reference_run);
+  const index = run.tool_calls.findIndex((step) => step.name === "log_decision");
+  const failed = structuredClone(run.tool_calls[index]);
+  failed.outcome = "error";
+  run.tool_calls.splice(index, 0, failed);
+  const scored = scoreRun(suite, scenario, run);
+  assert.ok(scored.failures.includes("write_replayed"));
+});
+
+test("separately approved rows can each be written once", () => {
+  const suite = loadScenarios("record-meeting-outcomes");
+  const scenario = suite.scenarios.find((item) => item.id === "advisor-batch-approved-direct-writes");
+  const scored = scoreRun(suite, scenario, structuredClone(scenario.reference_run));
+  assert.equal(scored.ok, true, scored.failures.join(","));
+});
