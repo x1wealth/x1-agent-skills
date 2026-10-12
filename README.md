@@ -61,6 +61,7 @@ CLI](https://github.com/vercel-labs/skills):
 npx skills add x1wealth/x1-agent-skills --skill ask-household-record
 npx skills add x1wealth/x1-agent-skills --skill handle-capital-call
 npx skills add x1wealth/x1-agent-skills --skill review-k1
+npx skills add x1wealth/x1-agent-skills --skill build-with-x1
 ```
 
 Then connect your compatible host to X1's remote MCP service at
@@ -108,6 +109,17 @@ Run these inside Claude Code:
 The X1 connection is off by default. Review the plugin, enable it when you are
 ready, and complete X1 sign-in through Claude Code.
 
+Already installed? Update the marketplace and plugin from your terminal:
+
+```bash
+claude plugin marketplace update x1-wealth
+claude plugin update x1-agent-skills@x1-wealth
+claude plugin details x1-agent-skills@x1-wealth
+```
+
+Version `0.5.0` adds `build-with-x1` as the sixth skill. Restart Claude Code after
+updating and check the plugin's enabled state. New installs are disabled by default.
+
 See [compatibility.json](compatibility.json) for the exact qualification status
 of each host.
 
@@ -120,6 +132,9 @@ grok plugin install x1wealth/x1-agent-skills@v0.4.0#plugins/x1-agent-skills
 grok plugin install x1wealth/x1-agent-skills@v0.4.0#plugins/x1-agent-skills --trust
 grok inspect
 ```
+
+The pinned `v0.4.0` release predates Build with X1. These commands remain the
+previous Grok route; they don't install the new builder skill.
 
 The plugin includes the skill and X1 MCP endpoint. Grok will ask you to complete
 X1 sign-in. An install does not grant access or prove the full workflow. Read

@@ -3,14 +3,14 @@
   "contractId": "x1.agent-skills-public-plugin.v1",
   "files": [
     {
-      "bytes": 927,
+      "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "e086b336d3df47f48d7de882dc723340a7a8c538d7319beb62d8603d836cac12"
+      "sha256": "d5f2fbb4dd496658bf00508677724a0e4355214a2cbc0009d5983d7d91bf2a63"
     },
     {
-      "bytes": 1803,
+      "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "fad12f8ef33a430b1123c36400539a2036b74cc674b1f150a7fc6c75d2d858a2"
+      "sha256": "7bb96130c2efc282f194530b60182d489f3f43c4057392cac9f353a1571a4641"
     },
     {
       "bytes": 2771,
@@ -45,7 +45,7 @@
     {
       "bytes": 1253,
       "path": "package.json",
-      "sha256": "79e58b1500f81f23e9acd49020b5e4b8373cea453749fc4e4855def84bc6dd84"
+      "sha256": "766025ee00dad99e7ccb82d393e6e0b3324430787f2b322181550dc2189d1212"
     },
     {
       "bytes": 23714,
@@ -485,17 +485,18 @@
     }
   ],
   "sourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_and_synthetic_instruction_checks_only",
-      "nativeHost": "Claude Code 2.1.296 local-directory plugin-manager install and six-skill inventory; disabled; no model run",
+      "nativeHost": "Claude Code 2.1.296 local and GitHub branch plugin-manager installs discover six skills; disabled; no model run",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
       "historicalReleaseReceiptsApply": false,
       "sourceRevision": "fcf454499516aeb9b7b8cf747cfe8a9e9b3d70f2",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
-      "qualificationScope": "Exact source copy, syntax/reference/manifest checks, isolated local Claude Code install and synthetic local-file execution; no remote install, live connection, client access or customer outcome."
+      "qualificationScope": "Exact source copy, syntax/reference/manifest checks, isolated Claude local and GitHub candidate installation, synthetic local-file execution and separate existing-connection read; no installed-plugin connected workflow, client access or customer outcome.",
+      "existingConnectionRead": "Passed own-record metadata and selected cited passage through existing Codex X1 connection; administrator account, self-scoped read; separate from installed plugin"
     }
   }
 }

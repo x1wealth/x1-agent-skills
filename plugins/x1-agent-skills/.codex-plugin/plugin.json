@@ -3,7 +3,7 @@
     "name": "X1 Wealth",
     "url": "https://x1wealth.com"
   },
-  "description": "Review capital-call notices and K-1s, prepare meetings, and record meeting outcomes through X1 while keeping money movement and household authority outside the agent.",
+  "description": "Review capital-call notices and K-1s, prepare meetings, and record meeting outcomes through X1 while keeping money movement and household authority outside the agent. Customize views or extend your own project with Build with X1.",
   "homepage": "https://x1wealth.com",
   "interface": {
     "capabilities": [
@@ -18,7 +18,7 @@
     ],
     "developerName": "X1 Wealth",
     "displayName": "X1 Agent Skills",
-    "longDescription": "Portable workflows for reviewing a capital-call notice, reviewing each K-1 against the household's entities, agreements, and prior year with a CPA handoff, preparing a client or household meeting from the X1 record, and recording meeting outcomes as approved proposals, all while preserving X1 record identities, involving the right person, and safely resuming the same governed work later.",
+    "longDescription": "Portable workflows for reviewing a capital-call notice, reviewing each K-1 against the household's entities, agreements, and prior year with a CPA handoff, preparing a client or household meeting from the X1 record, and recording meeting outcomes as approved proposals, all while preserving X1 record identities, involving the right person, and safely resuming the same governed work later. Build with X1 adds property, bookkeeping and insurance recipes for your chosen workspace.",
     "privacyPolicyURL": "https://x1wealth.com/legal/privacy-policy",
     "shortDescription": "K-1s, capital calls, meeting prep, and meeting outcomes through X1",
     "termsOfServiceURL": "https://x1wealth.com/legal/terms-and-conditions",
@@ -40,5 +40,5 @@
   "name": "x1-agent-skills",
   "repository": "https://github.com/x1wealth/x1-agent-skills",
   "skills": "./skills/",
-  "version": "0.4.0"
+  "version": "0.5.0"
 }
