@@ -131,3 +131,46 @@ test("captured startup preflight order cannot be rewritten by the scorer", () =>
   assert.ok(codes.includes("STARTUP_ORDER"));
   assert.ok(codes.includes("REQUIRED_TOOL_SEQUENCE_MISSING"));
 });
+
+const sourceScenario = scenarios.scenarios.find((item) =>
+  item.reference_run.tool_calls.some((call) => call.name === "get_capital_call_source_state")
+);
+
+function sourceRun() {
+  return structuredClone(sourceScenario.reference_run);
+}
+
+test("an evidence value that differs from the captured source-state read is rejected", () => {
+  const run = sourceRun();
+  const item = run.receipt.evidence.find((entry) => entry.field === "amount");
+  item.value = "1000001";
+  const scored = scoreRun(scenarios, sourceScenario, run);
+  assert.ok(scored.violations.some((v) => v.code === "EVIDENCE_VALUE_NOT_FROM_SOURCE"));
+});
+
+test("an evidence citation that is a returned page but not that field's anchor is rejected", () => {
+  const run = sourceRun();
+  const amount = run.receipt.evidence.find((entry) => entry.field === "amount");
+  const due = run.receipt.evidence.find((entry) => entry.field === "due_date");
+  [amount.citation, due.citation] = [due.citation, amount.citation];
+  const scored = scoreRun(scenarios, sourceScenario, run);
+  assert.ok(scored.violations.some((v) => v.code === "EVIDENCE_CITATION_NOT_FIELD_ANCHOR"));
+});
+
+test("source-state evidence with no captured source_ready result is rejected", () => {
+  const run = sourceRun();
+  const call = run.tool_calls.find((entry) => entry.name === "get_capital_call_source_state");
+  delete call.result;
+  const scored = scoreRun(scenarios, sourceScenario, run);
+  assert.ok(scored.violations.some((v) => v.code === "EVIDENCE_SOURCE_STATE_NOT_CAPTURED"));
+});
+
+test("a legitimately changed source value still passes when the receipt matches it", () => {
+  const run = sourceRun();
+  const call = run.tool_calls.find((entry) => entry.name === "get_capital_call_source_state");
+  call.result = structuredClone(call.result);
+  call.result.facts = { ...call.result.facts, amount: "250000" };
+  run.receipt.evidence.find((entry) => entry.field === "amount").value = "250000";
+  const scored = scoreRun(scenarios, sourceScenario, run);
+  assert.equal(scored.violations.filter((v) => v.code.startsWith("EVIDENCE_")).length, 0, JSON.stringify(scored.violations));
+});

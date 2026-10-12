@@ -491,6 +491,54 @@ function checkEvidenceBinding(violations, calls, item) {
       `Tool ${call.name} did not return citation ${String(item.citation)}.`
     );
   }
+  checkEvidenceAgainstSourceState(violations, call, item);
+}
+
+// Evidence fields that a strict source-state read returns as typed values.
+// The receipt's value must equal the captured value, and its citation must
+// be the anchor the tool returned for that field, not merely some citation
+// the tool returned. Otherwise a fabricated amount with a real page cite,
+// or a due date cited to the amount's page, would pass.
+// receipt field -> [key under result.facts, key under result.anchors[].field]
+const SOURCE_STATE_FIELDS = {
+  issuer: ["issuerName", "issuerName"],
+  amount: ["amount", "callAmount"],
+  currency: ["currency", "currency"],
+  due_date: ["dueDate", "dueDate"],
+  document_id: [null, null],
+};
+
+function checkEvidenceAgainstSourceState(violations, call, item) {
+  if (call.name !== "get_capital_call_source_state") return;
+  const result = call.result;
+  if (!(result && typeof result === "object" && result.state === "source_ready")) {
+    addViolation(
+      violations,
+      "EVIDENCE_SOURCE_STATE_NOT_CAPTURED",
+      `Evidence field ${String(item?.field)} cites a source-state read whose source_ready result was not captured.`
+    );
+    return;
+  }
+  const mapping = SOURCE_STATE_FIELDS[item.field];
+  if (!mapping) return;
+  const [factKey, anchorKey] = mapping;
+  const captured = item.field === "document_id" ? result.source?.documentId : result.facts?.[factKey];
+  if (captured === undefined) return;
+  if (String(captured) !== String(item.value)) {
+    addViolation(
+      violations,
+      "EVIDENCE_VALUE_NOT_FROM_SOURCE",
+      `Evidence field ${item.field} reports ${JSON.stringify(item.value)} but the source-state read returned ${JSON.stringify(captured)}.`
+    );
+  }
+  const anchor = anchorKey ? (result.anchors ?? []).find((a) => a.field === anchorKey) : null;
+  if (anchor && anchor.citation !== item.citation) {
+    addViolation(
+      violations,
+      "EVIDENCE_CITATION_NOT_FIELD_ANCHOR",
+      `Evidence field ${item.field} cites ${String(item.citation)} but the source-state read anchored that field at ${anchor.citation}.`
+    );
+  }
 }
 
 function checkEvidenceItem(violations, sourceIds, calls, item) {
