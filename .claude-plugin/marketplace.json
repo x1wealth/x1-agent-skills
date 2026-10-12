@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Official X1 Wealth agent skills",
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "name": "x1-wealth",
   "owner": {
@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "description": "Your family's own record in Claude: cited answers from your trusts, LLCs and policies, K-1 review with a CPA handoff, capital calls, and meeting follow-through.",
+      "description": "Your family's own record in Claude: cited answers from your trusts, LLCs and policies, K-1 review with a CPA handoff, capital calls, and meeting follow-through. Build your own property, bookkeeping or insurance view.",
       "name": "x1-agent-skills",
       "source": "./plugins/x1-agent-skills"
     }
