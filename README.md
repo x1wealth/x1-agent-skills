@@ -89,8 +89,15 @@ free job.
 ```bash
 codex plugin marketplace add x1wealth/x1-agent-skills
 codex plugin add x1-agent-skills@x1-wealth
-codex mcp add x1 --url https://mcp.x1wealth.com/mcp
 ```
+
+These commands install the skills. Before signing in, follow the
+[Codex connection guide](https://x1wealth.com/connect/codex) to configure the
+X1 server with `scopes = ["openid", "profile", "email"]`, then run
+`codex mcp login x1`. Configure the scopes first: `codex mcp add` can start
+sign-in immediately, before that restriction is in place. If you already have
+an X1 connection, inspect its existing configuration instead of adding a
+duplicate table.
 
 Start Codex and ask: `Help me review this capital-call notice through X1.`
 Codex will use the skill when the request matches and X1 will handle sign-in and
@@ -106,8 +113,10 @@ Run these inside Claude Code:
 /reload-plugins
 ```
 
-The X1 connection is off by default. Review the plugin, enable it when you are
-ready, and complete X1 sign-in through Claude Code.
+The plugin is disabled by default. After reviewing it, enable it from your
+terminal with `claude plugin enable x1-agent-skills@x1-wealth`. Run
+`/reload-plugins` in Claude Code, then use `/mcp` to select X1 and complete
+sign-in. Your X1 account determines the tools and records available to you.
 
 Already installed? Update the marketplace and plugin from your terminal:
 
