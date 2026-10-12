@@ -32,6 +32,26 @@ Read [The job is bigger than the chat](FIELD_GUIDE.md) for the idea, or [try the
 weird parts first](TRY_IT.md) to see the skill under pressure. The synthetic
 demo needs no X1 account, API key, or financial document.
 
+## Make it yours
+
+Use the existing workflows when you want a finished answer. When you want to
+customize a view or extend your own project, ask for `build-with-x1`.
+
+- Make a property desk with the source behind each named party.
+- Add evidence and questions to your bookkeeping checklist, keeping your rows.
+- Turn policy records into a dated insurance review list.
+- Bring a different idea and keep your own tools, layout and workflow.
+
+You can work inside your assistant or your own project. Start with supplied files;
+connect X1 when finding or revisiting your authorized record makes the job easier.
+The skill supports editable in-host views where the host allows them. A chat's MCP
+connection doesn't automatically give an artifact its own live connection.
+
+See the [recipe library](plugins/x1-agent-skills/skills/build-with-x1/references/recipes.md).
+These are portable instructions; new connected-artifact and professional-client
+runs remain unverified. The historical release's host receipts don't qualify this
+addition. Existing installation and connection instructions below still apply.
+
 ## Install the skill
 
 Install the portable skill with the open-source [skills

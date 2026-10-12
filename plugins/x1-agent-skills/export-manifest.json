@@ -18,9 +18,9 @@
       "sha256": "1f9f5f5f4d427a1e3f422dfff164a523cd1df076d1b35d46e2ba25ded96f614c"
     },
     {
-      "bytes": 1416,
+      "bytes": 1918,
       "path": "README.md",
-      "sha256": "02af2120d712de1ae1b485f987e0819f8b1b88a3bb70d64d03a61bfbd3c99682"
+      "sha256": "cc83a4f07e2dd23c370494c2a05329ece7d9e929f1045f0190e4654956c30225"
     },
     {
       "bytes": 674,
@@ -101,6 +101,41 @@
       "bytes": 5272,
       "path": "skills/ask-household-record/SKILL.md",
       "sha256": "c3e00d54648717946f580fce725af640a794e1fb5ed09b4225d13f37ba9f8070"
+    },
+    {
+      "bytes": 9266,
+      "path": "skills/build-with-x1/SKILL.md",
+      "sha256": "5d0f35e3aa5c696582f870a89e46ec4658c8be23c955d3048c7add2cbf67edf1"
+    },
+    {
+      "bytes": 1717,
+      "path": "skills/build-with-x1/references/adapt-a-workflow.md",
+      "sha256": "3116f271385c8bd1146bb0f2a2d15ec900cfca47dd6d83dbe939be8fd31b0531"
+    },
+    {
+      "bytes": 2972,
+      "path": "skills/build-with-x1/references/bookkeeping-workbench.md",
+      "sha256": "8639d02b05da5c39f623c06c5aaa053703badec6ed4b861583e803f7978cf0f9"
+    },
+    {
+      "bytes": 3279,
+      "path": "skills/build-with-x1/references/experience-modes.md",
+      "sha256": "85c376cf7156d342abe4ad32d3e1dfe002053be3149fdd75d413fa6f5c3d44c2"
+    },
+    {
+      "bytes": 1861,
+      "path": "skills/build-with-x1/references/insurance-review.md",
+      "sha256": "803d053e77a0cffb85f32d9632787f94e59e1044feae0193d6b98a63a74e284f"
+    },
+    {
+      "bytes": 2033,
+      "path": "skills/build-with-x1/references/property-desk.md",
+      "sha256": "373a1472fcb161fef056d7de4db88174cf54a7a5a54ce19f3846b4d2acbe5b6d"
+    },
+    {
+      "bytes": 1636,
+      "path": "skills/build-with-x1/references/recipes.md",
+      "sha256": "8ca48c71de05bc5790644a797769a9799870a8a3801f23f951d2c186aafd5cc2"
     },
     {
       "bytes": 29538,
@@ -193,9 +228,9 @@
       "sha256": "15c075cbd32cee11f0d965baea78af562b617b9a5f6f2c2d63df0d1f41677f16"
     },
     {
-      "bytes": 11307,
+      "bytes": 11309,
       "path": "skills/record-meeting-outcomes/SKILL.md",
-      "sha256": "5e31730aad86657647eea4169e7110706b6074515f5b5705f8c6f66913322773"
+      "sha256": "8a25053dada65a0836a3801576977dd72c645118566f65c987a294e46f5b4f8c"
     },
     {
       "bytes": 2262,
@@ -450,5 +485,17 @@
     }
   ],
   "sourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
-  "version": "0.4.0"
+  "version": "0.4.0",
+  "supplementalSkillQualification": {
+    "build-with-x1": {
+      "status": "source_and_synthetic_instruction_checks_only",
+      "nativeHost": "not_run",
+      "connectedArtifact": "not_run",
+      "professionalClient": "not_run",
+      "historicalReleaseReceiptsApply": false,
+      "sourceRevision": "fcf454499516aeb9b7b8cf747cfe8a9e9b3d70f2",
+      "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
+      "qualificationScope": "Exact source copy, syntax/reference/manifest checks and synthetic local-file execution; no fresh host install, live connection, client access or customer outcome."
+    }
+  }
 }

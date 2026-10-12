@@ -1,8 +1,8 @@
 # X1 Agent Skills plugin
 
-This plugin packages five skills for Codex, Claude Code, and Grok:
+This plugin packages six skills for Codex, Claude Code, and Grok:
 `ask-household-record`, `handle-capital-call`, `prepare-meeting`,
-`record-meeting-outcomes`, and `review-k1`. It
+`record-meeting-outcomes`, `review-k1`, and `build-with-x1`. It
 connects to X1's existing remote MCP service. It does not bundle a server,
 credentials, production code, or household data.
 
@@ -20,3 +20,10 @@ connector's beta posture where X1 reports none is enforced. A confirmed
 document request notifies the record's own member through X1, and the batch
 says so before approval. Start with the repository README for installation and
 each skill's `SKILL.md` for the exact operating contract.
+
+`build-with-x1` helps you customize an in-host view or extend an existing project.
+Its property, bookkeeping and insurance recipes preserve your chosen workspace;
+ordinary questions can stay with the existing outcome skills. Supplied files are
+enough for a local build. See [the recipe library](skills/build-with-x1/references/recipes.md).
+The new builder instructions have source and synthetic review only; connected
+artifacts and professional-client operation need their own checks.
