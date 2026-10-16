@@ -8,6 +8,10 @@ Help a household owner, bookkeeper or fractional CFO prepare the evidence and qu
 
 Keep document presence, entity/period match and accounting status separate. A bank statement doesn't establish reconciliation. An invoice doesn't establish payment. A document for another entity can't complete the row. An unsuccessful search describes that query, not every place a document might exist.
 
+Before selecting a file, inspect its available name, description and source labels. Exclude a record from real checklist evidence only when that metadata explicitly identifies it as a fixture or synthetic/example data, such as a demo, test-data sample or QA fixture. The word "QA" or "test" alone isn't enough. If the label is ambiguous, list the record as a possible fixture with the exact label that raised the question; keep its claims unverified and continue with other qualifying sources. The person can confirm it if they choose. Use fixtures only for an explicitly requested practice example, kept separate from the real checklist.
+
+Wording such as "exclude test files" in a query isn't an enforced filter. Check every returned passage against the requested entity and period. Explanatory instructions or examples don't establish the household's facts. If nothing qualifies, report what this bounded search found and keep the row open. Don't change or delete excluded records.
+
 Use the source's wording for any actual reconciliation status and say which entity, account and period it covers. Don't treat a prepared question or a draft checklist tick as an accounting entry.
 
 ## Make it mine
@@ -26,4 +30,4 @@ Map returned source references into the existing rows instead of replacing the c
 
 A new statement may resolve the missing-statement question while reconciliation remains open. A new reconciliation report may resolve only the stated account and period. Keep unrelated rows and user-authored notes intact; don't rebuild the whole checklist. Prepare questions such as “Can you share the reconciliation evidence for this account and period?” without sending them.
 
-Check correct entity/month, wrong entity/right month, right entity/wrong month, incomplete selected-file coverage, duplicate evidence and explicit reconciliation evidence with a narrower scope. Avoid transaction posting, categorization, tax filing or marking a period closed unless the user separately requests an available operation under its actual execution contract.
+Check correct entity/month, wrong entity/right month, right entity/wrong month, an explicitly labeled fixture, an ambiguous fixture label surfaced for optional confirmation, an entity name containing "QA" without a fixture mark, an explanatory page without the requested facts, incomplete selected-file coverage, duplicate evidence and explicit reconciliation evidence with a narrower scope. Avoid transaction posting, categorization, tax filing or marking a period closed unless the user separately requests an available operation under its actual execution contract.

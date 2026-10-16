@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2 - 2026-10-16
+
+- Improved the Build with X1 bookkeeping recipe: screen source labels before retrieving passages, keep explicit fixtures out of real checklist evidence, surface ambiguous labels without treating a company name as a fixture mark, and inspect results even when a query asks to exclude test files. This is an instruction update, not a new accounting integration or connected-workflow qualification.
+
 ## 0.5.1 - 2026-10-16
 
 - Improved the Build with X1 insurance recipe: recover an absent field with a selected-file label search, compare the original only when a viewer is available, and keep statement dates, reporting periods and issue dates distinct. This patch also delivers the already-public evaluator fixes from PRs 21 and 22 to existing installs and repairs five stale inventory hashes. It is not a new signed release or host-workflow qualification.
