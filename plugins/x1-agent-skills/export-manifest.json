@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "d5f2fbb4dd496658bf00508677724a0e4355214a2cbc0009d5983d7d91bf2a63"
+      "sha256": "79e2eb89f82a17f15f7d2310688dd92c05a0cfc85f015ad62dc9aca6e70b0751"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "7bb96130c2efc282f194530b60182d489f3f43c4057392cac9f353a1571a4641"
+      "sha256": "873f03e3d637d14289b1ad2ed39a9f02ff85406d082523bf7a98c1a3be273f00"
     },
     {
       "bytes": 2771,
@@ -45,7 +45,7 @@
     {
       "bytes": 1253,
       "path": "package.json",
-      "sha256": "766025ee00dad99e7ccb82d393e6e0b3324430787f2b322181550dc2189d1212"
+      "sha256": "25275398326dc89c051e4b0e1293211023ed6e2377bb7f5a55a25a044cb68fb1"
     },
     {
       "bytes": 23714,
@@ -53,14 +53,14 @@
       "sha256": "609108c6eadd1d014330539ce992e09aaed61c0c18a5a413312ce26576d09130"
     },
     {
-      "bytes": 12167,
+      "bytes": 15016,
       "path": "scripts/evaluate-meeting-skill.mjs",
-      "sha256": "6b990c11427f76b465e7c125e033bc90f5b517ebf80134ff653f4a8555ff921b"
+      "sha256": "9a2c86fee4028e849052ee0600769cd282bc20941187ad3046d48df8db90a554"
     },
     {
-      "bytes": 1877,
+      "bytes": 6043,
       "path": "scripts/evaluate-meeting-skill.test.mjs",
-      "sha256": "a5f022751b5f9796e4894c64d92ecbbe168f28a3241569634f2b0313d9148fa3"
+      "sha256": "8150b5dd6d96ba8ac6991be3c3f164d89bcae61aad30c6df0b53d2fe8fd08d29"
     },
     {
       "bytes": 30102,
@@ -123,9 +123,9 @@
       "sha256": "85c376cf7156d342abe4ad32d3e1dfe002053be3149fdd75d413fa6f5c3d44c2"
     },
     {
-      "bytes": 1861,
+      "bytes": 2852,
       "path": "skills/build-with-x1/references/insurance-review.md",
-      "sha256": "803d053e77a0cffb85f32d9632787f94e59e1044feae0193d6b98a63a74e284f"
+      "sha256": "43cc18d0577b2c82e35057dd6cbcd5ee349d6beac923869027c7e5d657f08b74"
     },
     {
       "bytes": 2033,
@@ -148,14 +148,14 @@
       "sha256": "ae5368fab84b1d954c0203b629d417dead5adbe365bf25fa978d277df07f7800"
     },
     {
-      "bytes": 45084,
+      "bytes": 47166,
       "path": "skills/handle-capital-call/evals/evaluate.mjs",
-      "sha256": "cdbabdad9129344b7472b68622c50390977238ff40af0d56d5cd06925d5c95b4"
+      "sha256": "a3f4cc54c3add690f7ba7cd5993e8285be19e95c755693491afd8bfd81ec355d"
     },
     {
-      "bytes": 4470,
+      "bytes": 6591,
       "path": "skills/handle-capital-call/evals/evaluate.test.mjs",
-      "sha256": "81c033ec37657eb4f4cb38e6fcbd4ff8fc3ee9cd3b4ae82fc39d706dede788a9"
+      "sha256": "39c062b80262c86335e111e1ecf3fe7a9b105d295b5ab6248915955fb13b68dd"
     },
     {
       "bytes": 6633,
@@ -198,9 +198,9 @@
       "sha256": "a06c790493869de7574189d5340551492e0e6b2894e80d3505cb24686c2a8750"
     },
     {
-      "bytes": 124026,
+      "bytes": 126160,
       "path": "skills/handle-capital-call/evals/scenarios.json",
-      "sha256": "f557f59cdb5d0dd37234a862ad96b2940c4bcfc4f88c99106a0f42e1c69e8ec4"
+      "sha256": "4faaf1dbc874e866f99011128b01ed6a3c67406ec0ed645d3f3261faa3525351"
     },
     {
       "bytes": 1170,
@@ -484,10 +484,25 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
-  "version": "0.5.0",
+  "sourceRevision": "696a268ec3b2149c7c56e525d394e9cb8b08d13d",
+  "version": "0.5.1",
   "supplementalSkillQualification": {
     "build-with-x1": {
+      "status": "instruction_source_reviewed_install_checks_pending",
+      "sourceRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4",
+      "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
+      "qualificationScope": "Current recipe matches its reviewed canonical source; earlier private source/date evidence is distinct from host installation and connected execution.",
+      "nativeHost": "Current 0.5.1 candidate install not yet checked; six skill directories in source.",
+      "remoteUpgrade": "Current 0.5.1 upgrade not yet checked.",
+      "connectedArtifact": "not_run",
+      "professionalClient": "not_run",
+      "historicalReleaseReceiptsApply": false
+    }
+  },
+  "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
+  "sourceRevisionRole": "Public upstream baseline; the revised Build with X1 recipe has its own exact private source revision below.",
+  "historicalSkillQualification": {
+    "build-with-x1-v0.5.0": {
       "status": "source_and_synthetic_instruction_checks_only",
       "nativeHost": "Claude Code 2.1.296 local and GitHub branch plugin-manager installs discover six skills; disabled; no model run",
       "connectedArtifact": "not_run",

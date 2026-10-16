@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.5.1 - 2026-10-16
+
+- Improved the Build with X1 insurance recipe: recover an absent field with a selected-file label search, compare the original only when a viewer is available, and keep statement dates, reporting periods and issue dates distinct. This patch also delivers the already-public evaluator fixes from PRs 21 and 22 to existing installs and repairs five stale inventory hashes. It is not a new signed release or host-workflow qualification.
+
+## Earlier additions (included in 0.5.0)
 
 - Added `review-k1`: each tax year 2025 K-1 is matched to the household's legal owner, checked against the operating agreement, the trust, and the prior-year K-1, sorted by version (estimate, original, amended, Form 8986), and summarized in an expected-versus-received register by legal owner and a CPA handoff, with a cited page behind every question. K-1s are routed by the tax period they cover, and one outside the shipped rule set is flagged rather than checked with the wrong year's rules. Professionals get chase drafts for every missing K-1 and a queue across their book.
 - Added a synthetic Quill household served over MCP, an independent answer key, seven graded scenarios with 80 rejected mutations, a no-account tour (`node plugins/x1-agent-skills/scripts/try-review-k1.mjs`), a runner that grades a real Claude Code agent against the household, and one recorded Claude Opus 5.5 run that passes.
