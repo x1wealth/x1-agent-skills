@@ -27,5 +27,5 @@
     "agent:k1": "node scripts/run-agent-review-k1.mjs"
   },
   "type": "module",
-  "version": "0.5.0"
+  "version": "0.5.1"
 }
