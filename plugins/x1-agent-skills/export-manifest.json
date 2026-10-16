@@ -488,12 +488,12 @@
   "version": "0.5.1",
   "supplementalSkillQualification": {
     "build-with-x1": {
-      "status": "instruction_source_reviewed_install_checks_pending",
+      "status": "source_reviewed_and_disabled_candidate_install_checked",
       "sourceRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
-      "qualificationScope": "Current recipe matches its reviewed canonical source; earlier private source/date evidence is distinct from host installation and connected execution.",
-      "nativeHost": "Current 0.5.1 candidate install not yet checked; six skill directories in source.",
-      "remoteUpgrade": "Current 0.5.1 upgrade not yet checked.",
+      "qualificationScope": "Reviewed canonical insurance recipe, package inventory, 47 package tests, deterministic oracle, and isolated disabled remote candidate installation/upgrade. Candidate commit binds its exact installation bytes; these reporting fields do not claim installed-plugin connected execution, client access or customer outcomes.",
+      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 69286abc7302c5b9bd313cfa00e858213313c7d3: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
+      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 69286abc7302c5b9bd313cfa00e858213313c7d3 upgraded 0.5.0 to 0.5.1; disabled state preserved; all 77 cached files match candidate. Current changes after that candidate only document qualification and provenance.",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
       "historicalReleaseReceiptsApply": false
