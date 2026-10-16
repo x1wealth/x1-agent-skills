@@ -488,12 +488,12 @@
   "version": "0.5.2",
   "supplementalSkillQualification": {
     "build-with-x1": {
-      "status": "source_reviewed_candidate_install_pending",
-      "sourceRevision": "3337301470c90f70882623c71f5b865609a72b77",
+      "status": "source_reviewed_and_disabled_candidate_install_checked",
+      "sourceRevision": "da3160a0feaae591fe52077870eee135ac37f510",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
-      "qualificationScope": "Reviewed canonical bookkeeping source-screening instructions, exact public reference copy, package inventory, 47 package tests, 41 oracle cases and 74 negative mutations. Exact disabled installation and upgrade remain publication gates. Existing evaluator checks do not prove model compliance with these instructions.",
-      "nativeHost": "Pending exact candidate installation; historical 0.5.1 installation does not qualify these bytes.",
-      "remoteUpgrade": "Pending 0.5.1 to 0.5.2 candidate upgrade.",
+      "qualificationScope": "Reviewed canonical bookkeeping source-screening instructions, exact public reference copy, package inventory, 47 package tests, 41 oracle cases, 74 negative mutations, and isolated disabled remote candidate fresh installation/upgrade. Candidate commit binds exact tested installation bytes; these reporting fields do not claim installed connected execution, client access, model compliance with the prose or customer outcomes.",
+      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 2710cfc3f6ab1a7b677e6984345027cbb337af63: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
+      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 2710cfc3f6ab1a7b677e6984345027cbb337af63 upgraded 0.5.1 to 0.5.2; disabled state preserved; all 77 cached files match candidate. Changes after that candidate document qualification and canonical provenance only.",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
       "historicalReleaseReceiptsApply": false,
