@@ -489,14 +489,15 @@
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
-      "sourceRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4",
+      "sourceRevision": "fa99d4e351aeefe60341d36cffc0ea685ab188b6",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
       "qualificationScope": "Reviewed canonical insurance recipe, package inventory, 47 package tests, deterministic oracle, and isolated disabled remote candidate installation/upgrade. Candidate commit binds its exact installation bytes; these reporting fields do not claim installed-plugin connected execution, client access or customer outcomes.",
       "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 69286abc7302c5b9bd313cfa00e858213313c7d3: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
       "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 69286abc7302c5b9bd313cfa00e858213313c7d3 upgraded 0.5.0 to 0.5.1; disabled state preserved; all 77 cached files match candidate. Current changes after that candidate only document qualification and provenance.",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
-      "historicalReleaseReceiptsApply": false
+      "historicalReleaseReceiptsApply": false,
+      "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
     }
   },
   "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
@@ -514,5 +515,6 @@
       "existingConnectionRead": "Passed own-record metadata and selected cited passage through existing Codex X1 connection; administrator account, self-scoped read; separate from installed plugin",
       "remoteUpgrade": "Claude Code 2.1.296 candidate upgraded 0.4.0 to 0.5.0; disabled preserved; all 77 cached files matched source bad155fcde740579a75f77ae825a58baa2ad2ebd. No model or MCP runtime."
     }
-  }
+  },
+  "publicBaseline": "696a268ec3b2149c7c56e525d394e9cb8b08d13d"
 }
