@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "79e2eb89f82a17f15f7d2310688dd92c05a0cfc85f015ad62dc9aca6e70b0751"
+      "sha256": "62ec3696f8b206c3bd6b8c28e15557da51ee5a1c6411967d7178a7931044a985"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "873f03e3d637d14289b1ad2ed39a9f02ff85406d082523bf7a98c1a3be273f00"
+      "sha256": "988f5ef554f7a30708d7c77e75d90e55d571a3f5d3bf302a1874137cea145733"
     },
     {
       "bytes": 2771,
@@ -45,7 +45,7 @@
     {
       "bytes": 1253,
       "path": "package.json",
-      "sha256": "25275398326dc89c051e4b0e1293211023ed6e2377bb7f5a55a25a044cb68fb1"
+      "sha256": "6577514b98d86fa50bd0406e85a5e18150d64000a191fe6ace15a7c972f3be3d"
     },
     {
       "bytes": 23714,
@@ -113,9 +113,9 @@
       "sha256": "3116f271385c8bd1146bb0f2a2d15ec900cfca47dd6d83dbe939be8fd31b0531"
     },
     {
-      "bytes": 2972,
+      "bytes": 4155,
       "path": "skills/build-with-x1/references/bookkeeping-workbench.md",
-      "sha256": "8639d02b05da5c39f623c06c5aaa053703badec6ed4b861583e803f7978cf0f9"
+      "sha256": "29f7a8104181dc0005ca53a8453d3a6d9ec85a06d78ffc064677cec1f7ec4008"
     },
     {
       "bytes": 3279,
@@ -484,20 +484,20 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "696a268ec3b2149c7c56e525d394e9cb8b08d13d",
-  "version": "0.5.1",
+  "sourceRevision": "8492a214b47062dd65f2ff886072a6844594956c",
+  "version": "0.5.2",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
-      "sourceRevision": "fa99d4e351aeefe60341d36cffc0ea685ab188b6",
+      "sourceRevision": "da3160a0feaae591fe52077870eee135ac37f510",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
-      "qualificationScope": "Reviewed canonical insurance recipe, package inventory, 47 package tests, deterministic oracle, and isolated disabled remote candidate installation/upgrade. Candidate commit binds its exact installation bytes; these reporting fields do not claim installed-plugin connected execution, client access or customer outcomes.",
-      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 69286abc7302c5b9bd313cfa00e858213313c7d3: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
-      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 69286abc7302c5b9bd313cfa00e858213313c7d3 upgraded 0.5.0 to 0.5.1; disabled state preserved; all 77 cached files match candidate. Current changes after that candidate only document qualification and provenance.",
+      "qualificationScope": "Reviewed canonical bookkeeping source-screening instructions, exact public reference copy, package inventory, 47 package tests, 41 oracle cases, 74 negative mutations, and isolated disabled remote candidate fresh installation/upgrade. Candidate commit binds exact tested installation bytes; these reporting fields do not claim installed connected execution, client access, model compliance with the prose or customer outcomes.",
+      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 2710cfc3f6ab1a7b677e6984345027cbb337af63: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
+      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 2710cfc3f6ab1a7b677e6984345027cbb337af63 upgraded 0.5.1 to 0.5.2; disabled state preserved; all 77 cached files match candidate. Changes after that candidate document qualification and canonical provenance only.",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
       "historicalReleaseReceiptsApply": false,
-      "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
+      "sourceBranchRevision": "3337301470c90f70882623c71f5b865609a72b77"
     }
   },
   "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
@@ -514,7 +514,19 @@
       "qualificationScope": "Exact source copy, syntax/reference/manifest checks, isolated Claude local and GitHub candidate installation, synthetic local-file execution and separate existing-connection read; no installed-plugin connected workflow, client access or customer outcome.",
       "existingConnectionRead": "Passed own-record metadata and selected cited passage through existing Codex X1 connection; administrator account, self-scoped read; separate from installed plugin",
       "remoteUpgrade": "Claude Code 2.1.296 candidate upgraded 0.4.0 to 0.5.0; disabled preserved; all 77 cached files matched source bad155fcde740579a75f77ae825a58baa2ad2ebd. No model or MCP runtime."
+    },
+    "build-with-x1-v0.5.1": {
+      "status": "source_reviewed_and_disabled_candidate_install_checked",
+      "sourceRevision": "fa99d4e351aeefe60341d36cffc0ea685ab188b6",
+      "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
+      "qualificationScope": "Reviewed canonical insurance recipe, package inventory, 47 package tests, deterministic oracle, and isolated disabled remote candidate installation/upgrade. Candidate commit binds its exact installation bytes; these reporting fields do not claim installed-plugin connected execution, client access or customer outcomes.",
+      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 69286abc7302c5b9bd313cfa00e858213313c7d3: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
+      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 69286abc7302c5b9bd313cfa00e858213313c7d3 upgraded 0.5.0 to 0.5.1; disabled state preserved; all 77 cached files match candidate. Current changes after that candidate only document qualification and provenance.",
+      "connectedArtifact": "not_run",
+      "professionalClient": "not_run",
+      "historicalReleaseReceiptsApply": false,
+      "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
     }
   },
-  "publicBaseline": "696a268ec3b2149c7c56e525d394e9cb8b08d13d"
+  "publicBaseline": "8492a214b47062dd65f2ff886072a6844594956c"
 }
