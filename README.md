@@ -13,6 +13,9 @@ prompt. The agent brings reasoning and initiative. X1 keeps the source,
 permission, waiting state, and history together so the work can continue after
 the chat ends.
 
+> **Try it with your agent:** Explore the household review exercise, then compare
+> its work with the answer key. [Start with the K-1 walkthrough](TRY_IT.md#k-1-season-in-one-command).
+
 Start with `ask-household-record`. Give it one real document, such as an
 operating agreement, a trust, a K-1, or an insurance policy, and it answers
 from that document with the page behind each answer. X1 files what it finds
