@@ -9,7 +9,7 @@
     {
       "license": "MIT",
       "name": "@modelcontextprotocol/sdk",
-      "version": "1.30.0"
+      "version": "1.32.0"
     },
     {
       "license": "MIT",
@@ -18,13 +18,13 @@
     },
     {
       "license": "MIT",
-      "name": "ajv-formats",
-      "version": "3.0.1"
+      "name": "ajv",
+      "version": "8.20.0"
     },
     {
       "license": "MIT",
-      "name": "ajv",
-      "version": "8.20.0"
+      "name": "ajv-formats",
+      "version": "3.0.1"
     },
     {
       "license": "MIT",
@@ -63,13 +63,13 @@
     },
     {
       "license": "MIT",
-      "name": "cookie-signature",
-      "version": "1.2.2"
+      "name": "cookie",
+      "version": "0.7.2"
     },
     {
       "license": "MIT",
-      "name": "cookie",
-      "version": "0.7.2"
+      "name": "cookie-signature",
+      "version": "1.2.2"
     },
     {
       "license": "MIT",
@@ -133,23 +133,23 @@
     },
     {
       "license": "MIT",
-      "name": "eventsource-parser",
-      "version": "3.1.1"
-    },
-    {
-      "license": "MIT",
       "name": "eventsource",
       "version": "3.0.7"
     },
     {
       "license": "MIT",
-      "name": "express-rate-limit",
-      "version": "8.6.2"
+      "name": "eventsource-parser",
+      "version": "3.1.1"
     },
     {
       "license": "MIT",
       "name": "express",
       "version": "5.2.1"
+    },
+    {
+      "license": "MIT",
+      "name": "express-rate-limit",
+      "version": "8.6.2"
     },
     {
       "license": "MIT",
@@ -159,7 +159,7 @@
     {
       "license": "BSD-3-Clause",
       "name": "fast-uri",
-      "version": "3.1.6"
+      "version": "3.1.7"
     },
     {
       "license": "MIT",
@@ -339,7 +339,7 @@
     {
       "license": "MIT",
       "name": "proxy-addr",
-      "version": "2.0.7"
+      "version": "2.0.8"
     },
     {
       "license": "BSD-3-Clause",
@@ -398,6 +398,11 @@
     },
     {
       "license": "MIT",
+      "name": "side-channel",
+      "version": "1.1.1"
+    },
+    {
+      "license": "MIT",
       "name": "side-channel-list",
       "version": "1.0.1"
     },
@@ -410,11 +415,6 @@
       "license": "MIT",
       "name": "side-channel-weakmap",
       "version": "1.0.2"
-    },
-    {
-      "license": "MIT",
-      "name": "side-channel",
-      "version": "1.1.1"
     },
     {
       "license": "MIT",
@@ -452,16 +452,16 @@
       "version": "1.0.2"
     },
     {
-      "license": "ISC",
-      "name": "zod-to-json-schema",
-      "version": "3.25.2"
-    },
-    {
       "license": "MIT",
       "name": "zod",
       "version": "4.4.3"
+    },
+    {
+      "license": "ISC",
+      "name": "zod-to-json-schema",
+      "version": "3.25.2"
     }
   ],
-  "source": "pnpm-lock.yaml",
-  "version": "0.4.0"
+  "source": "plugins/x1-agent-skills/pnpm-lock.yaml",
+  "version": "0.5.3"
 }
