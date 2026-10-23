@@ -530,20 +530,21 @@
   },
   "publicBaseline": "f4b25a6b04269a712cc46eddbb80054fb971e0d6",
   "dependencySecurityQualification": {
-    "status": "source_inventory_and_deterministic_tests_passed_host_install_pending",
+    "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
     "versions": {
       "@modelcontextprotocol/sdk": "1.32.0",
       "fast-uri": "3.1.7",
       "proxy-addr": "2.0.8"
     },
     "historicalReleaseReceiptsApply": false,
-    "nativeHost": "Candidate install pending; previous host receipts do not qualify changed package bytes",
+    "nativeHost": "Claude Code2.1.305 Linux fresh local-folder install and0.5.2->0.5.3 upgrade at candidatea0ce31729137505aaf07afbb9a0b3dc5e8011222;77tracked files matched,6skills,disabled,0agents/hooks;no model/MCP runtime",
     "connectedWorkflow": "not_run",
     "sourceScope": "Dependency and package metadata update; skill instruction files unchanged.",
     "tests": {
       "packageTests": 47,
       "oracleCases": 41,
       "negativeMutations": 74
-    }
+    },
+    "qualificationScope": "47package tests,41oracle cases,74negative mutations and exact local-folder installation/upgrade. These reporting fields follow the tested candidate; remote final-commit installation remains a publication gate."
   }
 }
