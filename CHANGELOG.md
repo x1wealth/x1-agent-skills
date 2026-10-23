@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 - 2026-10-23
+
+- Update the package’s MCP helper and evaluation dependency to SDK 1.32.0, and pin patched fast-uri 3.1.7 and proxy-addr 2.0.8. The lockfile, license inventory and plugin file hashes describe the updated candidate.
+
 ## 0.5.2 - 2026-10-16
 
 - Improved the Build with X1 bookkeeping recipe: screen source labels before retrieving passages, keep explicit fixtures out of real checklist evidence, surface ambiguous labels without treating a company name as a fixture mark, and inspect results even when a query asks to exclude test files. This is an instruction update, not a new accounting integration or connected-workflow qualification.

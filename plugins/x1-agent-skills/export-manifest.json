@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "62ec3696f8b206c3bd6b8c28e15557da51ee5a1c6411967d7178a7931044a985"
+      "sha256": "04978948fec7647d8a49a4f99b78be59981a30fdad41d6bd450accaa5c40e2f1"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "988f5ef554f7a30708d7c77e75d90e55d571a3f5d3bf302a1874137cea145733"
+      "sha256": "a930bdd4ad61a1350635af658a9b9bfb24b18b7168e0331330071ecda535aeac"
     },
     {
       "bytes": 2771,
@@ -43,14 +43,14 @@
       "sha256": "af44324b6888b52d47146d92c6ed6065222dd22ca90c973f0f41b0ada2320a31"
     },
     {
-      "bytes": 1253,
+      "bytes": 1372,
       "path": "package.json",
-      "sha256": "6577514b98d86fa50bd0406e85a5e18150d64000a191fe6ace15a7c972f3be3d"
+      "sha256": "cbc8f09fd464cd7fd25696a0c821653445f06d5aaa5ecc853354692ff62fcd2d"
     },
     {
-      "bytes": 23714,
+      "bytes": 23786,
       "path": "pnpm-lock.yaml",
-      "sha256": "609108c6eadd1d014330539ce992e09aaed61c0c18a5a413312ce26576d09130"
+      "sha256": "30351796112f82ac79d6667e373a594cf0f35a00632c42473c41862f39f2216b"
     },
     {
       "bytes": 15016,
@@ -484,8 +484,8 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "8492a214b47062dd65f2ff886072a6844594956c",
-  "version": "0.5.2",
+  "sourceRevision": "f4b25a6b04269a712cc46eddbb80054fb971e0d6",
+  "version": "0.5.3",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
@@ -501,7 +501,7 @@
     }
   },
   "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
-  "sourceRevisionRole": "Public upstream baseline; the revised Build with X1 recipe has its own exact private source revision below.",
+  "sourceRevisionRole": "Public upstream baseline for the dependency security update; unchanged skill instructions retain their recorded provenance.",
   "historicalSkillQualification": {
     "build-with-x1-v0.5.0": {
       "status": "source_and_synthetic_instruction_checks_only",
@@ -528,5 +528,22 @@
       "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
     }
   },
-  "publicBaseline": "8492a214b47062dd65f2ff886072a6844594956c"
+  "publicBaseline": "f4b25a6b04269a712cc46eddbb80054fb971e0d6",
+  "dependencySecurityQualification": {
+    "status": "source_inventory_and_deterministic_tests_passed_host_install_pending",
+    "versions": {
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "fast-uri": "3.1.7",
+      "proxy-addr": "2.0.8"
+    },
+    "historicalReleaseReceiptsApply": false,
+    "nativeHost": "Candidate install pending; previous host receipts do not qualify changed package bytes",
+    "connectedWorkflow": "not_run",
+    "sourceScope": "Dependency and package metadata update; skill instruction files unchanged.",
+    "tests": {
+      "packageTests": 47,
+      "oracleCases": 41,
+      "negativeMutations": 74
+    }
+  }
 }

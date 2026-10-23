@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.30.0",
+    "@modelcontextprotocol/sdk": "1.32.0",
     "zod": "4.4.3"
   },
   "description": "Portable, governed X1 agent skills with synthetic evaluations",
@@ -10,6 +10,12 @@
   "license": "Apache-2.0",
   "name": "@x1-wealth/agent-skills-evals",
   "packageManager": "pnpm@10.32.0",
+  "pnpm": {
+    "overrides": {
+      "fast-uri@>=3.0.0 <3.1.7": "3.1.7",
+      "proxy-addr@<2.0.8": "2.0.8"
+    }
+  },
   "private": true,
   "repository": {
     "type": "git",
@@ -27,5 +33,5 @@
     "agent:k1": "node scripts/run-agent-review-k1.mjs"
   },
   "type": "module",
-  "version": "0.5.2"
+  "version": "0.5.3"
 }
