@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.0",
-    "zod": "4.4.3"
+    "zod": "4.6.6"
   },
   "description": "Portable, governed X1 agent skills with synthetic evaluations",
   "engines": {
@@ -12,8 +12,12 @@
   "packageManager": "pnpm@10.32.0",
   "pnpm": {
     "overrides": {
-      "fast-uri@>=3.0.0 <3.1.7": "3.1.7",
-      "proxy-addr@<2.0.8": "2.0.8"
+      "body-parser@<2.4.0": "2.4.0",
+      "fast-uri@>=3.0.0 <3.1.9": "3.1.9",
+      "hono@<4.13.11": "4.13.11",
+      "ip-address@<10.7.4": "10.7.4",
+      "proxy-addr@<2.0.8": "2.0.8",
+      "qs@<6.16.1": "6.16.1"
     }
   },
   "private": true,
@@ -33,5 +37,5 @@
     "agent:k1": "node scripts/run-agent-review-k1.mjs"
   },
   "type": "module",
-  "version": "0.5.3"
+  "version": "0.5.4"
 }

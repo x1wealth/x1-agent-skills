@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.4 - 2026-10-25
+
+- Patch Zod to 4.6.6, body-parser to 2.4.0, fast-uri to 3.1.9, Hono to 4.13.11, ip-address to 10.7.4 and qs to 6.16.1. Keep SDK 1.32.0 and proxy-addr 2.0.8. Synchronize the private export dependency graph, license inventory and dependency floors. Skill instructions and the disabled-by-default connection are unchanged.
+
 ## 0.5.3 - 2026-10-23
 
 - Update the package’s MCP helper and evaluation dependency to SDK 1.32.0, and pin patched fast-uri 3.1.7 and proxy-addr 2.0.8. The lockfile, license inventory and plugin file hashes describe the updated candidate.

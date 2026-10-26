@@ -1,15 +1,15 @@
 {
   "creationInfo": {
-    "created": "2026-08-28T00:00:00Z",
+    "created": "2026-10-26T00:00:00Z",
     "creators": [
       "Organization: Lever Wealth LLC",
-      "Tool: x1-public-release-builder-v1"
+      "Tool: x1-agent-skills-dependency-release-0.5.4"
     ],
     "licenseListVersion": "3.26"
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.4.0",
-  "name": "x1-agent-skills-0.4.0",
+  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.5.4",
+  "name": "x1-agent-skills-0.5.4",
   "packages": [
     {
       "copyrightText": "Copyright 2026 Lever Wealth LLC",
@@ -19,7 +19,7 @@
       "licenseDeclared": "Apache-2.0",
       "name": "x1-agent-skills",
       "SPDXID": "SPDXRef-Package-x1-agent-skills",
-      "versionInfo": "0.4.0"
+      "versionInfo": "0.5.4"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -36,8 +36,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "@modelcontextprotocol/sdk",
-      "SPDXID": "SPDXRef-Package--modelcontextprotocol-sdk-1.30.0",
-      "versionInfo": "1.30.0"
+      "SPDXID": "SPDXRef-Package--modelcontextprotocol-sdk-1.32.0",
+      "versionInfo": "1.32.0"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -72,8 +72,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "body-parser",
-      "SPDXID": "SPDXRef-Package-body-parser-2.3.0",
-      "versionInfo": "2.3.0"
+      "SPDXID": "SPDXRef-Package-body-parser-2.4.0",
+      "versionInfo": "2.4.0"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -306,8 +306,8 @@
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "BSD-3-Clause",
       "name": "fast-uri",
-      "SPDXID": "SPDXRef-Package-fast-uri-3.1.6",
-      "versionInfo": "3.1.6"
+      "SPDXID": "SPDXRef-Package-fast-uri-3.1.9",
+      "versionInfo": "3.1.9"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -396,8 +396,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "hono",
-      "SPDXID": "SPDXRef-Package-hono-4.13.5",
-      "versionInfo": "4.13.5"
+      "SPDXID": "SPDXRef-Package-hono-4.13.11",
+      "versionInfo": "4.13.11"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -432,8 +432,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "ip-address",
-      "SPDXID": "SPDXRef-Package-ip-address-10.5.0",
-      "versionInfo": "10.5.0"
+      "SPDXID": "SPDXRef-Package-ip-address-10.7.4",
+      "versionInfo": "10.7.4"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -630,8 +630,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "proxy-addr",
-      "SPDXID": "SPDXRef-Package-proxy-addr-2.0.7",
-      "versionInfo": "2.0.7"
+      "SPDXID": "SPDXRef-Package-proxy-addr-2.0.8",
+      "versionInfo": "2.0.8"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -639,8 +639,8 @@
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "BSD-3-Clause",
       "name": "qs",
-      "SPDXID": "SPDXRef-Package-qs-6.16.0",
-      "versionInfo": "6.16.0"
+      "SPDXID": "SPDXRef-Package-qs-6.16.1",
+      "versionInfo": "6.16.1"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -846,8 +846,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "zod",
-      "SPDXID": "SPDXRef-Package-zod-4.4.3",
-      "versionInfo": "4.4.3"
+      "SPDXID": "SPDXRef-Package-zod-4.6.6",
+      "versionInfo": "4.6.6"
     }
   ],
   "relationships": [
@@ -857,7 +857,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package--modelcontextprotocol-sdk-1.30.0",
+      "relatedSpdxElement": "SPDXRef-Package--modelcontextprotocol-sdk-1.32.0",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -877,7 +877,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-body-parser-2.3.0",
+      "relatedSpdxElement": "SPDXRef-Package-body-parser-2.4.0",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -1007,7 +1007,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-fast-uri-3.1.6",
+      "relatedSpdxElement": "SPDXRef-Package-fast-uri-3.1.9",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -1057,7 +1057,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-hono-4.13.5",
+      "relatedSpdxElement": "SPDXRef-Package-hono-4.13.11",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -1077,7 +1077,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-ip-address-10.5.0",
+      "relatedSpdxElement": "SPDXRef-Package-ip-address-10.7.4",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -1187,12 +1187,12 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-proxy-addr-2.0.7",
+      "relatedSpdxElement": "SPDXRef-Package-proxy-addr-2.0.8",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-qs-6.16.0",
+      "relatedSpdxElement": "SPDXRef-Package-qs-6.16.1",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
@@ -1307,7 +1307,7 @@
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
     {
-      "relatedSpdxElement": "SPDXRef-Package-zod-4.4.3",
+      "relatedSpdxElement": "SPDXRef-Package-zod-4.6.6",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     }
