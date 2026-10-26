@@ -463,5 +463,5 @@
     }
   ],
   "source": "plugins/x1-agent-skills/pnpm-lock.yaml",
-  "version": "0.5.4"
+  "version": "0.6.0"
 }

@@ -2,7 +2,7 @@
 
 This history-free public candidate was deterministically transformed from accepted X1 source revision `3dde918274cbb5e01302dc90a94222ed9dd65fa7`. The plugin export manifest binds every public plugin file and retains the exact source-to-target hashes. The repository release manifest also binds the approved release contract and transform inputs.
 
-Real X1 adapters, server code, Git history, qualification traces, household data, credentials, and internal authority or storage implementation are excluded.
+Private X1 server adapters, server code, Git history, qualification traces, household data, credentials, and internal authority or storage implementation are excluded.
 
 ## Build with X1 source addition
 
@@ -45,3 +45,9 @@ The corresponding private template and generator repair merged in [X1 PR4113](ht
 The package passes 47 tests, 41 deterministic oracle cases, 74 negative mutations and dependency audits with zero findings at every severity. Local stdio client/server smoke checks pass for both bundled synthetic MCP servers. Claude Code 2.1.310 remotely installed candidate `0706ad27b9db770155a41224bbd43641cf2e8740` in a fresh isolated configuration and upgraded a separate isolated 0.5.3 install to it. Both matched all 77 tracked plugin files, discovered six skills and remained disabled. No model or connected X1 workflow ran. These reporting fields follow that tested candidate.
 
 Final-commit remote installation is a merge gate; its exact commit and receipt are recorded in [PR28](https://github.com/x1wealth/x1-agent-skills/pull/28), followed by stable-main fresh-install and 0.5.3 upgrade receipts. The dependency audit is package evidence, not a claim that Oneleet has rescanned the published repository.
+
+## Marketplace 0.6.0 builder integration resources
+
+Public upstream baseline: `1bd5ee5cd15566edeb92425aadf80eb93d6b24a8`. The hosted-app reference, skill routing and pure evidence adapter are copied from the owned canonical Build with X1 source. Canonical source merged to X1 master as `5afb32b2ece38b3709385dfd3bd7a2452b4960f5` (branch `ecf0ecfb02f0a548ff243440f0ed9b6539ffc6a4`). The six new or revised builder files match that master tree byte for byte. No Second Look code is copied; the module is independently authored against X1’s evidence contract. Dependency versions and lock bytes are unchanged from 0.5.4. The signed 0.4.0 archive, historical root release manifest and Grok route stay frozen. New source, synthetic adapter checks and installation evidence do not qualify a deployed app’s OAuth, user authorization, storage or connected model workflow.
+
+The package passes 60 tests, including 13 portable adapter cases, and 41 deterministic oracle cases; its unchanged dependency graph has a zero-finding audit. Private checks pass two canonical serializer tests, the 51-test actual MCP producer suite and MCP typecheck. Claude Code 2.1.310 remotely installed candidate `04932258dfb537c66aa942a1eaaefb242ce63403` in a fresh isolated configuration and upgraded a separate isolated 0.5.4 install to it. Both matched all 81 tracked files, discovered six skills and remained disabled. No model or connected workflow ran. These reporting fields follow that candidate. Final-commit remote install is a merge gate; its exact SHA and receipt will be cited in PR29, followed by stable-main fresh and direct 0.5.4-upgrade receipts.

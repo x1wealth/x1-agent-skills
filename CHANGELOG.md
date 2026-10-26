@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 - 2026-10-25
+
+- Add an advanced Build with X1 path for existing hosted apps, preserving their sign-in and per-owner X1 consent. Include a pure, tested adapter for current own-document cited evidence, with source/provenance/link binding, partial and withheld-text handling, and unknown source versions. This adds no OAuth server, token store, app permission, connection entitlement or new X1 tool. Existing skills, dependency graph and disabled-by-default connection remain.
+
 ## 0.5.4 - 2026-10-25
 
 - Patch Zod to 4.6.6, body-parser to 2.4.0, fast-uri to 3.1.9, Hono to 4.13.11, ip-address to 10.7.4 and qs to 6.16.1. Keep SDK 1.32.0 and proxy-addr 2.0.8. Synchronize the private export dependency graph, license inventory and dependency floors. Skill instructions and the disabled-by-default connection are unchanged.

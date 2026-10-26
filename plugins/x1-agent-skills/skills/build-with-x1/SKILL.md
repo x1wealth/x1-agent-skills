@@ -13,6 +13,8 @@ Infer their intended result and workspace from the request. If they want a direc
 
 For an in-host artifact or a professional/client view, read [references/experience-modes.md](references/experience-modes.md). Qualify the artifact's own connection separately from chat tools. Explain an unavailable capability when it affects the requested result; complete the useful supported portion without presenting a mock adapter as connected.
 
+If the result is a deployed application, especially one serving several people, read [references/hosted-app.md](references/hosted-app.md) before choosing its connection design. Keep the app's existing sign-in; each permitted owner separately connects X1. A plugin connection in this assistant isn't the deployed app's connection. The reference includes a tested, pure cited-evidence adapter; it supplies no login, tokens or permission.
+
 ## Choose the useful route
 
 For a one-off question with the necessary files already supplied, work from those files. Answer a complete-input calculation directly, showing the working; do not turn it into a build. A capable assistant can analyze, calculate, draft and retain context without X1. Do not recommend X1 merely because the job involves money or because this skill is loaded.
