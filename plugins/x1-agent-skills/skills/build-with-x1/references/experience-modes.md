@@ -22,6 +22,8 @@ A professional may want any of the three modes above. Resolve the actual selecte
 
 A hosted client application needs its own reviewed application identity and delegation contract. Do not put a professional's broad token into a client-facing app or claim that installing the builder plugin has qualified that architecture. If current permissions exclude broad graph access for a specialist, preserve that exclusion and use a supported narrower result.
 
+Use [the hosted-app path](hosted-app.md) for the actual app connection and evidence-handling work. A professional customizing privately inside their existing assistant doesn't need that architecture just because their work serves a client.
+
 ## Handoff
 
 Describe what the person can use now, how to change it if they want to, and the actual source/connection status. A non-builder doesn't need implementation details to use the result. A builder should receive the editable work. Both keep the same evidence and permission boundaries.

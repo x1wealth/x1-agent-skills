@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "77674dad1f288eb9a45550cb5a8551e87482aabf4ed6f5bf63f66f684ff3c122"
+      "sha256": "9d3995ca4acf74713f58ad0d030744d1573778c09d5e503f61f6b839f218aa51"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "0dab27fc59b6d1b1601edfc02c9eebf45a2e1752cfc08b4281c739c412a311db"
+      "sha256": "d25684cb79389c589b13dbf2cf0b586b4f4c0f02c297b9e45591d810c54ba6fe"
     },
     {
       "bytes": 2771,
@@ -18,9 +18,9 @@
       "sha256": "1f9f5f5f4d427a1e3f422dfff164a523cd1df076d1b35d46e2ba25ded96f614c"
     },
     {
-      "bytes": 1918,
+      "bytes": 2305,
       "path": "README.md",
-      "sha256": "cc83a4f07e2dd23c370494c2a05329ece7d9e929f1045f0190e4654956c30225"
+      "sha256": "b78b64cc9f44cab77e13d3f79fb7a561ad9114a2330da5938aff33b40ab963ce"
     },
     {
       "bytes": 674,
@@ -43,9 +43,9 @@
       "sha256": "af44324b6888b52d47146d92c6ed6065222dd22ca90c973f0f41b0ada2320a31"
     },
     {
-      "bytes": 1511,
+      "bytes": 1646,
       "path": "package.json",
-      "sha256": "0e1bce6e4c7836edeeb16db0bb900147bdd4173eb217f634ddcbb4390962e9da"
+      "sha256": "73379951ebb9d51747af5e11746f63244d882b857138a8371cf2b7ce6dd0c3a1"
     },
     {
       "bytes": 23900,
@@ -103,9 +103,9 @@
       "sha256": "c3e00d54648717946f580fce725af640a794e1fb5ed09b4225d13f37ba9f8070"
     },
     {
-      "bytes": 9266,
+      "bytes": 9703,
       "path": "skills/build-with-x1/SKILL.md",
-      "sha256": "5d0f35e3aa5c696582f870a89e46ec4658c8be23c955d3048c7add2cbf67edf1"
+      "sha256": "651ac0c6e345ad6449eb50f06bd2265b5c1ad373fba8c079855b570180b54e37"
     },
     {
       "bytes": 1717,
@@ -118,9 +118,14 @@
       "sha256": "29f7a8104181dc0005ca53a8453d3a6d9ec85a06d78ffc064677cec1f7ec4008"
     },
     {
-      "bytes": 3279,
+      "bytes": 3520,
       "path": "skills/build-with-x1/references/experience-modes.md",
-      "sha256": "85c376cf7156d342abe4ad32d3e1dfe002053be3149fdd75d413fa6f5c3d44c2"
+      "sha256": "ce555975ef2c7445680885252bc03944de53c385ac9b7b2cbb52fdbb7aa6a76b"
+    },
+    {
+      "bytes": 9593,
+      "path": "skills/build-with-x1/references/hosted-app.md",
+      "sha256": "4b46f5a0b06c63343c7248fc43ae458b90dedb76beaadfbc2654fe60f4bcd71d"
     },
     {
       "bytes": 2852,
@@ -136,6 +141,21 @@
       "bytes": 1636,
       "path": "skills/build-with-x1/references/recipes.md",
       "sha256": "8ca48c71de05bc5790644a797769a9799870a8a3801f23f951d2c186aafd5cc2"
+    },
+    {
+      "bytes": 2768,
+      "path": "skills/build-with-x1/scripts/x1-evidence.fixture.json",
+      "sha256": "0ad12fbfa022e1f6cfa46b8faf888d958c2a1304c57059721683454a89db443f"
+    },
+    {
+      "bytes": 10220,
+      "path": "skills/build-with-x1/scripts/x1-evidence.mjs",
+      "sha256": "2dca96c8a8f095b5c04efaca07df748a66829a77e0dd2a1504ad2dd6ae51c874"
+    },
+    {
+      "bytes": 8294,
+      "path": "skills/build-with-x1/scripts/x1-evidence.test.mjs",
+      "sha256": "f3a510103cad23bfcfbbdb524034bc0bb80efaf840004fdc906a69d4d999de41"
     },
     {
       "bytes": 29538,
@@ -484,8 +504,8 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "74eb2e75810e649540f28c9f4b9fe2e5b6454686",
-  "version": "0.5.4",
+  "sourceRevision": "1bd5ee5cd15566edeb92425aadf80eb93d6b24a8",
+  "version": "0.6.0",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
@@ -501,7 +521,7 @@
     }
   },
   "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
-  "sourceRevisionRole": "Public upstream baseline for the dependency security update; unchanged skill instructions retain their recorded provenance.",
+  "sourceRevisionRole": "Public upstream baseline; canonical skill sources retain their recorded provenance, with the hosted-builder tranche qualified separately.",
   "historicalSkillQualification": {
     "build-with-x1-v0.5.0": {
       "status": "source_and_synthetic_instruction_checks_only",
@@ -528,7 +548,7 @@
       "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
     }
   },
-  "publicBaseline": "74eb2e75810e649540f28c9f4b9fe2e5b6454686",
+  "publicBaseline": "1bd5ee5cd15566edeb92425aadf80eb93d6b24a8",
   "dependencySecurityQualification": {
     "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
     "versions": {
@@ -580,5 +600,14 @@
       "negativeMutations": 74
     },
     "qualificationScope": "47package tests,41oracle cases,74negative mutations and exact local-folder installation/upgrade. These reporting fields follow the tested candidate; remote final-commit installation remains a publication gate."
+  },
+  "builderKitQualification": {
+    "status": "source_and_adapter_tests_passed_remote_install_pending",
+    "scope": "Hosted-app instruction path and pure current own-document evidence normalizer; no OAuth/token storage/server implementation or connection/permission changes.",
+    "adapterTests": 13,
+    "privateCanonicalContractTests": 2,
+    "privateProducerTests": 51,
+    "connectedWorkflow": "not_run",
+    "historicalReleaseReceiptsApply": false
   }
 }

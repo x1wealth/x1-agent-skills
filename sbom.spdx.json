@@ -1,15 +1,15 @@
 {
   "creationInfo": {
-    "created": "2026-10-26T00:00:00Z",
+    "created": "2026-10-26T04:18:32Z",
     "creators": [
       "Organization: Lever Wealth LLC",
-      "Tool: x1-agent-skills-dependency-release-0.5.4"
+      "Tool: x1-agent-skills-builder-release-0.6.0"
     ],
     "licenseListVersion": "3.26"
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.5.4",
-  "name": "x1-agent-skills-0.5.4",
+  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.6.0",
+  "name": "x1-agent-skills-0.6.0",
   "packages": [
     {
       "copyrightText": "Copyright 2026 Lever Wealth LLC",
@@ -19,7 +19,7 @@
       "licenseDeclared": "Apache-2.0",
       "name": "x1-agent-skills",
       "SPDXID": "SPDXRef-Package-x1-agent-skills",
-      "versionInfo": "0.5.4"
+      "versionInfo": "0.6.0"
     },
     {
       "downloadLocation": "NOASSERTION",

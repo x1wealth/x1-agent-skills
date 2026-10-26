@@ -386,3 +386,7 @@ synthetic fixture that reproduces it.
 
 Copyright 2026 Lever Wealth LLC. Licensed under Apache-2.0. X1 Wealth and its
 marks are not licensed for unrelated products or endorsement.
+
+### Build with X1 in an existing web app
+
+Version 0.6.0 adds a [hosted-app reference](plugins/x1-agent-skills/skills/build-with-x1/references/hosted-app.md) and a small, dependency-free adapter for readable cited document evidence. Keep your own app, sign-in and case model; each owner separately authorizes X1. The adapter has no network or token handling. These resources do not establish deployed-app OAuth or multi-user acceptance. Personal in-host builds can keep using their existing host connection.
