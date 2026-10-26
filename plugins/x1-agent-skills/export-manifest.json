@@ -509,15 +509,16 @@
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
-      "sourceRevision": "da3160a0feaae591fe52077870eee135ac37f510",
+      "sourceRevision": "5afb32b2ece38b3709385dfd3bd7a2452b4960f5",
+      "sourceBranchRevision": "ecf0ecfb02f0a548ff243440f0ed9b6539ffc6a4",
       "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
-      "qualificationScope": "Reviewed canonical bookkeeping source-screening instructions, exact public reference copy, package inventory, 47 package tests, 41 oracle cases, 74 negative mutations, and isolated disabled remote candidate fresh installation/upgrade. Candidate commit binds exact tested installation bytes; these reporting fields do not claim installed connected execution, client access, model compliance with the prose or customer outcomes.",
-      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 2710cfc3f6ab1a7b677e6984345027cbb337af63: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
-      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 2710cfc3f6ab1a7b677e6984345027cbb337af63 upgraded 0.5.1 to 0.5.2; disabled state preserved; all 77 cached files match candidate. Changes after that candidate document qualification and canonical provenance only.",
+      "qualificationScope": "Current canonical builder tree, reviewed hosted-app instructions, pure adapter/producer checks and exact disabled remote candidate install/upgrade. No model compliance with the prose, connected artifact, hosted-app OAuth, client access or customer outcome is established. Final-commit installation is a separate merge gate in PR29.",
+      "nativeHost": "Claude Code 2.1.310 fresh remote candidate install; all 81 files match, six skills, disabled; no model or connected workflow.",
+      "remoteUpgrade": "Claude Code 2.1.310 remote upgrade from 0.5.4 to candidate; all 81 files match, six skills, disabled state preserved; no model or connected workflow.",
+      "candidateRevision": "04932258dfb537c66aa942a1eaaefb242ce63403",
       "connectedArtifact": "not_run",
       "professionalClient": "not_run",
-      "historicalReleaseReceiptsApply": false,
-      "sourceBranchRevision": "3337301470c90f70882623c71f5b865609a72b77"
+      "historicalReleaseReceiptsApply": false
     }
   },
   "historicalSourceRevision": "3dde918274cbb5e01302dc90a94222ed9dd65fa7",
@@ -546,10 +547,81 @@
       "professionalClient": "not_run",
       "historicalReleaseReceiptsApply": false,
       "sourceBranchRevision": "4d6a2c3541855084023087c636e79e0dccbdc2c4"
+    },
+    "build-with-x1-v0.5.2": {
+      "status": "source_reviewed_and_disabled_candidate_install_checked",
+      "sourceRevision": "da3160a0feaae591fe52077870eee135ac37f510",
+      "sourceRoot": "docs/strategy/media-program/resources/build-with-x1",
+      "qualificationScope": "Reviewed canonical bookkeeping source-screening instructions, exact public reference copy, package inventory, 47 package tests, 41 oracle cases, 74 negative mutations, and isolated disabled remote candidate fresh installation/upgrade. Candidate commit binds exact tested installation bytes; these reporting fields do not claim installed connected execution, client access, model compliance with the prose or customer outcomes.",
+      "nativeHost": "Claude Code 2.1.301 fresh remote candidate install at 2710cfc3f6ab1a7b677e6984345027cbb337af63: six skills, disabled, all 77 cached files match candidate; no model or MCP runtime.",
+      "remoteUpgrade": "Claude Code 2.1.301 remote candidate at 2710cfc3f6ab1a7b677e6984345027cbb337af63 upgraded 0.5.1 to 0.5.2; disabled state preserved; all 77 cached files match candidate. Changes after that candidate document qualification and canonical provenance only.",
+      "connectedArtifact": "not_run",
+      "professionalClient": "not_run",
+      "historicalReleaseReceiptsApply": false,
+      "sourceBranchRevision": "3337301470c90f70882623c71f5b865609a72b77"
     }
   },
   "publicBaseline": "1bd5ee5cd15566edeb92425aadf80eb93d6b24a8",
   "dependencySecurityQualification": {
+    "status": "unchanged_dependency_graph_reaudited_zero_findings",
+    "versions": {
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "zod": "4.6.6",
+      "body-parser": "2.4.0",
+      "fast-uri": "3.1.9",
+      "hono": "4.13.11",
+      "ip-address": "10.7.4",
+      "qs": "6.16.1",
+      "proxy-addr": "2.0.8"
+    },
+    "dependencyBaselineVersion": "0.5.4",
+    "lockSha256": "c3d90828ee7b020a3b7fb76442257a3b51a5372042c3445b9759c7b9a8ea5126",
+    "audit": {
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0,
+      "info": 0
+    },
+    "qualificationScope": "The unchanged 0.5.4 dependency graph was reaudited for 0.6.0. Prior remediation and stdio smoke evidence remain historical in historicalDependencySecurityQualificationV054. Current candidate installation is in builderKitQualification; no new connected workflow is claimed."
+  },
+  "historicalDependencySecurityQualificationV053": {
+    "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
+    "versions": {
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "fast-uri": "3.1.7",
+      "proxy-addr": "2.0.8"
+    },
+    "historicalReleaseReceiptsApply": false,
+    "nativeHost": "Claude Code2.1.305 Linux fresh local-folder install and0.5.2->0.5.3 upgrade at candidatea0ce31729137505aaf07afbb9a0b3dc5e8011222;77tracked files matched,6skills,disabled,0agents/hooks;no model/MCP runtime",
+    "connectedWorkflow": "not_run",
+    "sourceScope": "Dependency and package metadata update; skill instruction files unchanged.",
+    "tests": {
+      "packageTests": 47,
+      "oracleCases": 41,
+      "negativeMutations": 74
+    },
+    "qualificationScope": "47package tests,41oracle cases,74negative mutations and exact local-folder installation/upgrade. These reporting fields follow the tested candidate; remote final-commit installation remains a publication gate."
+  },
+  "builderKitQualification": {
+    "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
+    "scope": "Hosted-app instruction path and pure current own-document evidence normalizer; no OAuth/token storage/server implementation or connection/permission changes.",
+    "adapterTests": 13,
+    "privateCanonicalContractTests": 2,
+    "privateProducerTests": 51,
+    "connectedWorkflow": "not_run",
+    "historicalReleaseReceiptsApply": false,
+    "privateSourceRevision": "5afb32b2ece38b3709385dfd3bd7a2452b4960f5",
+    "privateSourceBranchRevision": "ecf0ecfb02f0a548ff243440f0ed9b6539ffc6a4",
+    "candidateRevision": "04932258dfb537c66aa942a1eaaefb242ce63403",
+    "packageTests": 60,
+    "oracleCases": 41,
+    "nativeHost": "Claude Code 2.1.310 fresh remote candidate install; all 81 files match, six skills, disabled; no model or connected workflow.",
+    "remoteUpgrade": "Claude Code 2.1.310 remote upgrade from 0.5.4 to candidate; all 81 files match, six skills, disabled state preserved; no model or connected workflow.",
+    "qualificationScope": "Current adapter/source tests, zero-finding unchanged dependency audit and exact disabled candidate installation. Reporting metadata follows candidate; final-byte installation and stable-main receipts bind exact commit separately in PR29. Hosted-app OAuth, token storage, cross-user access and connected use are not run.",
+    "sourceTreeFiles": 11
+  },
+  "historicalDependencySecurityQualificationV054": {
     "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
     "versions": {
       "@modelcontextprotocol/sdk": "1.32.0",
@@ -582,32 +654,5 @@
     "nativeHost": "Claude Code 2.1.310 remote fresh candidate install: all 77 files match 0706ad27b9db770155a41224bbd43641cf2e8740, six skills, disabled; no model or connected workflow.",
     "remoteUpgrade": "Claude Code 2.1.310 remote upgrade from 0.5.3 to candidate 0706ad27b9db770155a41224bbd43641cf2e8740: all 77 files match, six skills, disabled state preserved; no model or connected workflow.",
     "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audits, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main fresh/upgrade receipts are recorded in PR28; historical signed release receipts do not qualify these bytes."
-  },
-  "historicalDependencySecurityQualificationV053": {
-    "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
-    "versions": {
-      "@modelcontextprotocol/sdk": "1.32.0",
-      "fast-uri": "3.1.7",
-      "proxy-addr": "2.0.8"
-    },
-    "historicalReleaseReceiptsApply": false,
-    "nativeHost": "Claude Code2.1.305 Linux fresh local-folder install and0.5.2->0.5.3 upgrade at candidatea0ce31729137505aaf07afbb9a0b3dc5e8011222;77tracked files matched,6skills,disabled,0agents/hooks;no model/MCP runtime",
-    "connectedWorkflow": "not_run",
-    "sourceScope": "Dependency and package metadata update; skill instruction files unchanged.",
-    "tests": {
-      "packageTests": 47,
-      "oracleCases": 41,
-      "negativeMutations": 74
-    },
-    "qualificationScope": "47package tests,41oracle cases,74negative mutations and exact local-folder installation/upgrade. These reporting fields follow the tested candidate; remote final-commit installation remains a publication gate."
-  },
-  "builderKitQualification": {
-    "status": "source_and_adapter_tests_passed_remote_install_pending",
-    "scope": "Hosted-app instruction path and pure current own-document evidence normalizer; no OAuth/token storage/server implementation or connection/permission changes.",
-    "adapterTests": 13,
-    "privateCanonicalContractTests": 2,
-    "privateProducerTests": 51,
-    "connectedWorkflow": "not_run",
-    "historicalReleaseReceiptsApply": false
   }
 }
