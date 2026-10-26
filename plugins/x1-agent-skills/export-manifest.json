@@ -530,7 +530,7 @@
   },
   "publicBaseline": "74eb2e75810e649540f28c9f4b9fe2e5b6454686",
   "dependencySecurityQualification": {
-    "status": "candidate_qualification_in_progress",
+    "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
     "versions": {
       "@modelcontextprotocol/sdk": "1.32.0",
       "zod": "4.6.6",
@@ -543,7 +543,25 @@
     },
     "historicalReleaseReceiptsApply": false,
     "connectedWorkflow": "not_run",
-    "sourceScope": "Dependency and version metadata only; skill instruction files unchanged."
+    "sourceScope": "Dependency and version metadata only; skill instruction files unchanged.",
+    "privateSourceRevision": "f7b2ddca985dc8e44672e6c7dd54f3d020669ba6",
+    "privateSourceBranchRevision": "8c5d9427709b98349be3833047cf90459d721f6f",
+    "candidateRevision": "0706ad27b9db770155a41224bbd43641cf2e8740",
+    "tests": {
+      "packageTests": 47,
+      "oracleCases": 41,
+      "negativeMutations": 74
+    },
+    "audit": {
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0,
+      "info": 0
+    },
+    "nativeHost": "Claude Code 2.1.310 remote fresh candidate install: all 77 files match 0706ad27b9db770155a41224bbd43641cf2e8740, six skills, disabled; no model or connected workflow.",
+    "remoteUpgrade": "Claude Code 2.1.310 remote upgrade from 0.5.3 to candidate 0706ad27b9db770155a41224bbd43641cf2e8740: all 77 files match, six skills, disabled state preserved; no model or connected workflow.",
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audits, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main fresh/upgrade receipts are recorded in PR28; historical signed release receipts do not qualify these bytes."
   },
   "historicalDependencySecurityQualificationV053": {
     "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
