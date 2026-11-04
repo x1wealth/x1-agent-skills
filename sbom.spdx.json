@@ -1,15 +1,15 @@
 {
   "creationInfo": {
-    "created": "2026-10-26T04:18:32Z",
+    "created": "2026-11-04T15:13:18Z",
     "creators": [
       "Organization: Lever Wealth LLC",
-      "Tool: x1-agent-skills-builder-release-0.6.0"
+      "Tool: x1-agent-skills-dependency-release-0.6.1"
     ],
     "licenseListVersion": "3.26"
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.6.0",
-  "name": "x1-agent-skills-0.6.0",
+  "documentNamespace": "https://github.com/x1wealth/x1-agent-skills/sbom/0.6.1",
+  "name": "x1-agent-skills-0.6.1",
   "packages": [
     {
       "copyrightText": "Copyright 2026 Lever Wealth LLC",
@@ -19,7 +19,7 @@
       "licenseDeclared": "Apache-2.0",
       "name": "x1-agent-skills",
       "SPDXID": "SPDXRef-Package-x1-agent-skills",
-      "versionInfo": "0.6.0"
+      "versionInfo": "0.6.1"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -27,8 +27,8 @@
       "licenseConcluded": "MIT",
       "licenseDeclared": "MIT",
       "name": "@hono/node-server",
-      "SPDXID": "SPDXRef-Package--hono-node-server-2.1.1",
-      "versionInfo": "2.1.1"
+      "SPDXID": "SPDXRef-Package--hono-node-server-2.1.5",
+      "versionInfo": "2.1.5"
     },
     {
       "downloadLocation": "NOASSERTION",
@@ -852,7 +852,7 @@
   ],
   "relationships": [
     {
-      "relatedSpdxElement": "SPDXRef-Package--hono-node-server-2.1.1",
+      "relatedSpdxElement": "SPDXRef-Package--hono-node-server-2.1.5",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-x1-agent-skills"
     },
