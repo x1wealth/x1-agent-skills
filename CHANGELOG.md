@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 - 2026-11-04
+
+- Pin `@hono/node-server` to 2.1.5 through a package override, fixing GHSA-rmxm-3fg6-px4f (`serveStatic` decoded the request path twice, which could bypass middleware on static paths). The SDK pulls it in for its HTTP transport; the bundled synthetic servers use stdio. The lockfile matches the private export template, and the license inventory, SBOM and plugin file hashes describe the new graph. Skill instructions and the disabled-by-default connection are unchanged.
+
 ## 0.6.0 - 2026-10-25
 
 - Add an advanced Build with X1 path for existing hosted apps, preserving their sign-in and per-owner X1 consent. Include a pure, tested adapter for current own-document cited evidence, with source/provenance/link binding, partial and withheld-text handling, and unknown source versions. This adds no OAuth server, token store, app permission, connection entitlement or new X1 tool. Existing skills, dependency graph and disabled-by-default connection remain.

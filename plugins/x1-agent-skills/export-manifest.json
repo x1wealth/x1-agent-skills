@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "9d3995ca4acf74713f58ad0d030744d1573778c09d5e503f61f6b839f218aa51"
+      "sha256": "0a4e8239a3d8b4ab087e640b40e8c4c1f5c18c29b4d83519c9fd20ce2a65d585"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "d25684cb79389c589b13dbf2cf0b586b4f4c0f02c297b9e45591d810c54ba6fe"
+      "sha256": "d93075629b3807a8ebf8ede82f965404cfd69564db048486f046c5a69b10bd8a"
     },
     {
       "bytes": 2771,
@@ -43,14 +43,14 @@
       "sha256": "af44324b6888b52d47146d92c6ed6065222dd22ca90c973f0f41b0ada2320a31"
     },
     {
-      "bytes": 1646,
+      "bytes": 1689,
       "path": "package.json",
-      "sha256": "73379951ebb9d51747af5e11746f63244d882b857138a8371cf2b7ce6dd0c3a1"
+      "sha256": "e77822d9fd2ddf7c53188cafa207619421b1d604558699525b5f9c95992e7bff"
     },
     {
-      "bytes": 23900,
+      "bytes": 23936,
       "path": "pnpm-lock.yaml",
-      "sha256": "c3d90828ee7b020a3b7fb76442257a3b51a5372042c3445b9759c7b9a8ea5126"
+      "sha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c"
     },
     {
       "bytes": 15016,
@@ -504,8 +504,8 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "1bd5ee5cd15566edeb92425aadf80eb93d6b24a8",
-  "version": "0.6.0",
+  "sourceRevision": "45784a515ad91cd63a4c6babf9bdc06391c4740a",
+  "version": "0.6.1",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
@@ -561,9 +561,9 @@
       "sourceBranchRevision": "3337301470c90f70882623c71f5b865609a72b77"
     }
   },
-  "publicBaseline": "1bd5ee5cd15566edeb92425aadf80eb93d6b24a8",
+  "publicBaseline": "45784a515ad91cd63a4c6babf9bdc06391c4740a",
   "dependencySecurityQualification": {
-    "status": "unchanged_dependency_graph_reaudited_zero_findings",
+    "status": "source_tests_audit_and_stdio_smoke_verified_remote_install_pending",
     "versions": {
       "@modelcontextprotocol/sdk": "1.32.0",
       "zod": "4.6.6",
@@ -572,10 +572,22 @@
       "hono": "4.13.11",
       "ip-address": "10.7.4",
       "qs": "6.16.1",
-      "proxy-addr": "2.0.8"
+      "proxy-addr": "2.0.8",
+      "@hono/node-server": "2.1.5"
     },
-    "dependencyBaselineVersion": "0.5.4",
-    "lockSha256": "c3d90828ee7b020a3b7fb76442257a3b51a5372042c3445b9759c7b9a8ea5126",
+    "advisories": {
+      "GHSA-rmxm-3fg6-px4f": "@hono/node-server >=1.19.10 <2.1.3; patched 2.1.3; resolved 2.1.5"
+    },
+    "historicalReleaseReceiptsApply": false,
+    "connectedWorkflow": "not_run",
+    "sourceScope": "Dependency override, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
+    "privateSourceRevision": "48a997f64112cebcd8d331bb5c26783b891f1702",
+    "lockSha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c",
+    "tests": {
+      "packageTests": 60,
+      "oracleCases": 41,
+      "negativeMutations": 74
+    },
     "audit": {
       "critical": 0,
       "high": 0,
@@ -583,7 +595,8 @@
       "low": 0,
       "info": 0
     },
-    "qualificationScope": "The unchanged 0.5.4 dependency graph was reaudited for 0.6.0. Prior remediation and stdio smoke evidence remain historical in historicalDependencySecurityQualificationV054. Current candidate installation is in builderKitQualification; no new connected workflow is claimed."
+    "stdioSmoke": "Both bundled synthetic MCP servers initialized, listed tools and answered get_user_capabilities over stdio with SDK 1.32.0; no model or remote X1 call.",
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit and local stdio protocol smoke checks. Disabled remote candidate fresh and upgrade installs are recorded after the candidate commit; historical signed release receipts do not qualify these bytes."
   },
   "historicalDependencySecurityQualificationV053": {
     "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
@@ -654,5 +667,28 @@
     "nativeHost": "Claude Code 2.1.310 remote fresh candidate install: all 77 files match 0706ad27b9db770155a41224bbd43641cf2e8740, six skills, disabled; no model or connected workflow.",
     "remoteUpgrade": "Claude Code 2.1.310 remote upgrade from 0.5.3 to candidate 0706ad27b9db770155a41224bbd43641cf2e8740: all 77 files match, six skills, disabled state preserved; no model or connected workflow.",
     "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audits, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main fresh/upgrade receipts are recorded in PR28; historical signed release receipts do not qualify these bytes."
+  },
+  "historicalDependencySecurityQualificationV060": {
+    "status": "unchanged_dependency_graph_reaudited_zero_findings",
+    "versions": {
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "zod": "4.6.6",
+      "body-parser": "2.4.0",
+      "fast-uri": "3.1.9",
+      "hono": "4.13.11",
+      "ip-address": "10.7.4",
+      "qs": "6.16.1",
+      "proxy-addr": "2.0.8"
+    },
+    "dependencyBaselineVersion": "0.5.4",
+    "lockSha256": "c3d90828ee7b020a3b7fb76442257a3b51a5372042c3445b9759c7b9a8ea5126",
+    "audit": {
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0,
+      "info": 0
+    },
+    "qualificationScope": "The unchanged 0.5.4 dependency graph was reaudited for 0.6.0. Prior remediation and stdio smoke evidence remain historical in historicalDependencySecurityQualificationV054. Current candidate installation is in builderKitQualification; no new connected workflow is claimed."
   }
 }
