@@ -563,7 +563,7 @@
   },
   "publicBaseline": "45784a515ad91cd63a4c6babf9bdc06391c4740a",
   "dependencySecurityQualification": {
-    "status": "source_tests_audit_and_stdio_smoke_verified_remote_install_pending",
+    "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
     "versions": {
       "@modelcontextprotocol/sdk": "1.32.0",
       "zod": "4.6.6",
@@ -583,6 +583,7 @@
     "sourceScope": "Dependency override, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
     "privateSourceRevision": "48a997f64112cebcd8d331bb5c26783b891f1702",
     "lockSha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c",
+    "candidateRevision": "ebe28eb7b37beff6f517272cf62c35c4ad826d79",
     "tests": {
       "packageTests": 60,
       "oracleCases": 41,
@@ -596,7 +597,9 @@
       "info": 0
     },
     "stdioSmoke": "Both bundled synthetic MCP servers initialized, listed tools and answered get_user_capabilities over stdio with SDK 1.32.0; no model or remote X1 call.",
-    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit and local stdio protocol smoke checks. Disabled remote candidate fresh and upgrade installs are recorded after the candidate commit; historical signed release receipts do not qualify these bytes."
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes.",
+    "nativeHost": "Claude Code 2.1.318 remote fresh candidate install: all 81 files match ebe28eb7b37beff6f517272cf62c35c4ad826d79, six skills, disabled; no model or connected workflow.",
+    "remoteUpgrade": "Claude Code 2.1.318 remote upgrade from 0.6.0 to candidate ebe28eb7b37beff6f517272cf62c35c4ad826d79: all 81 files match, six skills, disabled state preserved; no model or connected workflow."
   },
   "historicalDependencySecurityQualificationV053": {
     "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
