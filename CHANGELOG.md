@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.2 - 2026-11-16
+
+- Raise Hono to 4.13.17 and `@hono/node-server` to 2.1.6 through package overrides. This fixes five Hono advisories (GHSA-4h7h-rv7c-7m2v, GHSA-h7mg-cq63-vhpq, GHSA-4m76-xfj5-7975, GHSA-46wx-v44x-9hh2, GHSA-3gg2-335m-rxc6: multipart form validation, RegExpRouter wildcard middleware, middleware scoped inside a mount prefix, CSRF checks on hyperlink auditing requests and CSS helper escaping) and two node-server advisories (GHSA-qv5m-9pm6-hqp3, GHSA-jpvv-r467-5p4w: `ECONNRESET` during a WebSocket upgrade and backslashes in request paths). The SDK loads both only for its HTTP transport; the bundled synthetic servers use stdio. The lockfile matches the private export template, and the license inventory, SBOM and plugin file hashes describe the new graph. Skill instructions and the disabled-by-default connection are unchanged.
+
 ## 0.6.1 - 2026-11-04
 
 - Pin `@hono/node-server` to 2.1.5 through a package override, fixing GHSA-rmxm-3fg6-px4f (`serveStatic` decoded the request path twice, which could bypass middleware on static paths). The SDK pulls it in for its HTTP transport; the bundled synthetic servers use stdio. The lockfile matches the private export template, and the license inventory, SBOM and plugin file hashes describe the new graph. Skill instructions and the disabled-by-default connection are unchanged.

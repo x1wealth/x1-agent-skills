@@ -5,12 +5,12 @@
     {
       "bytes": 991,
       "path": ".claude-plugin/plugin.json",
-      "sha256": "0a4e8239a3d8b4ab087e640b40e8c4c1f5c18c29b4d83519c9fd20ce2a65d585"
+      "sha256": "20042201e37c44edd2462ff9bdd9df58c370d808af93409193bf27ac55ddf301"
     },
     {
       "bytes": 1956,
       "path": ".codex-plugin/plugin.json",
-      "sha256": "d93075629b3807a8ebf8ede82f965404cfd69564db048486f046c5a69b10bd8a"
+      "sha256": "017caf5c602e199af4657ccf5a212e6f6333cb6a4ba05b88ecef4a3daba73a04"
     },
     {
       "bytes": 2771,
@@ -45,12 +45,12 @@
     {
       "bytes": 1689,
       "path": "package.json",
-      "sha256": "e77822d9fd2ddf7c53188cafa207619421b1d604558699525b5f9c95992e7bff"
+      "sha256": "0e3c5ffed7f0f1fc120ebc03bd74b7d49e343f9a7e4ad183cdc7886c7f06b6fb"
     },
     {
       "bytes": 23936,
       "path": "pnpm-lock.yaml",
-      "sha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c"
+      "sha256": "a7874893bcfc301365600ab3f511efebff1573301ebe22c6673062117fb3391a"
     },
     {
       "bytes": 15016,
@@ -504,8 +504,8 @@
       "target": "skills/handle-capital-call/references/current-x1-contract.md"
     }
   ],
-  "sourceRevision": "45784a515ad91cd63a4c6babf9bdc06391c4740a",
-  "version": "0.6.1",
+  "sourceRevision": "55d9b6bb461fa7e6a45899a976c47261c5dff5ca",
+  "version": "0.6.2",
   "supplementalSkillQualification": {
     "build-with-x1": {
       "status": "source_reviewed_and_disabled_candidate_install_checked",
@@ -561,7 +561,7 @@
       "sourceBranchRevision": "3337301470c90f70882623c71f5b865609a72b77"
     }
   },
-  "publicBaseline": "45784a515ad91cd63a4c6babf9bdc06391c4740a",
+  "publicBaseline": "55d9b6bb461fa7e6a45899a976c47261c5dff5ca",
   "dependencySecurityQualification": {
     "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
     "versions": {
@@ -569,21 +569,26 @@
       "zod": "4.6.6",
       "body-parser": "2.4.0",
       "fast-uri": "3.1.9",
-      "hono": "4.13.11",
+      "hono": "4.13.17",
       "ip-address": "10.7.4",
       "qs": "6.16.1",
       "proxy-addr": "2.0.8",
-      "@hono/node-server": "2.1.5"
+      "@hono/node-server": "2.1.6"
     },
     "advisories": {
-      "GHSA-rmxm-3fg6-px4f": "@hono/node-server >=1.19.10 <2.1.3; patched 2.1.3; resolved 2.1.5"
+      "GHSA-4h7h-rv7c-7m2v": "hono >=4.5.1 <=4.13.15; patched 4.13.16; resolved 4.13.17",
+      "GHSA-h7mg-cq63-vhpq": "hono >=4.1.4 <=4.13.15; patched 4.13.16; resolved 4.13.17",
+      "GHSA-4m76-xfj5-7975": "hono <4.13.16; patched 4.13.16; resolved 4.13.17",
+      "GHSA-46wx-v44x-9hh2": "hono <4.13.16; patched 4.13.16; resolved 4.13.17",
+      "GHSA-3gg2-335m-rxc6": "hono >=3.12.0 <=4.13.15; patched 4.13.16; resolved 4.13.17",
+      "GHSA-qv5m-9pm6-hqp3": "@hono/node-server >=2.0.0 <2.1.6; patched 2.1.6; resolved 2.1.6",
+      "GHSA-jpvv-r467-5p4w": "@hono/node-server >=2.0.0 <2.1.6; patched 2.1.6; resolved 2.1.6"
     },
     "historicalReleaseReceiptsApply": false,
     "connectedWorkflow": "not_run",
-    "sourceScope": "Dependency override, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
-    "privateSourceRevision": "48a997f64112cebcd8d331bb5c26783b891f1702",
-    "lockSha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c",
-    "candidateRevision": "ebe28eb7b37beff6f517272cf62c35c4ad826d79",
+    "sourceScope": "Dependency overrides, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
+    "privateSourceRevision": "7093edeffe143cce802a1c3772e423ac79693d8f",
+    "lockSha256": "a7874893bcfc301365600ab3f511efebff1573301ebe22c6673062117fb3391a",
     "tests": {
       "packageTests": 60,
       "oracleCases": 41,
@@ -597,9 +602,7 @@
       "info": 0
     },
     "stdioSmoke": "Both bundled synthetic MCP servers initialized, listed tools and answered get_user_capabilities over stdio with SDK 1.32.0; no model or remote X1 call.",
-    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes.",
-    "nativeHost": "Claude Code 2.1.318 remote fresh candidate install: all 81 files match ebe28eb7b37beff6f517272cf62c35c4ad826d79, six skills, disabled; no model or connected workflow.",
-    "remoteUpgrade": "Claude Code 2.1.318 remote upgrade from 0.6.0 to candidate ebe28eb7b37beff6f517272cf62c35c4ad826d79: all 81 files match, six skills, disabled state preserved; no model or connected workflow."
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes."
   },
   "historicalDependencySecurityQualificationV053": {
     "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
@@ -693,5 +696,44 @@
       "info": 0
     },
     "qualificationScope": "The unchanged 0.5.4 dependency graph was reaudited for 0.6.0. Prior remediation and stdio smoke evidence remain historical in historicalDependencySecurityQualificationV054. Current candidate installation is in builderKitQualification; no new connected workflow is claimed."
+  },
+  "historicalDependencySecurityQualificationV061": {
+    "status": "source_tests_audit_and_disabled_remote_candidate_install_verified",
+    "versions": {
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "zod": "4.6.6",
+      "body-parser": "2.4.0",
+      "fast-uri": "3.1.9",
+      "hono": "4.13.11",
+      "ip-address": "10.7.4",
+      "qs": "6.16.1",
+      "proxy-addr": "2.0.8",
+      "@hono/node-server": "2.1.5"
+    },
+    "advisories": {
+      "GHSA-rmxm-3fg6-px4f": "@hono/node-server >=1.19.10 <2.1.3; patched 2.1.3; resolved 2.1.5"
+    },
+    "historicalReleaseReceiptsApply": false,
+    "connectedWorkflow": "not_run",
+    "sourceScope": "Dependency override, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
+    "privateSourceRevision": "48a997f64112cebcd8d331bb5c26783b891f1702",
+    "lockSha256": "6b0cf739b3192a5a07b4c0e8a345dcd02571ad71e098d6e4250f355b3039ab2c",
+    "candidateRevision": "ebe28eb7b37beff6f517272cf62c35c4ad826d79",
+    "tests": {
+      "packageTests": 60,
+      "oracleCases": 41,
+      "negativeMutations": 74
+    },
+    "audit": {
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0,
+      "info": 0
+    },
+    "stdioSmoke": "Both bundled synthetic MCP servers initialized, listed tools and answered get_user_capabilities over stdio with SDK 1.32.0; no model or remote X1 call.",
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes.",
+    "nativeHost": "Claude Code 2.1.318 remote fresh candidate install: all 81 files match ebe28eb7b37beff6f517272cf62c35c4ad826d79, six skills, disabled; no model or connected workflow.",
+    "remoteUpgrade": "Claude Code 2.1.318 remote upgrade from 0.6.0 to candidate ebe28eb7b37beff6f517272cf62c35c4ad826d79: all 81 files match, six skills, disabled state preserved; no model or connected workflow."
   }
 }
