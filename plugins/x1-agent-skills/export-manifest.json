@@ -589,6 +589,7 @@
     "sourceScope": "Dependency overrides, lockfile, license/SBOM and version metadata only; skill instruction files unchanged.",
     "privateSourceRevision": "7093edeffe143cce802a1c3772e423ac79693d8f",
     "lockSha256": "a7874893bcfc301365600ab3f511efebff1573301ebe22c6673062117fb3391a",
+    "candidateRevision": "7658a50790b5bcd6a5c522c2b89a6003fdfeb30e",
     "tests": {
       "packageTests": 60,
       "oracleCases": 41,
@@ -602,7 +603,9 @@
       "info": 0
     },
     "stdioSmoke": "Both bundled synthetic MCP servers initialized, listed tools and answered get_user_capabilities over stdio with SDK 1.32.0; no model or remote X1 call.",
-    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes."
+    "qualificationScope": "Current package tests, deterministic oracle and mutation cases, zero-finding dependency audit, local stdio protocol smoke checks, and exact disabled remote candidate fresh installation and upgrade. Reporting metadata follows that candidate. Final-commit remote install and stable-main receipts are recorded in the release pull request; historical signed release receipts do not qualify these bytes.",
+    "nativeHost": "Claude Code 2.1.325 remote fresh candidate install: all 81 files match 7658a50790b5bcd6a5c522c2b89a6003fdfeb30e, six skills, disabled; no model or connected workflow.",
+    "remoteUpgrade": "Claude Code 2.1.325 remote upgrade from 0.6.1 to candidate 7658a50790b5bcd6a5c522c2b89a6003fdfeb30e: all 81 files match, six skills, disabled state preserved; no model or connected workflow."
   },
   "historicalDependencySecurityQualificationV053": {
     "status": "source_inventory_tests_and_isolated_local_install_verified_remote_install_pending",
